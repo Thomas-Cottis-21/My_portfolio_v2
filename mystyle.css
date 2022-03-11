@@ -1,0 +1,27 @@
+/* ----- Hero Section -----*/
+#hero-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#hero-image {
+    max-width: 100vw;
+    height: auto;
+}
+/* ----- End Hero Section -----*/
+
+/* ----- Intro Section -----*/
+#intro-image {
+    margin-top: 15px;
+    border-radius: 10px;
+}
+#col-right-intro {
+    margin-top: 15px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+/* ----- End Intro Section ----- */
+
+/* ----- Soft Skills Section ----- */
+
+/* ----- End Soft Skills Section ----- */
