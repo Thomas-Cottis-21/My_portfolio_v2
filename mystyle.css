@@ -1,27 +1,72 @@
 /* ----- Hero Section -----*/
-#hero-container {
+.hero-container {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
-#hero-image {
+.hero-image {
     max-width: 100vw;
     height: auto;
 }
 /* ----- End Hero Section -----*/
 
 /* ----- Intro Section -----*/
-#intro-image {
+.intro-image {
     margin-top: 15px;
     border-radius: 10px;
 }
-#col-right-intro {
+.col-right-intro {
     margin-top: 15px;
-    background-color: lightgray;
     border-radius: 10px;
+}
+.intro-header-main, .intro-header-content {
+    font-family: "Sora", sans-serif;
+}
+.intro-header-main {
+    font-weight: 200;
+}
+.intro-header-content {
+    font-weight: 600;
+    color: #55cd28;
+}
+.intro-content {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 100;
 }
 /* ----- End Intro Section ----- */
 
 /* ----- Soft Skills Section ----- */
-
+.soft-skills-header-main, .soft-skills-header-content {
+    font-family: "Sora", sans-serif;
+}
+.soft-skills-header-content {
+    font-weight: 600;
+    color: #55cd28;
+}
+.soft-skills-content {
+    font-family: "Oxygen", sans-serif;
+}
 /* ----- End Soft Skills Section ----- */
+
+/* ----- Hard Skills Section ----- */
+.hard-skills-header-main, .hard-skills-header-gauge {
+    font-family: "Sora", sans-serif;
+}
+.hard-skills-header-gauge {
+    font-weight: 600;
+    color: #55cd28;
+}
+.hard-skills-content {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 100;
+}
+/* ----- End Hard Skills Section ----- */
+
+/* ----- Education Section ----- */
+.education-header-main {
+    font-family: "Sora", sans-serif;
+}
+.education-content {
+    font-family: "Oxygen", sans-serif;
+}
+/* ----- End Education Section ----- */

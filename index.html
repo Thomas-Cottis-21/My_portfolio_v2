@@ -7,11 +7,17 @@
     <title>My Portfolio V2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Sora:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- -------------------- Hero Section -------------------- -->
-    <div id="hero-container" class="container-fluid p-0">
-        <img id="hero-image" src="/Img/hero/green-island.jpg" alt="hero">
+    <div class="container-fluid p-0 hero-container">
+        <img src="/Img/hero/green-island.jpg" alt="hero" class="hero-image">
     </div>
     <!-- -------------------- End Hero Section -------------------- -->
 
@@ -19,26 +25,28 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <img id="intro-image" src="/Img/intro/Tom_img.jpeg" alt="Helicopter cockpit" class="w-100">
+                <img src="/Img/intro/Tom_img.jpeg" alt="Helicopter cockpit" class="w-100 intro-image">
             </div>
-            <div id="col-right-intro" class="col">
-                <h1 class="display-3">Lorem ipsum dolor sit amet</h1>
+            <div class="col col-right-intro">
+                <h1 class="display-5 intro-header-main">Lorem ipsum dolor sit amet</h1>
+                <p class="intro-content">Nulla dui tellus, blandit sed ipsum sed, pellentesque pretium ante. Pellentesque ut lectus eros. Donec cursus, felis ut luctus fermentum, nibh magna condimentum nulla, in fringilla nunc lacus sit amet tortor.</p>
+                <hr> 
                 <div class="row row-cols-2">
                     <div class="col">
-                        <div class="display-6">hello1</div>
-                        <p>Vivamus ultricies ipsum mauris, vestibulum iaculis quam viverra ut. Nullam posuere leo a lectus iaculis, venenatis mollis eros mollis.</p>
+                        <div class="display-6 intro-header-content">fact1</div>
+                        <p class="intro-content">Vivamus ultricies ipsum mauris, vestibulum iaculis quam viverra ut. Nullam posuere leo a lectus iaculis, venenatis mollis eros mollis.</p>
                     </div>
                     <div class="col">
-                        <div class="display-6">hello2</div>
-                        <p>Curabitur ac risus lacinia, sollicitudin ante et, dignissim velit. Quisque id odio nibh. Aenean magna est, feugiat eu faucibus a, rhoncus sit amet nisl.</p>
+                        <div class="display-6 intro-header-content">fact2</div>
+                        <p class="intro-content">Curabitur ac risus lacinia, sollicitudin ante et, dignissim velit. Quisque id odio nibh. Aenean magna est, feugiat eu faucibus a, rhoncus sit amet nisl.</p>
                     </div>
                     <div class="col">
-                        <div class="display-6">hello3</div>
-                        <p>Quisque lobortis, ex nec venenatis porta, nisl magna pellentesque quam, non mollis neque dolor in magna. Nunc vitae vestibulum odio, non congue ex. Cras pretium mauris non odio laoreet, ac egestas velit scelerisque.</p>
+                        <div class="display-6 intro-header-content">fact3</div>
+                        <p class="intro-content">Quisque lobortis, ex nec venenatis porta, nisl magna pellentesque quam, non mollis neque dolor in magna. Nunc vitae vestibulum odio, non congue ex. Cras pretium mauris non odio laoreet, ac egestas velit scelerisque.</p>
                     </div>
                     <div class="col">
-                        <div class="display-6">hello4</div>
-                        <p>Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales. Pellentesque maximus tempus purus, sed rhoncus est tincidunt sed.</p>
+                        <div class="display-6 intro-header-content">fact4</div>
+                        <p class="intro-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales. Pellentesque maximus tempus purus, sed rhoncus est tincidunt sed.</p>
                     </div>
                 </div>
             </div>
@@ -48,39 +56,78 @@
 
     <!-- -------------------- Skills Section -------------------- -->
     <div class="container">
-        <div class="display-2 d-flex justify-content-center">Soft Skills</div>
+        <div class="display-3 d-flex mt-5 justify-content-center soft-skills-header-main">Soft Skills</div>
         <div class="row row-cols-3">
             <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center">skill set one</div>
-                <p class="mt-4">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set one</div>
+                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
             </div>
             <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center">skill set two</div>
-                <p class="mt-4">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set two</div>
+                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
             </div>
             <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center">skill set three</div>
-                <p class="mt-4">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set three</div>
+                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
             </div>
             <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center">skill set four</div>
-                <p class="mt-4">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set four</div>
+                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
             </div>
             <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center">skill set five</div>
-                <p class="mt-4">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set five</div>
+                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
             </div>
             <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center">skill set six</div>
-                <p class="mt-4">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set six</div>
+                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
             </div>
         </div>
     </div>
     <!-- -------------------- End Soft Skills Section -------------------- -->
 
     <!-- -------------------- Hard Skills Section -------------------- -->
-    
+    <div class="container">
+        <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main">Hard Skills</div>
+        <p class="mt-4 text-center hard-skills-content">Fusce dui eros, semper ac rutrum et, tempus sed velit. Mauris a interdum nisi. Fusce ornare urna pretium nulla gravida porttitor. Ut et est ut lectus venenatis cursus vel vitae leo. Donec mattis purus eu dignissim luctus. Phasellus quis quam et felis fringilla egestas ac nec leo. Nam lobortis ipsum id nisi mollis, eu viverra felis pharetra.</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row row-cols-3 text-center">
+            <div class="col">
+                <div class="display-6 hard-skills-header-gauge">HTML</div>
+                <p>//This is where the wheel goes</p>
+            </div>
+            <div class="col">
+                <div class="display-6 hard-skills-header-gauge">CSS</div>
+                <p>//This is where the wheel goes</p>
+            </div>
+            <div class="col">
+                <div class="display-6 hard-skills-header-gauge">Bootstrap</div>
+                <p>//This is where the wheel goes</p>
+            </div>
+            <div class="col">
+                <div class="display-6 hard-skills-header-gauge">JavaScript</div>
+                <p>//This is where the wheel goes</p>
+            </div>
+            <div class="col">
+                <div class="display-6 hard-skills-header-gauge">PHP</div>
+                <p>//This is where the wheel goes</p>
+            </div>
+            <div class="col">
+                <div class="display-6 hard-skills-header-gauge">MySQL</div>
+                <p>//This is where the wheel goes</p>
+            </div>
+        </div>
+    </div>
     <!-- -------------------- End Hard Skills Section -------------------- -->
+
+    <!-- -------------------- Education Section -------------------- -->
+    <div class="container">
+        <div class="display-3 d-flex mt-5 justify-content-center education-header-main">Education</div>
+        <p class="mt-4 text-center education-content">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
+        
+    </div>
+    <!-- -------------------- End Education Section -------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
