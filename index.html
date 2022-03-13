@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio V2</title>
+
+    <!-- -------------------- Bootstrap link -------------------- -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+
+    <!-- -------------------- Custom CSS -------------------- -->
+
+    <link rel="stylesheet" href="/css/mystyle.css">
+
+<!-- -------------------- Google fonts -------------------- -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Sora:wght@100&display=swap" rel="stylesheet">
@@ -17,7 +23,8 @@
 <body>
     <!-- -------------------- Hero Section -------------------- -->
     <div class="container-fluid p-0 hero-container">
-        <img src="/Img/hero/green-island.jpg" alt="hero" class="hero-image">
+        <!-- <img src="/Img/hero/green-island.jpg" alt="hero" class="hero-image"> -->
+        <video muted autoplay src="/Img/hero/video-hero/rock_climber-hero.mp4" class="hero-video"></video>
     </div>
     <!-- -------------------- End Hero Section -------------------- -->
 
@@ -25,7 +32,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <img src="/Img/intro/Tom_img.jpeg" alt="Helicopter cockpit" class="w-100 intro-image">
+                <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="w-100 intro-image">
             </div>
             <div class="col col-right-intro">
                 <h1 class="display-5 intro-header-main">Lorem ipsum dolor sit amet</h1>
@@ -125,9 +132,44 @@
     <div class="container">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main">Education</div>
         <p class="mt-4 text-center education-content">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
-        
     </div>
     <!-- -------------------- End Education Section -------------------- -->
+
+    <!-- -------------------- Projects Section -------------------- -->
+    <div class="container-fluid">
+        <div class="display-3 d-flex mt-5 justify-content-center project-header-main">Projects</div>
+        <div class="row row-cols-1 d-flex justify-content-center text-center">
+            <div class="col">
+                <div class="embed-responsive">
+                    <div class="display-6 mt-5 project-header-iframe">My First Portfolio</div>
+                    <p class="mb-2">//This is where the description for the iframes will go</p>
+                    <iframe class="project-iframe" src="https://thomasandco.xyz/" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="embed-responsive">
+                    <div class="display-6 mt-5 project-header-iframe">Grandpas' Polygraph Business</div>
+                    <p class="mb-2">//This is where the description for the iframes will go</p>
+                    <iframe class="project-iframe" src="https://projectpolygraph.netlify.app/" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="embed-responsive">
+                    <div class="display-6 mt-5 project-header-iframe">Friends' flute instructor freelance</div>
+                    <p class="mb-2">//This is where the description for the iframes will go</p>
+                    <iframe class="project-iframe" src="https://shaloraflute.netlify.app/" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="embed-responsive">
+                    <div class="display-6 mt-5 project-header-iframe">Cerakote business startup</div>
+                    <p class="mb-2">//This is where the description for the iframes will go</p>
+                    <iframe class="project-iframe" src="https://joshcerakote.netlify.app/" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------- End Projects Section -------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
