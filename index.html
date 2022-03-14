@@ -23,16 +23,16 @@
 <body>
     <!-- -------------------- Hero Section -------------------- -->
     <div class="container-fluid p-0 hero-container">
-        <!-- <img src="/Img/hero/green-island.jpg" alt="hero" class="hero-image"> -->
-        <video muted autoplay src="/Img/hero/video-hero/rock_climber-hero.mp4" class="hero-video"></video>
+        <img src="/Img/hero/green-island.jpg" alt="hero" class="hero-image">
+        <!-- video muted autoplay src="/Img/hero/video-hero/rock_climber-hero.mp4" class="hero-video"></!-->
     </div>
     <!-- -------------------- End Hero Section -------------------- -->
 
     <!-- -------------------- Intro Section -------------------- -->
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="w-100 intro-image">
+    <div class="container d-flex">
+        <div id="intro-container-row" class="row">
+            <div class="col-6 intro-container-image">
+                <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
             </div>
             <div class="col col-right-intro">
                 <h1 class="display-5 intro-header-main">Lorem ipsum dolor sit amet</h1>
@@ -65,32 +65,32 @@
     <div class="container">
         <div class="display-3 d-flex mt-5 justify-content-center soft-skills-header-main">Soft Skills</div>
         <div class="row row-cols-3">
-            <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set one</div>
-                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-            </div>
-            <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set two</div>
-                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-            </div>
-            <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set three</div>
-                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-            </div>
-            <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set four</div>
-                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-            </div>
-            <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set five</div>
-                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-            </div>
-            <div class="col mt-5">
-                <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set six</div>
-                <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="col mt-5">
+                    <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set one</div>
+                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                </div>
+                <div class="col mt-5">
+                    <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set two</div>
+                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                </div>
+                <div class="col mt-5">
+                    <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set three</div>
+                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                </div>
+                <div class="col mt-5">
+                    <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set four</div>
+                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                </div>
+                <div class="col mt-5">
+                    <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set five</div>
+                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                </div>
+                <div class="col mt-5">
+                    <div class="display-6 d-flex justify-content-center soft-skills-header-content">skill set six</div>
+                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                </div>
             </div>
         </div>
-    </div>
     <!-- -------------------- End Soft Skills Section -------------------- -->
 
     <!-- -------------------- Hard Skills Section -------------------- -->
@@ -131,7 +131,19 @@
     <!-- -------------------- Education Section -------------------- -->
     <div class="container">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main">Education</div>
-        <p class="mt-4 text-center education-content">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
+        <p class="mt-4 text-center education-content-main">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
+        <div class="row row-col-2 text-center">
+            <div class="col education-content-right">
+                <div class="display-6 education-header-content">Alta High School</div>
+                <hr>
+                <p>//Education descriptions</p>
+            </div>
+            <div class="col education-content-left">
+                <div class="display-6 education-header-content">Salt Lake Community College</div>
+                <hr>
+                <p>//Education descriptions</p>
+            </div>
+        </div>
     </div>
     <!-- -------------------- End Education Section -------------------- -->
 
