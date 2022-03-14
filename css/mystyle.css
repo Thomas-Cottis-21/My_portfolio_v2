@@ -12,6 +12,20 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-header {
+    font-family: "Oxygen", sans-serif;
+    font-size: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-content {
+    font-family: "Oxygen", sans-serif;
+    font-size: 25px;
+}
 .hero-image, .hero-video {
     min-width: 100%;
     max-height: 100vh;
