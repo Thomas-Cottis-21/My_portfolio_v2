@@ -89,6 +89,7 @@ body {
     font-family: "Oxygen", sans-serif;
 }
 .hard-skills-header-gauge {
+    margin-top: 10px;
     font-weight: 600;
     color: #55cd28;
 }
