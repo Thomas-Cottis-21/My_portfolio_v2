@@ -76,9 +76,11 @@ body {
 .soft-skills-header-content {
     font-weight: 600;
     color: #55cd28;
+    justify-content: center;
 }
 .soft-skills-content {
     font-family: "Oxygen", sans-serif;
+    text-align: center;
 }
 /* ----- End Soft Skills Section ----- */
 
