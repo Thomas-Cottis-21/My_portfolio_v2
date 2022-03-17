@@ -213,4 +213,31 @@ textarea {
     border-color: #32b317;
     border-radius: 10px;
 }
+.hidden {
+    visibility: hidden;
+}
+.contact-data-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Oxygen", sans-serif;
+}
+.contact-confirm-intro {
+    text-align: center;
+    font-weight: 200;
+    font-size: 50px;
+}
+.contact-confirm-data-list {
+    text-align: center;
+    font-weight: 200;
+    font-size: 40px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
 /* ----- End Contact Section ----- */

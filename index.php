@@ -30,9 +30,8 @@
 </head>
 <body>
     <!-- -------------------- Back To Top -------------------- -->
-        <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up"></a>
-    <!-- -------------------- Back To Top -------------------- -->
-
+    <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up"></a>
+    
     <!-- -------------------- Hero Section -------------------- -->
 <section id="hero">
     <div class="container-fluid p-0 hero-container">
@@ -195,7 +194,7 @@
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe">My First Portfolio</div>
                     <p class="mb-2">//This is where the description for the iframes will go</p>
-                    <iframe class="project-iframe" src="https://thomasandco.xyz/" frameborder="0"></iframe>
+                    <iframe class="project-iframe" src="https://google.com/" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="col">
@@ -224,10 +223,28 @@
     <!-- -------------------- End Projects Section -------------------- -->
 
     <!-- -------------------- Contact Section -------------------- -->
+    <?php
+        $firstName = $lastName = $email = $number = $contact = $content = $submit = "";
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $firstName = data_input($_POST["fname"]);
+            $lastName = data_input($_POST["lname"]);
+            $email = data_input($_POST["email"]);
+            $number = data_input($_POST["number"]);
+            $content = data_input($_POST["content"]);
+        }
+
+        function data_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+    ?>
     <section>
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main">Contact</div>
-        <div class="container">
-            <form action="">
+        <div id="contactForm" class="container">
+            <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>
@@ -254,11 +271,33 @@
                         <textarea name="content" id="content" placeholder="Message"></textarea>
                     </div>
 
-                    <button class="btn btn-secondary mt-3 col-lg-2" type="submit">Submit form</button>
+                    <button id="submit" class="btn btn-secondary mt-3 col-lg-2" type="submit">Submit form</button>
                 </div>
             </form>
         </div>
     </section>
+    <div id="contactResponse" class="container">
+        <?php
+            if (!empty($_POST["email"])){
+                ?>  <div class="contact-data-section">
+                        <div class="contact-confirm-intro">
+                            <div class="contact-confirm-intro"><?="Thank you for your interest!" ?></div>
+                            <div class="display-2 contact-confirm-intro"><?="Your confirmation email has been sent using your contact information recorded as:"?></div>
+                        </div>
+                        <div class="contact-confirm-data-list">
+                            <ul>
+                                <li><?= $firstName ?></li>
+                                <li><?= $lastName ?></li>
+                                <li><?= $email ?></li>
+                                <li><?= $number ?></li>
+                                <li><?= $contactBack ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                <?php
+            }
+        ?>
+    </div>
     <!-- -------------------- End Contact Section -------------------- -->
 
     <!-- -------------------- Bootstrap CDN -------------------- -->
