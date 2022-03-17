@@ -9,7 +9,7 @@ const toTopAppear = () => {
         console.log("appearing");
     } else {
         element.classList.remove("show");
-        console.log("not appearing");
+        console.log("hidding");
     }
 }
 window.addEventListener("scroll", toTopAppear);

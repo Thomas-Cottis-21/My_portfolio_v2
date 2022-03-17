@@ -286,8 +286,7 @@
                         </div>
                         <div class="contact-confirm-data-list">
                             <ul>
-                                <li><?= $firstName ?></li>
-                                <li><?= $lastName ?></li>
+                                <li><?= $firstName . " " . $lastName ?></li>
                                 <li><?= $email ?></li>
                                 <li><?= $number ?></li>
                                 <li><?= $contactBack ?></li>
