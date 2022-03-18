@@ -101,31 +101,14 @@ a:hover {
 #intro-container-row {
     align-items: center;
 }
-@media (max-width: 1200px) {
-    #intro-container-row {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-}
 .intro-container-image {
     width: auto;
     justify-content: center;
-}
-@media (max-width: 1200px) {
-    .intro-container-image {
-        justify-content: center;
-    }
 }
 .intro-image {
     margin-top: 15px;
     border-radius: 10px;
     width: 40vw;
-}
-@media (max-width: 1200px) {
-    .intro-image {
-        width: 75vw;
-    }
 }
 .col-right-intro {
     margin-top: 15px;
@@ -145,6 +128,21 @@ a:hover {
 .intro-content {
     font-family: "Oxygen", sans-serif;
     font-weight: 100;
+}
+@media (max-width: 1200px) {
+    .intro-container-image {
+        justify-content: center;
+    }
+    @media (max-width: 1200px) {
+        .intro-image {
+            width: 75vw;
+        }
+    #intro-container-row {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
 }
 /* ----- End Intro Section ----- */
 
@@ -219,8 +217,16 @@ input, button {
 input:focus, textarea:focus, button:focus {
     outline: none;
 }
-label {
-    margin: 10px;
+.contact-checkbox-section {
+    font-family: "Oxygen", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.contact-checkboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
 }
 textarea {
     resize: none;
@@ -231,25 +237,6 @@ textarea {
     border-color: #32b317;
     border-radius: 10px;
 }
-.hidden {
-    visibility: hidden;
-}
-.contact-data-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: "Oxygen", sans-serif;
-}
-.contact-confirm-intro {
-    text-align: center;
-    font-weight: 200;
-    font-size: 50px;
-}
-.contact-confirm-data-list {
-    text-align: center;
-    font-weight: 200;
-    font-size: 40px;
-}
 ul {
     list-style: none;
     padding: 0;
@@ -259,3 +246,29 @@ li {
     list-style: none;
 }
 /* ----- End Contact Section ----- */
+
+/* ----- thanks.php Section ----- */
+.thanks-page {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.thanks-header-main, .thanks-information-header, .thanks.information-content {
+    font-family: "Oxygen", sans-serif;
+}
+.thanks-header-main, .thanks-information-header {
+    color:#32b317;
+}
+.thanks-header-main {
+    font-size: 140px;
+}
+.thanks-information-header {
+    font-size: 80px;
+}
+.thanks-information-content {
+    color:#55cd28;
+    font-family: "Oxygen", sans-serif;
+    font-size: 60px;
+}
+/* ----- End thanks.php Section ----- */
+

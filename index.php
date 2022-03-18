@@ -223,28 +223,30 @@
     <!-- -------------------- End Projects Section -------------------- -->
 
     <!-- -------------------- Contact Section -------------------- -->
-    <?php
-        $firstName = $lastName = $email = $number = $contact = $content = $submit = null;
+    <section>
+        <?php
+        $firstName = $lastName = $email = $number = $contact = $content = null;
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $firstName = data_input($_POST["fname"]);
             $lastName = data_input($_POST["lname"]);
             $email = data_input($_POST["email"]);
             $number = data_input($_POST["number"]);
+            $contact = data_input($_POST["contact"]);
             $content = data_input($_POST["content"]);
         }
 
-        function data_input($data) {
+        function data_input($data)
+        {
             $data = trim($data);
             $data = stripslashes($data);
             $data = htmlspecialchars($data);
             return $data;
         }
-    ?>
-    <section>
+        ?>
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main">Contact</div>
         <div id="contactForm" class="container">
-            <form id="myForm" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+            <form id="myForm" action="/php/thanks.php" method="post">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>
@@ -265,41 +267,37 @@
                         <label for="email"></label>
                         <input type="text" id="email" name="email" placeholder="Email">
                     </div>
+                    <div class="contact-checkbox-section mt-4">
+                        <div>What is your prefered method of contact?</div>
+                        <div class="contact-checkboxes d-flex mt-4">
+                            <div class="col-lg-2">
+                                <label for="contact">Text message</label>
+                                <input type="checkbox" id="textbox" name="contact[]" value="text">
+                            </div>
+
+                            <div class="col-lg-2">
+                                <label for="contact">Phone call</label>
+                                <input type="checkbox" id="callbox" name="contact[]" value="call">
+                            </div>
+
+                            <div class="col-lg-2">
+                                <label for="contact">Email</label>
+                                <input type="checkbox" id="emailbox" name="contact[]" value="Email">
+                            </div>
+                        </div>
+                    </div>
+                    
 
                     <div class="col-lg-12">
                         <label for="content"></label>
                         <textarea name="content" id="content" placeholder="Message"></textarea>
                     </div>
 
-                    <button id="submit" class="btn btn-secondary mt-3 col-lg-2" name="submit" type="submit">Submit form</button>
+                    <button id="submit" class="btn btn-secondary mt-3 col-lg-2" type="submit">Submit form</button>
                 </div>
             </form>
         </div>
     </section>
-    <div id="contactResponse" class="container">
-        <?php
-            if (isset($_POST["submit"])){
-                ?>  <div class="contact-data-section">
-                        <div class="contact-confirm-intro">
-                            <div class="contact-confirm-intro"><?="Thank you for your interest!" ?></div>
-                            <div class="display-2 contact-confirm-intro"><?="Your confirmation email has been sent using your contact information recorded as:"?></div>
-                        </div>
-                        <div class="contact-confirm-data-list">
-                            <ul>
-                                <li><?= $firstName . " " . $lastName ?></li>
-                                <li><?= $email ?></li>
-                                <li><?= $number ?></li>
-                                <li><?= $contactBack ?></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button id="refreshButton" class="refresh-button bi bi-arrow-clockwise" ></button>
-                <?php
-            } else {
-                $firstName = $lastName = $email = $number = $contactBack = null;
-            }
-        ?>
-    </div>
     <!-- -------------------- End Contact Section -------------------- -->
 
     <!-- -------------------- Bootstrap CDN -------------------- -->
