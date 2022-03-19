@@ -38,31 +38,50 @@
             </div>
             <div class="thanks-information-header">
                 <div>
-                    <div class="mt-4">Your name, email and number were recorded as: </div>
+                    <div class="mt-4">Your confirmation email was sent!</div>
+                    <div class="mt-1">Please review your recorded information: </div>
                 </div>
             </div>
             <div class="thanks-information-content">
                 <div>
                     <!-- php goes here -->
-                    <ul>
-                        <li><?=$_POST["fname"]?></li>
-                        <li><?=$_POST["lname"]?></li>
-                        <li><?=$_POST["email"]?></li>
-                        <li><?=$_POST["number"]?></li>
-                        <li><?=$_POST["contact"]?></li>
-                    </ul>
                     <?php
-                        $to = $_POST["email"];
-                        $subject = "Thank you from Thomas Cottis";
-                        $message = "Thank you for looking over my site and reaching out to me! I'll get back to you within 24 hours!";
-                        $headers = "From: thomascottis@thomasandco.xyz";
-                        
-                        mail($to, $subject, $message, $headers);
+                        $firstName = $_POST["fname"];
+                        $lastName = $_POST["lname"];
+                        $email = $_POST["email"];
+                        $number = $_POST["number"];
+                        $contact = array (
+                            $_POST["Text"], $_POST["Call"], $_POST["Email"]
+                        );
+                        $content = $_POST["content"];
+
+                        if (!empty($number)) {
+                            $number = " | " . $number;
+                        }
                     ?>
+                    <ul>
+                        <li><?=$firstName . " " . $lastName?></li>
+                        <li><?=$email . $number?></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</body>
+    <?php
+        $to = $email;
+        $subject = "Thank you from Thomas Cottis";
+        $message = "Thank you for looking over my site and reaching out to me! I'll get back to you within 24 hours!";
+        $headers = "From: thomascottis@thomasandco.xyz";
+        
+        mail($to, $subject, $message, $headers);
 
+        $toThomas = "thomascottis@thomasandco.xyz";
+        $subjectThomas = "New Message!";
+        $messageThomas = $content;
+        $headersThomas = "From: thomascottis@thomasandco.xyz";
+
+        mail($toThomas, $subjectThomas, $messageThomas, $headersThomas);
+    ?>
+</body>
+<script src="/js/main.js"></script>
 </html>

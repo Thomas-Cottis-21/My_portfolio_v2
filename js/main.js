@@ -13,3 +13,36 @@ const toTopAppear = () => {
     }
 }
 window.addEventListener("scroll", toTopAppear);
+
+//Dark Mode
+
+let currentState = localStorage.getItem("darkMode");
+let darkModeButton = document.getElementById("toggleDm");
+
+const enableDarkMode = () => {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("darkMode", "enabled");
+    console.log("enabled");
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("darkMode", "disabled");
+    console.log("disabled");
+}
+
+if (currentState == "enabled") {
+    enableDarkMode();
+}
+
+const trigger = () => {
+    currentState = localStorage.getItem("darkMode");
+
+    if (currentState !== "enabled") {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+}
+darkModeButton.addEventListener("click", trigger);
+//localStorage.clear();

@@ -7,30 +7,28 @@
     <title>My Portfolio V2</title>
 
     <!-- -------------------- Bootstrap CDN link -------------------- -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- -------------------- Bootstrap icons CDN link -------------------- -->
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <!-- -------------------- Custom CSS -------------------- -->
-
     <link rel="stylesheet" href="/css/mystyle.css">
 
     <!-- -------------------- data-aos onscroll library -------------------- -->
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- -------------------- Google fonts -------------------- -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Sora:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Sora:wght@100&display=swap&family=Nunito:wght@200&display=swap&family=Raleway:wght@200&display=swap"" rel="stylesheet">
 </head>
 <body>
     <!-- -------------------- Back To Top -------------------- -->
     <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up"></a>
+
+    <!-- -------------------- Dark Mode -------------------- -->
+    <button id="toggleDm" class="buttonDm"></button>
     
     <!-- -------------------- Hero Section -------------------- -->
 <section id="hero">
@@ -224,26 +222,6 @@
 
     <!-- -------------------- Contact Section -------------------- -->
     <section>
-        <?php
-        $firstName = $lastName = $email = $number = $contact = $content = null;
-
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $firstName = data_input($_POST["fname"]);
-            $lastName = data_input($_POST["lname"]);
-            $email = data_input($_POST["email"]);
-            $number = data_input($_POST["number"]);
-            $contact = data_input($_POST["contact"]);
-            $content = data_input($_POST["content"]);
-        }
-
-        function data_input($data)
-        {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
-        ?>
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main">Contact</div>
         <div id="contactForm" class="container">
             <form id="myForm" action="/php/thanks.php" method="post">
@@ -272,27 +250,24 @@
                         <div class="contact-checkboxes d-flex mt-4">
                             <div class="col-lg-2">
                                 <label for="contact">Text message</label>
-                                <input type="checkbox" id="textbox" name="contact[]" value="text">
+                                <input type="checkbox" id="textbox" name="Text" value="Text">
                             </div>
 
                             <div class="col-lg-2">
                                 <label for="contact">Phone call</label>
-                                <input type="checkbox" id="callbox" name="contact[]" value="call">
+                                <input type="checkbox" id="callbox" name="Call" value="Call">
                             </div>
 
                             <div class="col-lg-2">
                                 <label for="contact">Email</label>
-                                <input type="checkbox" id="emailbox" name="contact[]" value="Email">
+                                <input type="checkbox" id="emailbox" name="Email" value="Email">
                             </div>
                         </div>
                     </div>
-                    
-
                     <div class="col-lg-12">
                         <label for="content"></label>
                         <textarea name="content" id="content" placeholder="Message"></textarea>
                     </div>
-
                     <button id="submit" class="btn btn-secondary mt-3 col-lg-2" type="submit">Submit form</button>
                 </div>
             </form>

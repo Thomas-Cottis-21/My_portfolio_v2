@@ -3,12 +3,18 @@ body, html {
 }
 body {
     overflow-x: hidden;
+    background-color: lightgray;
 }
 @media (min-width: 1400px){
     body {
         overflow-x: auto;
     }
 }
+/* ----- Dark Mode ----- */
+.dark-mode {
+    background-color: #5E5E5E;
+}
+/* ----- End Dark Mode ----- */
 /* ----- Back To Top ----- */
 .return-to-top-button {
     opacity: 0;
@@ -29,13 +35,13 @@ body {
     align-items: center;
     transition: 0.2s;
 }
-.refresh-button {
+.buttonDm {
     display: flex;
     position: fixed;
     width: 50px;
     height: 50px;
-    bottom: 20px;
-    right: 120px;
+    bottom: 100px;
+    right: 30px;
     z-index: 99;
     border: none;
     outline: none;
@@ -86,7 +92,7 @@ a:hover {
     transform: translateY(-50%);
 }
 .carousel-header {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 70px;
     top: 50%;
     transform: translateY(-50%);
@@ -115,7 +121,7 @@ a:hover {
     border-radius: 10px;
 }
 .intro-header-main, .intro-header-content {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 .intro-header-main {
     margin-top: 0;
@@ -123,7 +129,7 @@ a:hover {
 }
 .intro-header-content {
     font-weight: 600;
-    color: #32b317;
+    color: #6BD600;
 }
 .intro-content {
     font-family: "Oxygen", sans-serif;
@@ -147,8 +153,8 @@ a:hover {
 /* ----- End Intro Section ----- */
 
 /* ----- Soft Skills Section ----- */
-.soft-skills-header-main, .soft-skills-header-content {
-    font-family: "Oxygen", sans-serif;
+.soft-skills-header-main, .soft-skills-header-content, .hard-skills-header-main, .hard-skills-header-gauge {
+    font-family: "Raleway", sans-serif;
 }
 .soft-skills-header-content {
     font-weight: 600;
@@ -162,9 +168,6 @@ a:hover {
 /* ----- End Soft Skills Section ----- */
 
 /* ----- Hard Skills Section ----- */
-.hard-skills-header-main, .hard-skills-header-gauge {
-    font-family: "Oxygen", sans-serif;
-}
 .hard-skills-header-gauge {
     margin-top: 10px;
     font-weight: 600;
@@ -178,20 +181,20 @@ a:hover {
 
 /* ----- Education Section ----- */
 .education-header-main {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 .education-content-main {
     font-family: "Oxygen", sans-serif;
 }
 .education-header-content {
-    color: #32b317;
+    color: #6BD600;
     font-family: "Oxygen", sans-serif;
 }
 /* ----- End Education Section ----- */
 
 /* ----- Projects Section ----- */
 .project-header-main, .project-header-iframe {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 .project-header-iframe {
     font-weight: 600;
@@ -206,16 +209,25 @@ a:hover {
 
 /* ----- Contact Section ----- */
 .contact-header-main {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 input, button {
     border: none;
     width: 100%;
     border-bottom: 2px solid;
-    border-color: #32b317;
+    border-color: #6BD600;
+    background-color: transparent;
 }
 input:focus, textarea:focus, button:focus {
     outline: none;
+    
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
 }
 .contact-checkbox-section {
     font-family: "Oxygen", sans-serif;
@@ -234,7 +246,7 @@ textarea {
     height: 45vh;
     margin: 0 auto;
     border: 2px solid;
-    border-color: #32b317;
+    border-color: #6BD600;
     border-radius: 10px;
 }
 ul {
@@ -249,6 +261,7 @@ li {
 
 /* ----- thanks.php Section ----- */
 .thanks-page {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -266,9 +279,65 @@ li {
     font-size: 80px;
 }
 .thanks-information-content {
-    color:#55cd28;
+    color:#6BD600;
     font-family: "Oxygen", sans-serif;
     font-size: 60px;
+}
+@media (max-width: 1400px) {
+    .thanks-header-main {
+        font-size: 140px;
+    }
+    .thanks-information-header {
+        font-size: 80px;
+    }
+    .thanks-information-content {
+        font-size: 60px;
+    }
+}
+@media (max-width: 1100px) {
+    .thanks-header-main {
+        font-size: 120px;
+    }
+    .thanks-information-header {
+        font-size: 70px;
+    }
+    .thanks-information-content {
+        font-size: 50px;
+    }
+    .thanks-page {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .thanks-header-main {
+        font-size: 100px;
+    }
+    .thanks-information-header {
+        font-size: 60px;
+    }
+    .thanks-information-content {
+        font-size: 40px;
+    }
+    .thanks-page {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    .thanks-header-main {
+        font-size: 70px;
+    }
+    .thanks-information-header {
+        font-size: 40px;
+    }
+    .thanks-information-content {
+        font-size: 30px;
+    }
+    .thanks-page {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 /* ----- End thanks.php Section ----- */
 
