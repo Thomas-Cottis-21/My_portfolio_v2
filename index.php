@@ -28,7 +28,7 @@
     <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up"></a>
 
     <!-- -------------------- Dark Mode -------------------- -->
-    <button id="toggleDm" class="buttonDm"></button>
+    <button id="toggleDm" class="buttonDm bi bi-lamp"></button>
     
     <!-- -------------------- Hero Section -------------------- -->
 <section id="hero">
@@ -224,7 +224,7 @@
     <section>
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main">Contact</div>
         <div id="contactForm" class="container">
-            <form id="myForm" action="/php/thanks.php" method="post">
+            <form id="myForm" action="/php/thanks.php" method="POST">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>

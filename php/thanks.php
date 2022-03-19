@@ -46,7 +46,13 @@
                 <div>
                     <!-- php goes here -->
                     <?php
-                        $firstName = $_POST["fname"];
+
+                        function data_input($data) {
+                            $data = htmlspecialchars($data);
+                            return $data;
+                        }
+
+                        $firstName = data_input($_POST["fname"]);
                         $lastName = $_POST["lname"];
                         $email = $_POST["email"];
                         $number = $_POST["number"];

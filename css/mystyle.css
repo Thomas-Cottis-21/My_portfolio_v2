@@ -14,7 +14,16 @@ body {
 .dark-mode {
     background-color: #5E5E5E;
 }
+.dark-mode-button {
+    background-color: #5E5E5E;
+    color: lightgray;
+}
+.light-mode-button {
+    background-color: lightgray;
+    color: #5E5E5E;
+}
 /* ----- End Dark Mode ----- */
+
 /* ----- Back To Top ----- */
 .return-to-top-button {
     opacity: 0;
@@ -36,6 +45,7 @@ body {
     transition: 0.2s;
 }
 .buttonDm {
+    opacity: 0;
     display: flex;
     position: fixed;
     width: 50px;
@@ -45,8 +55,6 @@ body {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #55cd28;
-    color: white;
     cursor: pointer;
     border-radius: 4px;
     justify-content: center;

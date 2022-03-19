@@ -2,13 +2,15 @@
 const toTopAppear = () => {
 
     //fromTop fullscreen = 300
-    let element = document.getElementById("backToTop");
+    let toTop = document.getElementById("backToTop");
 
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        element.classList.add("show");
+        toTop.classList.add("show");
+        darkModeButton.classList.add("show");
         console.log("appearing");
     } else {
-        element.classList.remove("show");
+        toTop.classList.remove("show");
+        darkModeButton.classList.remove("show");
         console.log("hidding");
     }
 }
@@ -21,18 +23,24 @@ let darkModeButton = document.getElementById("toggleDm");
 
 const enableDarkMode = () => {
     document.body.classList.add("dark-mode");
+    darkModeButton.classList.add("light-mode-button");
+    darkModeButton.classList.remove("dark-mode-button");
     localStorage.setItem("darkMode", "enabled");
     console.log("enabled");
 }
 
 const disableDarkMode = () => {
     document.body.classList.remove("dark-mode");
+    darkModeButton.classList.remove("light-mode-button");
+    darkModeButton.classList.add("dark-mode-button");
     localStorage.setItem("darkMode", "disabled");
     console.log("disabled");
 }
 
 if (currentState == "enabled") {
     enableDarkMode();
+} else {
+    disableDarkMode();
 }
 
 const trigger = () => {
