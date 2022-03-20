@@ -76,6 +76,20 @@ a:hover {
 }
 /* ----- End Back To Top ----- */
 
+/* ----- Navbar ----- */
+.navbar {
+    padding: 0;
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.navbar li {
+    position: relative;
+}
 /* ----- Hero Section -----*/
 .hero-container {
     width: 100%;
@@ -100,7 +114,7 @@ a:hover {
     transform: translateY(-50%);
 }
 .carousel-header {
-    font-family: "Raleway", sans-serif;
+    font-family: "Oxygen", sans-serif;
     font-size: 70px;
     top: 50%;
     transform: translateY(-50%);
@@ -129,7 +143,7 @@ a:hover {
     border-radius: 10px;
 }
 .intro-header-main, .intro-header-content {
-    font-family: "Raleway", sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
 .intro-header-main {
     margin-top: 0;
@@ -162,7 +176,7 @@ a:hover {
 
 /* ----- Soft Skills Section ----- */
 .soft-skills-header-main, .soft-skills-header-content, .hard-skills-header-main, .hard-skills-header-gauge {
-    font-family: "Raleway", sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
 .soft-skills-header-content {
     font-weight: 600;
@@ -189,7 +203,7 @@ a:hover {
 
 /* ----- Education Section ----- */
 .education-header-main {
-    font-family: "Raleway", sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
 .education-content-main {
     font-family: "Oxygen", sans-serif;
@@ -202,7 +216,7 @@ a:hover {
 
 /* ----- Projects Section ----- */
 .project-header-main, .project-header-iframe {
-    font-family: "Raleway", sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
 .project-header-iframe {
     font-weight: 600;
@@ -217,7 +231,7 @@ a:hover {
 
 /* ----- Contact Section ----- */
 .contact-header-main {
-    font-family: "Raleway", sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
 input, button {
     border: none;
@@ -233,7 +247,8 @@ input:focus, textarea:focus, button:focus {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
+input:-webkit-autofill:active, 
+textarea:-webkit-autofill:active {
     -webkit-transition-delay: 9999s;
     transition-delay: 9999s;
 }
@@ -252,6 +267,7 @@ textarea {
     resize: none;
     width: 100%;
     height: 45vh;
+    background-color: transparent;
     margin: 0 auto;
     border: 2px solid;
     border-color: #6BD600;

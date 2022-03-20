@@ -29,6 +29,8 @@
 
     <!-- -------------------- Dark Mode -------------------- -->
     <button id="toggleDm" class="buttonDm bi bi-lamp"></button>
+
+    <!-- -------------------- Nav bar -------------------- -->
     
     <!-- -------------------- Hero Section -------------------- -->
 <section id="hero">
@@ -228,7 +230,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>
-                        <input type="text" id="fname" name="fname" placeholder="First name">
+                        <input type="text" id="fname" name="fname" required placeholder="First name">
                     </div>
 
                     <div class="col-lg-6">
@@ -243,7 +245,7 @@
 
                     <div class="col-lg-6">
                         <label for="email"></label>
-                        <input type="text" id="email" name="email" placeholder="Email">
+                        <input type="email" id="email" name="email" required placeholder="Email">
                     </div>
                     <div class="contact-checkbox-section mt-4">
                         <div>What is your prefered method of contact?</div>

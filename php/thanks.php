@@ -46,7 +46,6 @@
                 <div>
                     <!-- php goes here -->
                     <?php
-
                         function data_input($data) {
                             $data = htmlspecialchars($data);
                             $data = trim($data);
