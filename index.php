@@ -25,13 +25,49 @@
 </head>
 <body>
     <!-- -------------------- Back To Top -------------------- -->
-    <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up"></a>
+    <div>
+        <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up"></a>
+    </div>
 
     <!-- -------------------- Dark Mode -------------------- -->
     <button id="toggleDm" class="buttonDm bi bi-lamp"></button>
 
     <!-- -------------------- Nav bar -------------------- -->
-    
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <a href="#" class="navbar-brand mb-0 h1">Navbar</a>
+
+        <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Item 1</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Item 2</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Item 3</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Item 4</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Item 5</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!-- -------------------- Hero Section -------------------- -->
 <section id="hero">
     <div class="container-fluid p-0 hero-container">
@@ -270,7 +306,7 @@
                         <label for="content"></label>
                         <textarea name="content" id="content" placeholder="Message"></textarea>
                     </div>
-                    <button id="submit" class="btn btn-secondary mt-3 col-lg-2" type="submit">Submit form</button>
+                    <button id="submit" class="btn btn-secondary mt-3 col-lg-2" type="submit">Send</button>
                 </div>
             </form>
         </div>

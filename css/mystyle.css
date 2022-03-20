@@ -77,24 +77,13 @@ a:hover {
 /* ----- End Back To Top ----- */
 
 /* ----- Navbar ----- */
-.navbar {
-    padding: 0;
-}
-.navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-.navbar li {
-    position: relative;
-}
+
 /* ----- Hero Section -----*/
 .hero-container {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    margin-top: 0;
 }
 .carousel-container {
     display: flex;
@@ -233,14 +222,14 @@ a:hover {
 .contact-header-main {
     font-family: "Oxygen", sans-serif;
 }
-input, button {
+input{
     border: none;
     width: 100%;
     border-bottom: 2px solid;
     border-color: #6BD600;
     background-color: transparent;
 }
-input:focus, textarea:focus, button:focus {
+input:focus, textarea:focus, button.btn:focus {
     outline: none;
     
 }
@@ -280,6 +269,13 @@ ul {
 }
 li {
     list-style: none;
+}
+button.btn {
+    width: 15%;
+    color: lightgray;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 /* ----- End Contact Section ----- */
 
