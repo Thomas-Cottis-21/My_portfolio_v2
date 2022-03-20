@@ -49,17 +49,18 @@
 
                         function data_input($data) {
                             $data = htmlspecialchars($data);
+                            $data = trim($data);
+                            $data = stripslashes($data);
                             return $data;
                         }
 
                         $firstName = data_input($_POST["fname"]);
-                        $lastName = $_POST["lname"];
-                        $email = $_POST["email"];
-                        $number = $_POST["number"];
+                        $lastName = data_input($_POST["lname"]);
+                        $email = data_input($_POST["email"]);
+                        $number = data_input($_POST["number"]);
                         $contact = array (
-                            $_POST["Text"], $_POST["Call"], $_POST["Email"]
-                        );
-                        $content = $_POST["content"];
+                            $_POST["Text"], $_POST["Call"], $_POST["Email"]);
+                        $content = data_input($_POST["content"]);
 
                         if (!empty($number)) {
                             $number = " | " . $number;
@@ -68,6 +69,13 @@
                     <ul>
                         <li><?=$firstName . " " . $lastName?></li>
                         <li><?=$email . $number?></li>
+                        <li>
+                            <?php
+                                foreach($contact as $display) {
+                                    ?><span><?=$display . " "?></span><?php
+                                }
+                            ?>
+                        </li>
                     </ul>
                 </div>
             </div>
