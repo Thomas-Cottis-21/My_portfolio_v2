@@ -29,30 +29,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Sora:wght@100&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="container-fluid">
         <div class="thanks-page">
-            <div class="thanks-header-main">
-                <div class="mt-4">Thank you</div>
-            </div>
-            <div class="thanks-information-header">
-                <div>
-                    <div class="mt-4">Your confirmation email was sent!</div>
-                    <div class="mt-1">Please review your recorded information: </div>
-                </div>
-            </div>
             <div class="thanks-information-content">
                 <div>
-                    <!-- php goes here -->
-                    <?php
-                        function data_input($data) {
-                            $data = htmlspecialchars($data);
-                            $data = trim($data);
-                            $data = stripslashes($data);
+                <!-- php goes here -->
+                <?php
+                    function data_input($data) {
+                        $data = htmlspecialchars($data);
+                        $data = trim($data);
+                        $data = stripslashes($data);
                             return $data;
-                        }
-
+                    }
                         $firstName = data_input($_POST["fname"]);
                         $lastName = data_input($_POST["lname"]);
                         $email = data_input($_POST["email"]);
@@ -61,40 +50,53 @@
                             $_POST["Text"], $_POST["Call"], $_POST["Email"]);
                         $content = data_input($_POST["content"]);
 
-                        if (!empty($number)) {
-                            $number = " | " . $number;
-                        }
-                    ?>
-                    <ul>
-                        <li><?=$firstName . " " . $lastName?></li>
-                        <li><?=$email . $number?></li>
-                        <li>
+                        $to = $email;
+                        $subject = "Thank you from Thomas Cottis";
+                        $message = "Thank you for looking over my site and reaching out to me! I'll get back to you within 24 hours!";
+                        
+                        $email_to = "thomascottis@thomasandco.xyz";
+                        $email_subject = "New Message!";
+                        $email_message = $firstName . "\n" . $email . "\n" . $number . "\n" . wordwrap($content, 70, "\r\n");
+                        $headers = "From: $name, $email";
+
+                        mail($email_to, $email_subject, $email_message, $headers);
+                ?>
+                    <div class="thanks-header-main">
+                        <div class="mt-4">Thank you</div>
+                    </div>
+                    <!-- php email form information end -->
+                    <div class="thanks-information-content">
+                        <?php
+                            if (mail($to, $subject, $message)) {
+                                ?><div class="mt-4"><?="Your confirmation email was sent!"?></div>
+                                <div class="mt-1"><?="Please double check your recorded information: "?></div>
+                                <?php
+                            } else {
+                                ?><div class="mt-1"><?="Unfortunatley, your email was not sent! Please try again."?></div>
+                                <div class="mt-1"><?="Please revise your contact information, as it may have been the cause:"?></div> <?php
+                            }
+                        ?>
+                        <?php
+                            if (!empty($number)) {
+                                $number = " | " . $number;
+                            }
+                        ?>
+                        <ul>
+                            <li><?=$firstName . " " . $lastName?></li>
+                            <li><?=$email . $number?></li>
+                            <li>
                             <?php
                                 foreach($contact as $display) {
                                     ?><span><?=$display . " "?></span><?php
                                 }
                             ?>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php
-        $to = $email;
-        $subject = "Thank you from Thomas Cottis";
-        $message = "Thank you for looking over my site and reaching out to me! I'll get back to you within 24 hours!";
-        $headers = "From: thomascottis@thomasandco.xyz";
-        
-        mail($to, $subject, $message, $headers);
-
-        $toThomas = "thomascottis@thomasandco.xyz";
-        $subjectThomas = "New Message!";
-        $messageThomas = $content;
-        $headersThomas = "From: thomascottis@thomasandco.xyz";
-
-        mail($toThomas, $subjectThomas, $messageThomas, $headersThomas);
-    ?>
+    <script src="/js/main.js"></script>
 </body>
-<script src="/js/main.js"></script>
 </html>
