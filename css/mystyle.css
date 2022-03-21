@@ -24,6 +24,10 @@ body {
 }
 /* ----- End Dark Mode ----- */
 
+#wrap .backgroundColor {
+    background-color: #A2C80A;
+}
+
 /* ----- Back To Top ----- */
 .return-to-top-button {
     opacity: 0;
@@ -36,7 +40,7 @@ body {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #55cd28;
+    
     color: white;
     cursor: pointer;
     border-radius: 4px;
@@ -63,9 +67,7 @@ body {
 }
 .show {
     opacity: 1;
-    transition: 0.8s;
-    justify-content: center;
-    align-items: center;
+    transition: 0.5s;
 }
 a {
     text-decoration: none;
@@ -77,12 +79,33 @@ a:hover {
 /* ----- End Back To Top ----- */
 
 /* ----- Navbar ----- */
-.nav-link {
-    color: whitesmoke;
+#navBar {
+    align-items: baseline;
+    justify-content: space-between;
+}
+.navbar-brand {
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
     font-family: "Oxygen", sans-serif;
 }
-nav.navbar {
-    background-color: #6BD600;
+.nav-link {
+    color: rgb(255, 255, 255);
+    font-family: "Oxygen", sans-serif;
+}
+/* ----- Navbar scroll opacity classes ----- */
+.navDark {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+.navLight {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+/* ----- Navbar mobile dropdown access ----- */
+button.navbar-toggler {
+    background-color: rgba(255, 255, 255, .5);
 }
 /* ----- Hero Section -----*/
 .hero-container {
@@ -146,7 +169,7 @@ nav.navbar {
 }
 .intro-header-content {
     font-weight: 600;
-    color: #6BD600;
+    
 }
 .intro-content {
     font-family: "Oxygen", sans-serif;
@@ -175,7 +198,7 @@ nav.navbar {
 }
 .soft-skills-header-content {
     font-weight: 600;
-    color: #55cd28;
+    
     justify-content: center;
 }
 .soft-skills-content {
@@ -188,7 +211,7 @@ nav.navbar {
 .hard-skills-header-gauge {
     margin-top: 10px;
     font-weight: 600;
-    color: #55cd28;
+    
 }
 .hard-skills-content {
     font-family: "Oxygen", sans-serif;
@@ -204,7 +227,7 @@ nav.navbar {
     font-family: "Oxygen", sans-serif;
 }
 .education-header-content {
-    color: #6BD600;
+    
     font-family: "Oxygen", sans-serif;
 }
 /* ----- End Education Section ----- */
@@ -215,7 +238,7 @@ nav.navbar {
 }
 .project-header-iframe {
     font-weight: 600;
-    color: #55cd28;
+    
 }
 .project-iframe {
     border: none;
@@ -232,7 +255,7 @@ input{
     border: none;
     width: 100%;
     border-bottom: 2px solid;
-    border-color: #6BD600;
+    
     background-color: transparent;
 }
 input:focus, textarea:focus, button.btn:focus {
@@ -265,7 +288,7 @@ textarea {
     background-color: transparent;
     margin: 0 auto;
     border: 2px solid;
-    border-color: #6BD600;
+    
     border-radius: 10px;
 }
 ul {
@@ -295,9 +318,7 @@ button.btn {
 .thanks-header-main, .thanks-information-header, .thanks.information-content {
     font-family: "Oxygen", sans-serif;
 }
-.thanks-header-main, .thanks-information-header {
-    color:#32b317;
-}
+
 .thanks-header-main {
     font-size: 140px;
 }
@@ -305,7 +326,7 @@ button.btn {
     font-size: 80px;
 }
 .thanks-information-content {
-    color:#6BD600;
+    
     font-family: "Oxygen", sans-serif;
     font-size: 60px;
 }

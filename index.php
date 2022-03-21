@@ -24,9 +24,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Sora:wght@100&display=swap&family=Nunito:wght@200&display=swap&family=Raleway:wght@200&display=swap"" rel="stylesheet">
 </head>
 <body>
+    <div id="wrap">
+
+    
     <!-- -------------------- Back To Top -------------------- -->
     <div>
-        <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up"></a>
+        <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up color"></a>
     </div>
 
     <!-- -------------------- Dark Mode -------------------- -->
@@ -34,8 +37,8 @@
 
     <!-- -------------------- Nav bar -------------------- -->
     <header class="fixed-top header-transparent">
-        <nav class="navbar navbar-expand-sm">
-            <a href="#" class="navbar-brand mb-0 h1">Navbar</a>
+        <nav class="navbar navbar-expand-lg" id="navBar">
+            <a href="#" class="navbar-brand">Thomas Joseph Cottis</a>
 
             <button class="navbar-toggler" 
             type="button" 
@@ -44,7 +47,7 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="bi bi-arrow-bar-down"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -59,7 +62,7 @@
                         <a href="#" class="nav-link">Item 2</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Item 3</a>
+                        <a href="#" class="nav-link" id='green'>Item 3</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Item 4</a>
@@ -331,6 +334,6 @@
     <script>
         AOS.init();
     </script>
-
+    </div>
 </body>
 </html>
