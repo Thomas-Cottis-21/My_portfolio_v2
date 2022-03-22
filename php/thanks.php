@@ -53,11 +53,13 @@
                         $to = $email;
                         $subject = "Thank you from Thomas Cottis";
                         $message = "Thank you for looking over my site and reaching out to me! I'll get back to you within 24 hours!";
-                        
+                        $headers = "From: thomascottis@thomasandco.xyz";
+
+                        mail($to, $subject, $message, $headers);
+
                         $email_to = "thomascottis@thomasandco.xyz";
                         $email_subject = "New Message!";
-                        $email_message = $firstName . "\n" . $email . "\n" . $number . "\n" . wordwrap($content, 70, "\r\n");
-                        $headers = "From: $name, $email";
+                        $email_message = $firstName . " " . $lastName . "\n" . $email . "\n" . $number . "\n" . wordwrap($content, 70, "\r\n");
 
                         mail($email_to, $email_subject, $email_message, $headers);
                 ?>
@@ -66,16 +68,6 @@
                     </div>
                     <!-- php email form information end -->
                     <div class="thanks-information-content">
-                        <?php
-                            if (mail($to, $subject, $message)) {
-                                ?><div class="mt-4"><?="Your confirmation email was sent!"?></div>
-                                <div class="mt-1"><?="Please double check your recorded information: "?></div>
-                                <?php
-                            } else {
-                                ?><div class="mt-1"><?="Unfortunatley, your email was not sent! Please try again."?></div>
-                                <div class="mt-1"><?="Please revise your contact information, as it may have been the cause:"?></div> <?php
-                            }
-                        ?>
                         <?php
                             if (!empty($number)) {
                                 $number = " | " . $number;
