@@ -74,3 +74,15 @@ const trigger = () => {
 }
 darkModeButton.addEventListener("click", trigger);
 //localStorage.clear();
+
+//adding class "color" to all queries in order to change color of entire site based on one class
+    let test = document.getElementById("buttonTest");
+
+function changeColor() {
+    const colored = document.getElementsByClassName("color");
+    for (let i = 0; i < colored.length; i++) {
+        colored[i].style.color = "red";
+        console.log("changeColor is running");
+    }
+}
+    test.addEventListener("click", changeColor);

@@ -24,8 +24,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Sora:wght@100&display=swap&family=Nunito:wght@200&display=swap&family=Raleway:wght@200&display=swap"" rel="stylesheet">
 </head>
 <body>
-    <div id="wrap">
-
     
     <!-- -------------------- Back To Top -------------------- -->
     <div>
@@ -34,6 +32,8 @@
 
     <!-- -------------------- Dark Mode -------------------- -->
     <button id="toggleDm" class="buttonDm bi bi-lamp"></button>
+
+    <button id="buttonTest"></button>
 
     <!-- -------------------- Nav bar -------------------- -->
     <header class="fixed-top header-transparent">
@@ -116,7 +116,7 @@
                 <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
             </div>
             <div class="col col-right-intro">
-                <h1 class="display-5 intro-header-main">Lorem ipsum dolor sit amet</h1>
+                <h1 class="display-5 intro-header-main color">Lorem ipsum dolor sit amet</h1>
                 <p class="intro-content">Nulla dui tellus, blandit sed ipsum sed, pellentesque pretium ante. Pellentesque ut lectus eros. Donec cursus, felis ut luctus fermentum, nibh magna condimentum nulla, in fringilla nunc lacus sit amet tortor.</p>
                 <hr> 
                 <div class="row row-cols-2">
@@ -334,6 +334,5 @@
     <script>
         AOS.init();
     </script>
-    </div>
 </body>
 </html>
