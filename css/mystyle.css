@@ -3,29 +3,27 @@ body, html {
 }
 body {
     overflow-x: hidden;
-    background-color: lightgray;
+    background-color: #f9f9f9;
 }
 @media (min-width: 1400px){
     body {
         overflow-x: auto;
     }
 }
-/* ----- Color Switches ----- */
-.color {
-    transition: 0.5s;
+p {
+    font-size: 20px;
 }
-
 /* ----- Dark Mode ----- */
 .dark-mode {
-    background-color: #5E5E5E;
+    background-color: #5e5e5e;
 }
 .dark-mode-button {
-    background-color: #5E5E5E;
-    color: lightgray;
+    background-color: #5e5e5e;
+    color: #f9f9f9;
 }
 .light-mode-button {
-    background-color: lightgray;
-    color: #5E5E5E;
+    background-color: #f9f9f9;
+    color: #5e5e5e;
 }
 .buttonDm {
     opacity: 0;
@@ -75,7 +73,7 @@ a {
 }
 a:hover {
     text-decoration: none;
-    color: lightgray;
+    color: #f9f9f9;
 }
 /* ----- End Back To Top ----- */
 
@@ -90,15 +88,24 @@ a:hover {
     font-family: "Oxygen", sans-serif;
 }
 .nav-link {
-    color: black;
+    color: whitesmoke;
     font-family: "Oxygen", sans-serif;
+    font-size: 20px;
 }
 .nav-link:hover {
-    color: black;
+    color: #aaaaaa;
+}
+.dropdown-menu {
+    transition: ease-in-out;
+    transition-duration: 0.5s;
 }
 /* ----- Nav Color Preferences ----- */
+.color {
+    transition: 0.5s;
+}
 .preferences-color-button {
     width: 100%;
+    background-color: transparent;
     border: none;
     padding: 10px;
     text-align: center;
@@ -107,22 +114,22 @@ a:hover {
     font-size: 15px;
 }
 .green {
-    background-color: #a2c80a;
+    color: #a2c80a;
 }
 .orange {
-    background-color: #ffc600;
+    color: #ffc600;
 }
 .red {
-    background-color: #ff4000;
+    color: #ff4000;
 }
 .light-blue {
-    background-color: #00beff;
+    color: #00beff;
 }
 .dark-blue {
-    background-color: #007eff;
+    color: #007eff;
 }
 .gray {
-    background-color: #aaaaaa;
+    color: #aaaaaa;
 }
 /* ----- Nav End Color Preferences ----- */
 
@@ -133,7 +140,7 @@ a:hover {
     transition-duration: 0.5s;
 }
 .navLight {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: ease-in-out;
     transition-duration: 0.5s;
 }
@@ -212,7 +219,6 @@ a:hover {
 }
 .intro-header-content {
     font-weight: 600;
-    
 }
 .intro-content {
     font-family: "Oxygen", sans-serif;
@@ -373,6 +379,7 @@ button.btn {
     font-family: "Oxygen", sans-serif;
     font-size: 60px;
 }
+
 @media (max-width: 1400px) {
     .thanks-header-main {
         font-size: 140px;

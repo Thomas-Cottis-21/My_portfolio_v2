@@ -1,14 +1,17 @@
 //dark mode, navbar and back to top appear and disappear based on scroll from top height
 const toTopAppear = () => {
 
-    //fromTop fullscreen = 300
+    //fromTop fullscreen = 600
     let toTop = document.getElementById("backToTop");
     let navBar = document.getElementById("navBar");
+    let dropDown = document.getElementById("dropdownMenu");
     const buttonEnable = () => {
         toTop.classList.add("show");
         darkModeButton.classList.add("show");
         navBar.classList.add("navDark");
         navBar.classList.remove("navLight");
+        dropDown.classList.add("navDark");
+        dropDown.classList.remove("navLight");
     }
 
     const buttonDisable = () => {
@@ -16,6 +19,8 @@ const toTopAppear = () => {
         darkModeButton.classList.remove("show");
         navBar.classList.remove("navDark");
         navBar.classList.add("navLight");
+        dropDown.classList.remove("navDark");
+        dropDown.classList.add("navLight");
     }
 
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
@@ -96,7 +101,6 @@ function changeColor(type) {
     const colored = document.getElementsByClassName("color");
     for (let i = 0; i < colored.length; i++) {
         colored[i].style.color = type;
-        console.log("changeColor is running");
     }
 }
 
@@ -104,7 +108,6 @@ function changeBorderColor(typeBorder) {
     const colored = document.getElementsByClassName("border-color");
     for (let i = 0; i < colored.length; i++) {
         colored[i].style.borderColor = typeBorder;
-        console.log("changeColor is running");
     }
 }
 
@@ -112,7 +115,6 @@ function changeBackgroundColor(typeBackground) {
     const colored = document.getElementsByClassName("background-color");
     for (let i = 0; i < colored.length; i++) {
         colored[i].style.backgroundColor = typeBackground;
-        console.log("changeColor is running");
     }
 }
     buttonGreen.addEventListener("click", function() {

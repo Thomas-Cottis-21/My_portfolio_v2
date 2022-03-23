@@ -51,22 +51,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a href="#" class="nav-link color">Home</a>
+                        <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link color">Item 1</a>
+                        <a href="#" class="nav-link">Item 1</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link color">Item 2</a>
+                        <a href="#" class="nav-link">Item 2</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link color">Item 3</a>
+                        <a href="#" class="nav-link">Item 3</a>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown btn-group">
                             <p class="nav-link dropdown-toggle color" type="button" data-bs-toggle="dropdown">Preferences</p>
 
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" id="dropdownMenu">
                                 <li><button class="preferences-color-button green" id="green">Green</button></li>
                                 <li><button class="preferences-color-button orange" id="orange">Orange</button></li>
                                 <li><button class="preferences-color-button red" id="red">Red</button></li>
@@ -77,7 +77,7 @@
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a href="#" class="nav-link color">Item 5</a>
+                        <a href="#" class="nav-link">Item 5</a>
                     </li>
                 </ul>
             </div>
