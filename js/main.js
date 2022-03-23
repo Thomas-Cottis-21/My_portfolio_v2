@@ -78,11 +78,71 @@ darkModeButton.addEventListener("click", trigger);
 //adding class "color" to all queries in order to change color of entire site based on one class
     let test = document.getElementById("buttonTest");
 
-function changeColor() {
+    let buttonGreen = document.getElementById("green");
+    let buttonOrange = document.getElementById("orange");
+    let buttonRed = document.getElementById("red");
+    let buttonLightBlue = document.getElementById("light-blue");
+    let buttonDarkBlue = document.getElementById("dark-blue");
+    let buttonGray = document.getElementById("gray");
+
+    const green = "#a2c80a";
+    const orange = "#ffc600";
+    const red = "#ff4000";
+    const lightBlue = "#00beff";
+    const darkBlue = "#007eff";
+    const gray = "#aaaaaa";
+
+function changeColor(type) {
     const colored = document.getElementsByClassName("color");
     for (let i = 0; i < colored.length; i++) {
-        colored[i].style.color = "red";
+        colored[i].style.color = type;
         console.log("changeColor is running");
     }
 }
-    test.addEventListener("click", changeColor);
+
+function changeBorderColor(typeBorder) {
+    const colored = document.getElementsByClassName("border-color");
+    for (let i = 0; i < colored.length; i++) {
+        colored[i].style.borderColor = typeBorder;
+        console.log("changeColor is running");
+    }
+}
+
+function changeBackgroundColor(typeBackground) {
+    const colored = document.getElementsByClassName("background-color");
+    for (let i = 0; i < colored.length; i++) {
+        colored[i].style.backgroundColor = typeBackground;
+        console.log("changeColor is running");
+    }
+}
+    buttonGreen.addEventListener("click", function() {
+        changeColor(green);
+        changeBorderColor(green);
+        changeBackgroundColor(green);
+    });
+    buttonOrange.addEventListener("click", function() {
+        changeColor(orange);
+        changeBorderColor(orange);
+        changeBackgroundColor(orange);
+    });
+    buttonRed.addEventListener("click", function() {
+        changeColor(red);
+        changeBorderColor(red);
+        changeBackgroundColor(red);
+        
+    });
+    buttonLightBlue.addEventListener("click", function() {
+        changeColor(lightBlue);
+        changeBorderColor(lightBlue);
+        changeBackgroundColor(lightBlue);
+    });
+    buttonDarkBlue.addEventListener("click", function() {
+        changeColor(darkBlue);
+        changeBorderColor(darkBlue);
+        changeBackgroundColor(darkBlue);
+    });
+    buttonGray.addEventListener("click", function() {
+        changeColor(gray);
+        changeBorderColor(gray);
+        changeBackgroundColor(gray);
+    });
