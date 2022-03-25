@@ -12,7 +12,7 @@
         echo "Database status: ";
 
         echo "Database connection was successful<br>";
-    } catch(PDOException $error) {
+    } catch (PDOException $error) {
         echo "Database connection: failed" . "<br>" . $error -> getMessage();
     }
 
