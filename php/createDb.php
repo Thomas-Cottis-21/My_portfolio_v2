@@ -2,20 +2,12 @@
     $hostname = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "myFirstDatabase";
+    $dbname = "test";
+
     try {
-        $conn = new PDO("mysql:host=$hostname;dbname=$dbname;,username, password");
+        $conn = new PDO("mysql:host=$hostname;dbname=$dbname;,$username, $password");
 
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //$sql = "CREATE DATABASE myFirstDatabase";
-
-        echo "Database connection: successful";
-
-        //$conn->exec($sql);
-
-        echo "Database created successfully<br>";
-    } catch(PDOException $error) {
-        echo "Database connection: failed" . $error -> getMessage();
+        $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $error) {
+        echo "Database status: failed " . $error -> getMessage();
     }
-
-    $conn = null;
