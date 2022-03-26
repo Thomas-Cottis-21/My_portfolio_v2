@@ -247,7 +247,6 @@ a:hover {
 }
 .soft-skills-header-content {
     font-weight: 600;
-    
     justify-content: center;
 }
 .soft-skills-content {
@@ -304,12 +303,10 @@ input{
     border: none;
     width: 100%;
     border-bottom: 2px solid;
-    
     background-color: transparent;
 }
 input:focus, textarea:focus, button.btn:focus {
     outline: none;
-    
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -337,7 +334,6 @@ textarea {
     background-color: transparent;
     margin: 0 auto;
     border: 2px solid;
-    
     border-radius: 10px;
 }
 ul {
@@ -348,12 +344,12 @@ ul {
 li {
     list-style: none;
 }
-button.btn {
-    width: 15%;
-    color: lightgray;
-    justify-content: center;
-    margin-top: 5px;
-    margin-bottom: 20px;
+.contact-button-submit {
+    width: 20%;
+    height: auto;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
 }
 /* ----- End Contact Section ----- */
 
@@ -367,7 +363,6 @@ button.btn {
 .thanks-header-main, .thanks-information-header, .thanks.information-content {
     font-family: "Oxygen", sans-serif;
 }
-
 .thanks-header-main {
     font-size: 140px;
 }
@@ -400,6 +395,10 @@ button.btn {
     }
     .thanks-information-content {
         font-size: 50px;
+    }
+    .contact-checkboxes {
+        flex-direction: column;
+        align-items: center;
     }
     .thanks-page {
         flex-direction: column;

@@ -36,6 +36,11 @@
                 <div>
                 <!-- php goes here -->
                 <?php
+
+                    $firstName = $lastName = $email = $number = $contact = $content = "";
+
+                    if (!empty($_POST["email"])) {
+
                     function data_input($data) {
                         $data = htmlspecialchars($data);
                         $data = trim($data);
@@ -49,25 +54,27 @@
                         $contact = array (
                             $_POST["Text"], $_POST["Call"], $_POST["Email"]);
                         $content = data_input($_POST["content"]);
-
+                        
                         $to = $email;
                         $subject = "Thank you from Thomas Cottis";
                         $message = "Thank you for looking over my site and reaching out to me! I'll get back to you within 24 hours!";
                         $headers = "From: thomascottis@thomasandco.xyz";
 
                         mail($to, $subject, $message, $headers);
+                    }
+                        /*
 
                         $email_to = "thomascottis@thomasandco.xyz";
                         $email_subject = "New Message!";
                         $email_message = $firstName . " " . $lastName . "\n" . $email . "\n" . $number . "\n" . wordwrap($content, 70, "\r\n");
 
-                        mail($email_to, $email_subject, $email_message, $headers);
+                        mail($email_to, $email_subject, $email_message, $headers);*/
                 ?>
-                    <div class="thanks-header-main">
-                        <div class="mt-4 color">Thank you</div>
+                    <div class="thanks-header-main color">
+                        <div class="mt-4">Thank you</div>
                     </div>
                     <!-- php email form information end -->
-                    <div class="thanks-information-content color">
+                    <div class="thanks-information-content">
                         <?php
                             if (!empty($number)) {
                                 $number = " | " . $number;

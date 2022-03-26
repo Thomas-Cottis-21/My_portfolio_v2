@@ -102,6 +102,7 @@ function changeColor(type) {
     for (let i = 0; i < colored.length; i++) {
         colored[i].style.color = type;
     }
+    localStorage.setItem("color", type);
 }
 
 function changeBorderColor(typeBorder) {
@@ -117,6 +118,42 @@ function changeBackgroundColor(typeBackground) {
         colored[i].style.backgroundColor = typeBackground;
     }
 }
+
+    let savedColor = localStorage.getItem("color");
+
+    switch(savedColor) {
+        case "#a2c80a":
+            changeColor(green);
+            changeBorderColor(green);
+            changeBackgroundColor(green);
+            break;
+        case "#ffc600":
+            changeColor(orange);
+            changeBorderColor(orange);
+            changeBackgroundColor(orange);
+            break;
+        case "#ff4000":
+            changeColor(red);
+            changeBorderColor(red);
+            changeBackgroundColor(red);
+            break;
+        case "#00beff":
+            changeColor(lightBlue);
+            changeBorderColor(lightBlue);
+            changeBackgroundColor(lightBlue);
+            break;
+        case "#007eff":
+            changeColor(darkBlue);
+            changeBorderColor(darkBlue);
+            changeBackgroundColor(darkBlue);
+            break;
+        case "#aaaaaa":
+            changeColor(gray);
+            changeBorderColor(gray);
+            changeBackgroundColor(gray);
+            break;
+    }
+
     buttonGreen.addEventListener("click", function() {
         changeColor(green);
         changeBorderColor(green);
