@@ -1,10 +1,12 @@
 //dark mode, navbar and back to top appear and disappear based on scroll from top height
 const toTopAppear = () => {
 
-    //fromTop fullscreen = 600
+//naming variables for what will appear and disappear (anvbar, back to top and dark mode buttons)
     let toTop = document.getElementById("backToTop");
     let navBar = document.getElementById("navBar");
     let dropDown = document.getElementById("dropdownMenu");
+
+//this funcion shows the buttons and changes the navbar css to dark insead of light
     const buttonEnable = () => {
         toTop.classList.add("show");
         darkModeButton.classList.add("show");
@@ -14,6 +16,7 @@ const toTopAppear = () => {
         dropDown.classList.remove("navLight");
     }
 
+//this function makes the buttons disappear and changes the navbar to light instead of dark css
     const buttonDisable = () => {
         toTop.classList.remove("show");
         darkModeButton.classList.remove("show");
@@ -23,6 +26,7 @@ const toTopAppear = () => {
         dropDown.classList.add("navLight");
     }
 
+//this calls the functions above when the page has reached 600 pixels from the top
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
         buttonEnable();
         console.log("appearing");
@@ -31,13 +35,19 @@ const toTopAppear = () => {
         console.log("disappearing");
     }
 }
+
+//this calls the function on scroll
 window.addEventListener("scroll", toTopAppear);
 
 //Dark Mode
 
+//naming variables linked to local storage in order to check status
 let currentState = localStorage.getItem("darkMode");
+
+//naming the button
 let darkModeButton = document.getElementById("toggleDm");
 
+//this function changes the background to dark by adding dark class to body element as well as changing the button style respectively
 const enableDarkMode = () => {
     document.body.classList.add("dark-mode");
     darkModeButtonEnable();
@@ -45,6 +55,7 @@ const enableDarkMode = () => {
     console.log("enabled");
 }
 
+//this function changes the background to light by adding dark class to body element as well as changing the button style respectively
 const disableDarkMode = () => {
     document.body.classList.remove("dark-mode");
     darkModeButtonDisable();
@@ -52,22 +63,26 @@ const disableDarkMode = () => {
     console.log("disabled");
 }
 
+//this function sets the parameters executed by the functions above in order to change the style of the dark mode button
 const darkModeButtonEnable = () => {
     darkModeButton.classList.add("light-mode-button");
     darkModeButton.classList.remove("dark-mode-button");
 }
 
+//this function sets the parameters executed by the functions above in order to change the style of the dark mode button
 const darkModeButtonDisable = () => {
     darkModeButton.classList.remove("light-mode-button");
     darkModeButton.classList.add("dark-mode-button");
 }
 
+//this function checks the status of the body element so that on load the system rememebers if it was enabled or disabled based on local storage status
 if (currentState == "enabled") {
     enableDarkMode();
 } else {
     disableDarkMode();
 }
 
+//this function triggers the change on click as well as updating the variable
 const trigger = () => {
     currentState = localStorage.getItem("darkMode");
 
@@ -77,8 +92,11 @@ const trigger = () => {
         disableDarkMode();
     }
 }
+
+//runs trigger on click
 darkModeButton.addEventListener("click", trigger);
 //localStorage.clear();
+
 
 //adding class "color" to all queries in order to change color of entire site based on one class
 
@@ -105,7 +123,6 @@ function changeColor(type) {
         colored[i].style.color = type;
     }
     localStorage.setItem("savedColor", type);
-    console.log("the color should have changed");
 }
 
 //second function that loops through all the elements with the border-color class, creates and applies the border-color class, passing in the argument type, which will later be filled by one of the color variables
@@ -156,40 +173,47 @@ function changeBackgroundColor(typeBackground) {
         changeBackgroundColor(gray);
     });
 
-//accessing local storage variable on load in order to accuratley run switch
+    //accessing local storage variable in order to accuratley run switch
     let selectColor = localStorage.getItem("savedColor");
-
-//the switch that will apply the current color saved on the local storage
-    switch(selectColor) {
-        case "#a2c80a":
-            changeColor(green);
-            changeBorderColor(green);
-            changeBackgroundColor(green);
-            break;
-        case "#ffc600":
-            changeColor(orange);
-            changeBorderColor(orange);
-            changeBackgroundColor(orange);
-            break;
-        case "#ff4000":
-            changeColor(red);
-            changeBorderColor(red);
-            changeBackgroundColor(red);
-            break;
-        case "#00beff":
-            changeColor(lightBlue);
-            changeBorderColor(lightBlue);
-            changeBackgroundColor(lightBlue);
-            break;
-        case "#007eff":
-            changeColor(darkBlue);
-            changeBorderColor(darkBlue);
-            changeBackgroundColor(darkBlue);
-            break;
-        case "#aaaaaa":
-            changeColor(gray);
-            changeBorderColor(gray);
-            changeBackgroundColor(gray);
-            break;
-    }
+    
+    //the switch that will apply the current color saved on the local storage
+        switch(selectColor) {
+            case "#a2c80a":
+                changeColor(green);
+                changeBorderColor(green);
+                changeBackgroundColor(green);
+                console.log(selectColor);
+                break;
+            case "#ffc600":
+                changeColor(orange);
+                changeBorderColor(orange);
+                changeBackgroundColor(orange);
+                console.log(selectColor);
+                break;
+            case "#ff4000":
+                changeColor(red);
+                changeBorderColor(red);
+                changeBackgroundColor(red);
+                console.log(selectColor);
+                break;
+            case "#00beff":
+                changeColor(lightBlue);
+                changeBorderColor(lightBlue);
+                changeBackgroundColor(lightBlue);
+                console.log(selectColor);
+                break;
+            case "#007eff":
+                changeColor(darkBlue);
+                changeBorderColor(darkBlue);
+                changeBackgroundColor(darkBlue);
+                console.log(selectColor);
+                break;
+            case "#aaaaaa":
+                changeColor(gray);
+                changeBorderColor(gray);
+                changeBackgroundColor(gray);
+                console.log(selectColor);
+                break;
+        }
+    
     //localStorage.clear();
