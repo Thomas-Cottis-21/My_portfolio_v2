@@ -321,7 +321,7 @@
                         <label for="content"></label>
                         <textarea class="border-color" name="content" id="content" placeholder="Message"></textarea>
                     </div>
-                    <button id="submit" class="contact-button-submit mt-3 col-lg-2 background-color" type="submit">Send</button>
+                    <button id="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" type="submit">Send</button>
                 </div>
             </form>
         </div>

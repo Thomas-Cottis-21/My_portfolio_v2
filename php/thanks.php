@@ -70,8 +70,8 @@
 
                         mail($email_to, $email_subject, $email_message, $headers);*/
                 ?>
-                    <div class="thanks-header-main color">
-                        <div class="mt-4">Thank you</div>
+                    <div class="thanks-header-main">
+                        <div class="mt-4 color">Thank you</div>
                     </div>
                     <!-- php email form information end -->
                     <div class="thanks-information-content">
@@ -81,7 +81,7 @@
                             }
                         ?>
                         <ul>
-                            <li><?=$firstName . " " . $lastName?></li>
+                            <li class="color"><?=$firstName . " " . $lastName?></li>
                             <li><?=$email . $number?></li>
                             <li>
                             <?php

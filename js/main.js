@@ -81,15 +81,16 @@ darkModeButton.addEventListener("click", trigger);
 //localStorage.clear();
 
 //adding class "color" to all queries in order to change color of entire site based on one class
-    let test = document.getElementById("buttonTest");
 
+//naming variables to the preference buttons in the navbar
     let buttonGreen = document.getElementById("green");
     let buttonOrange = document.getElementById("orange");
     let buttonRed = document.getElementById("red");
     let buttonLightBlue = document.getElementById("light-blue");
     let buttonDarkBlue = document.getElementById("dark-blue");
     let buttonGray = document.getElementById("gray");
-
+    
+//naming variables that define each color
     const green = "#a2c80a";
     const orange = "#ffc600";
     const red = "#ff4000";
@@ -97,14 +98,17 @@ darkModeButton.addEventListener("click", trigger);
     const darkBlue = "#007eff";
     const gray = "#aaaaaa";
 
+//first function that loops through all the elements with the color class, creates and applies the color class, passing in the argument type, which will later be filled by one of the color variables
 function changeColor(type) {
     const colored = document.getElementsByClassName("color");
     for (let i = 0; i < colored.length; i++) {
         colored[i].style.color = type;
     }
-    localStorage.setItem("color", type);
+    localStorage.setItem("savedColor", type);
+    console.log("the color should have changed");
 }
 
+//second function that loops through all the elements with the border-color class, creates and applies the border-color class, passing in the argument type, which will later be filled by one of the color variables
 function changeBorderColor(typeBorder) {
     const colored = document.getElementsByClassName("border-color");
     for (let i = 0; i < colored.length; i++) {
@@ -112,6 +116,7 @@ function changeBorderColor(typeBorder) {
     }
 }
 
+//third function that loops through all the elements with the background-color class, creates and applies the backgrouond-color class, passing in the argument type, which will later be filled by one of the color variables
 function changeBackgroundColor(typeBackground) {
     const colored = document.getElementsByClassName("background-color");
     for (let i = 0; i < colored.length; i++) {
@@ -119,9 +124,43 @@ function changeBackgroundColor(typeBackground) {
     }
 }
 
-    let savedColor = localStorage.getItem("color");
+//event listeners that will trigger the functions above to create and apply the classes
+    buttonGreen.addEventListener("click", function() {
+        changeColor(green);
+        changeBorderColor(green);
+        changeBackgroundColor(green);
+    });
+    buttonOrange.addEventListener("click", function() {
+        changeColor(orange);
+        changeBorderColor(orange);
+        changeBackgroundColor(orange);
+    });
+    buttonRed.addEventListener("click", function() {
+        changeColor(red);
+        changeBorderColor(red);
+        changeBackgroundColor(red);
+    });
+    buttonLightBlue.addEventListener("click", function() {
+        changeColor(lightBlue);
+        changeBorderColor(lightBlue);
+        changeBackgroundColor(lightBlue);
+    });
+    buttonDarkBlue.addEventListener("click", function() {
+        changeColor(darkBlue);
+        changeBorderColor(darkBlue);
+        changeBackgroundColor(darkBlue);
+    });
+    buttonGray.addEventListener("click", function() {
+        changeColor(gray);
+        changeBorderColor(gray);
+        changeBackgroundColor(gray);
+    });
 
-    switch(savedColor) {
+//accessing local storage variable on load in order to accuratley run switch
+    let selectColor = localStorage.getItem("savedColor");
+
+//the switch that will apply the current color saved on the local storage
+    switch(selectColor) {
         case "#a2c80a":
             changeColor(green);
             changeBorderColor(green);
@@ -153,35 +192,4 @@ function changeBackgroundColor(typeBackground) {
             changeBackgroundColor(gray);
             break;
     }
-
-    buttonGreen.addEventListener("click", function() {
-        changeColor(green);
-        changeBorderColor(green);
-        changeBackgroundColor(green);
-    });
-    buttonOrange.addEventListener("click", function() {
-        changeColor(orange);
-        changeBorderColor(orange);
-        changeBackgroundColor(orange);
-    });
-    buttonRed.addEventListener("click", function() {
-        changeColor(red);
-        changeBorderColor(red);
-        changeBackgroundColor(red);
-        
-    });
-    buttonLightBlue.addEventListener("click", function() {
-        changeColor(lightBlue);
-        changeBorderColor(lightBlue);
-        changeBackgroundColor(lightBlue);
-    });
-    buttonDarkBlue.addEventListener("click", function() {
-        changeColor(darkBlue);
-        changeBorderColor(darkBlue);
-        changeBackgroundColor(darkBlue);
-    });
-    buttonGray.addEventListener("click", function() {
-        changeColor(gray);
-        changeBorderColor(gray);
-        changeBackgroundColor(gray);
-    });
+    //localStorage.clear();
