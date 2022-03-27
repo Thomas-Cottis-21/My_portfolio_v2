@@ -1,3 +1,7 @@
+//pathname of the current document
+let path = window.location.pathname;
+
+
 //dark mode, navbar and back to top appear and disappear based on scroll from top height
 const toTopAppear = () => {
 
@@ -35,9 +39,13 @@ const toTopAppear = () => {
         console.log("disappearing");
     }
 }
+console.log(path);
 
 //this calls the function on scroll
-window.addEventListener("scroll", toTopAppear);
+if (path == "/index.php") {
+    console.log('you should be seeing this in index');
+    window.addEventListener("scroll", toTopAppear);   
+}
 
 //Dark Mode
 
@@ -49,16 +57,20 @@ let darkModeButton = document.getElementById("toggleDm");
 
 //this function changes the background to dark by adding dark class to body element as well as changing the button style respectively
 const enableDarkMode = () => {
+    if (path == "/index.php") {
+        darkModeButtonEnable();
+    }
     document.body.classList.add("dark-mode");
-    darkModeButtonEnable();
     localStorage.setItem("darkMode", "enabled");
     console.log("enabled");
 }
 
 //this function changes the background to light by adding dark class to body element as well as changing the button style respectively
 const disableDarkMode = () => {
+    if (path == "/index.php") {
+        darkModeButtonDisable();
+    }
     document.body.classList.remove("dark-mode");
-    darkModeButtonDisable();
     localStorage.setItem("darkMode", "disabled");
     console.log("disabled");
 }
@@ -76,11 +88,11 @@ const darkModeButtonDisable = () => {
 }
 
 //this function checks the status of the body element so that on load the system rememebers if it was enabled or disabled based on local storage status
-if (currentState == "enabled") {
-    enableDarkMode();
-} else {
-    disableDarkMode();
-}
+    if (currentState == "enabled") {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
 
 //this function triggers the change on click as well as updating the variable
 const trigger = () => {
@@ -94,11 +106,16 @@ const trigger = () => {
 }
 
 //runs trigger on click
+if (path == "/index.php") {
 darkModeButton.addEventListener("click", trigger);
 //localStorage.clear();
+}
 
 
 //adding class "color" to all queries in order to change color of entire site based on one class
+
+//accessing local storage variable in order to accuratley run switch
+    let selectColor = localStorage.getItem("savedColor");
 
 //naming variables to the preference buttons in the navbar
     let buttonGreen = document.getElementById("green");
@@ -142,6 +159,7 @@ function changeBackgroundColor(typeBackground) {
 }
 
 //event listeners that will trigger the functions above to create and apply the classes
+if (path == "/index.php") {
     buttonGreen.addEventListener("click", function() {
         changeColor(green);
         changeBorderColor(green);
@@ -172,48 +190,56 @@ function changeBackgroundColor(typeBackground) {
         changeBorderColor(gray);
         changeBackgroundColor(gray);
     });
+}
 
-    //accessing local storage variable in order to accuratley run switch
-    let selectColor = localStorage.getItem("savedColor");
-    
-    //the switch that will apply the current color saved on the local storage
-        switch(selectColor) {
-            case "#a2c80a":
-                changeColor(green);
-                changeBorderColor(green);
-                changeBackgroundColor(green);
-                console.log(selectColor);
-                break;
-            case "#ffc600":
-                changeColor(orange);
-                changeBorderColor(orange);
-                changeBackgroundColor(orange);
-                console.log(selectColor);
-                break;
-            case "#ff4000":
-                changeColor(red);
-                changeBorderColor(red);
-                changeBackgroundColor(red);
-                console.log(selectColor);
-                break;
-            case "#00beff":
-                changeColor(lightBlue);
-                changeBorderColor(lightBlue);
-                changeBackgroundColor(lightBlue);
-                console.log(selectColor);
-                break;
-            case "#007eff":
-                changeColor(darkBlue);
-                changeBorderColor(darkBlue);
-                changeBackgroundColor(darkBlue);
-                console.log(selectColor);
-                break;
-            case "#aaaaaa":
-                changeColor(gray);
-                changeBorderColor(gray);
-                changeBackgroundColor(gray);
-                console.log(selectColor);
-                break;
-        }
-    
-    //localStorage.clear();
+//the switch that will apply the current color saved on the local storage
+const findColor = () => {
+    switch(selectColor) {
+        case "#a2c80a":
+            changeColor(green);
+            changeBorderColor(green);
+            changeBackgroundColor(green);
+            console.log(selectColor);
+            break;
+        case "#ffc600":
+            changeColor(orange);
+            changeBorderColor(orange);
+            changeBackgroundColor(orange);
+            console.log(selectColor);
+            break;
+        case "#ff4000":
+            changeColor(red);
+            changeBorderColor(red);
+            changeBackgroundColor(red);
+            console.log(selectColor);
+            break;
+        case "#00beff":
+            changeColor(lightBlue);
+            changeBorderColor(lightBlue);
+            changeBackgroundColor(lightBlue);
+            console.log(selectColor);
+            break;
+        case "#007eff":
+            changeColor(darkBlue);
+            changeBorderColor(darkBlue);
+            changeBackgroundColor(darkBlue);
+            console.log(selectColor);
+            break;
+        case "#aaaaaa":
+            changeColor(gray);
+            changeBorderColor(gray);
+            changeBackgroundColor(gray);
+            console.log(selectColor);
+            break;
+    }
+//localStorage.clear();
+
+
+
+
+
+
+
+
+}
+findColor();
