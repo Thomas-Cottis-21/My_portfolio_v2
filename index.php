@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Sora:wght@100&display=swap&family=Nunito:wght@200&display=swap&family=Raleway:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="home"></div>
     <!-- -------------------- Back To Top -------------------- -->
     <div>
         <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up background-color"></a>
@@ -50,8 +50,8 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">Home</a>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link">About</a>
