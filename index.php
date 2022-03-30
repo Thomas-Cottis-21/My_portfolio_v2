@@ -35,7 +35,7 @@
 
     <!-- -------------------- Nav bar -------------------- -->
     <header class="fixed-top header-transparent">
-        <nav class="navbar navbar-expand-lg" id="navBar">
+        <nav class="navbar navbar-expand-lg navLight" id="navBar">
             <a href="#" class="navbar-brand">Thomas Joseph Cottis</a>
 
             <button class="navbar-toggler background-color" 
@@ -54,19 +54,34 @@
                         <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Item 1</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Item 2</a>
+                        <a href="#skills" class="nav-link">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Item 3</a>
+                        <a href="#skills2" class="nav-link">Skills 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education" class="nav-link">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown btn-group">
+                            <p class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown">Projects</p>
+
+                            <ul class="dropdown-menu navLight" id="dropdownMenu">
+                                <li><a href="#firstPort" class="projects-dropdown-button">My First Portfolio</a></li>
+                                <li><a href="#polygraph" class="projects-dropdown-button">Polygraph Business</a></li>
+                                <li><a href="#flute" class="projects-dropdown-button">Flute Instructor</a></li>
+                                <li><a href="#cerakote" class="projects-dropdown-button">Cerakote Business</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown btn-group">
                             <p class="nav-link dropdown-toggle color" type="button" data-bs-toggle="dropdown">Preferences</p>
 
-                            <ul class="dropdown-menu" id="dropdownMenu">
+                            <ul class="dropdown-menu navLight" id="dropdownMenu">
                                 <li><button class="preferences-color-button green" id="green">Green</button></li>
                                 <li><button class="preferences-color-button orange" id="orange">Orange</button></li>
                                 <li><button class="preferences-color-button red" id="red">Red</button></li>
@@ -77,7 +92,7 @@
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a href="#" class="nav-link">Item 5</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -119,7 +134,7 @@
     <!-- -------------------- End Hero Section -------------------- -->
 
     <!-- -------------------- Intro Section -------------------- -->
-    <div class="container d-flex">
+    <div class="container d-flex" id="about">
         <div id="intro-container-row" class="row">
             <div class="col-6 intro-container-image">
                 <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
@@ -128,20 +143,20 @@
                 <h1 class="display-5 intro-header-main color">Lorem ipsum dolor sit amet</h1>
                 <p class="intro-content">Nulla dui tellus, blandit sed ipsum sed, pellentesque pretium ante. Pellentesque ut lectus eros. Donec cursus, felis ut luctus fermentum, nibh magna condimentum nulla, in fringilla nunc lacus sit amet tortor.</p>
                 <hr> 
-                <div class="row row-cols-2">
-                    <div class="col">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
                         <div class="display-6 intro-header-content color">fact1</div>
                         <p class="intro-content">Vivamus ultricies ipsum mauris, vestibulum iaculis quam viverra ut. Nullam posuere leo a lectus iaculis, venenatis mollis eros mollis.</p>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-6 col-md-12">
                         <div class="display-6 intro-header-content color">fact2</div>
                         <p class="intro-content">Curabitur ac risus lacinia, sollicitudin ante et, dignissim velit. Quisque id odio nibh. Aenean magna est, feugiat eu faucibus a, rhoncus sit amet nisl.</p>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-6 col-md-12">
                         <div class="display-6 intro-header-content color">fact3</div>
                         <p class="intro-content">Quisque lobortis, ex nec venenatis porta, nisl magna pellentesque quam, non mollis neque dolor in magna. Nunc vitae vestibulum odio, non congue ex. Cras pretium mauris non odio laoreet, ac egestas velit scelerisque.</p>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-6 col-md-12">
                         <div class="display-6 intro-header-content color">fact4</div>
                         <p class="intro-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales. Pellentesque maximus tempus purus, sed rhoncus est tincidunt sed.</p>
                     </div>
@@ -152,7 +167,7 @@
     <!-- -------------------- End Intro Section -------------------- -->
 
     <!-- -------------------- Skills Section -------------------- -->
-    <div class="container">
+    <div class="container" id="skills">
         <div class="display-3 d-flex mt-5 justify-content-center soft-skills-header-main color">Soft Skills</div>
         <div class="row">
                 <div class="col-lg-4 col-md-6 col-xs mt-5">
@@ -184,7 +199,7 @@
     <!-- -------------------- End Soft Skills Section -------------------- -->
 
     <!-- -------------------- Hard Skills Section -------------------- -->
-    <div class="container">
+    <div class="container" id="skills2">
         <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color">Hard Skills</div>
         <p class="mt-4 text-center hard-skills-content">Fusce dui eros, semper ac rutrum et, tempus sed velit. Mauris a interdum nisi. Fusce ornare urna pretium nulla gravida porttitor. Ut et est ut lectus venenatis cursus vel vitae leo. Donec mattis purus eu dignissim luctus. Phasellus quis quam et felis fringilla egestas ac nec leo. Nam lobortis ipsum id nisi mollis, eu viverra felis pharetra.</p>
     </div>
@@ -219,7 +234,7 @@
     <!-- -------------------- End Hard Skills Section -------------------- -->
 
     <!-- -------------------- Education Section -------------------- -->
-    <div class="container">
+    <div class="container" id="education">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main color">Education</div>
         <p class="mt-4 text-center education-content-main">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
         <div class="row row-col-2 text-center">
@@ -238,33 +253,33 @@
     <!-- -------------------- End Education Section -------------------- -->
 
     <!-- -------------------- Projects Section -------------------- -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="projects">
         <div class="display-3 d-flex mt-5 justify-content-center project-header-main color">Projects</div>
         <div class="row row-cols-1 d-flex justify-content-center text-center">
             <div class="col">
                 <div class="embed-responsive">
-                    <div class="display-6 mt-5 project-header-iframe color">My First Portfolio</div>
+                    <div class="display-6 mt-5 project-header-iframe color" id="firstPort">My First Portfolio</div>
                     <p class="mb-2">//This is where the description for the iframes will go</p>
                     <iframe class="project-iframe" src="https://google.com/" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
-                    <div class="display-6 mt-5 project-header-iframe color">Grandpas' Polygraph Business</div>
+                    <div class="display-6 mt-5 project-header-iframe color" id="polygraph">Grandpas' Polygraph Business</div>
                     <p class="mb-2">//This is where the description for the iframes will go</p>
                     <iframe class="project-iframe" src="https://projectpolygraph.netlify.app/" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
-                    <div class="display-6 mt-5 project-header-iframe color">Friends' flute instructor freelance</div>
+                    <div class="display-6 mt-5 project-header-iframe color" id="flute">Friends' flute instructor freelance</div>
                     <p class="mb-2">//This is where the description for the iframes will go</p>
                     <iframe class="project-iframe" src="https://shaloraflute.netlify.app/" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
-                    <div class="display-6 mt-5 project-header-iframe color">Cerakote business startup</div>
+                    <div class="display-6 mt-5 project-header-iframe color" id="cerakote">Cerakote business startup</div>
                     <p class="mb-2">//This is where the description for the iframes will go</p>
                     <iframe class="project-iframe" src="https://joshcerakote.netlify.app/" frameborder="0"></iframe>
                 </div>
@@ -274,7 +289,7 @@
     <!-- -------------------- End Projects Section -------------------- -->
 
     <!-- -------------------- Contact Section -------------------- -->
-    <section>
+    <section id="contact">
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color">Contact</div>
         <div id="contactForm" class="container">
             <form id="myForm" action="/php/thanks.php" method="POST">

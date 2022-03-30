@@ -15,10 +15,10 @@ p {
 }
 /* ----- Dark Mode ----- */
 .dark-mode {
-    background-color: #5e5e5e;
+    background-color: #8e8e8e;
 }
 .dark-mode-button {
-    background-color: #5e5e5e;
+    background-color: #8e8e8e;
     color: #f9f9f9;
 }
 .light-mode-button {
@@ -96,6 +96,7 @@ a:hover {
     color: #aaaaaa;
 }
 .dropdown-menu {
+    padding: 0;
     transition: ease-in-out;
     transition-duration: 0.5s;
 }
@@ -112,6 +113,9 @@ a:hover {
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
+}
+.preferences-color-button:hover {
+    background-color:rgba(0, 0, 0, 0.6);
 }
 .green {
     color: #a2c80a;
@@ -135,12 +139,12 @@ a:hover {
 
 /* ----- Navbar scroll opacity classes ----- */
 .navDark {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: ease-in-out;
     transition-duration: 0.5s;
 }
 .navLight {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     transition: ease-in-out;
     transition-duration: 0.5s;
 }
@@ -281,6 +285,20 @@ a:hover {
 /* ----- End Education Section ----- */
 
 /* ----- Projects Section ----- */
+.projects-dropdown-button {
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+.projects-dropdown-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
 .project-header-main, .project-header-iframe {
     font-family: "Oxygen", sans-serif;
 }

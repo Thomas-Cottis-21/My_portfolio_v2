@@ -8,26 +8,19 @@ const toTopAppear = () => {
 //naming variables for what will appear and disappear (anvbar, back to top and dark mode buttons)
     let toTop = document.getElementById("backToTop");
     let navBar = document.getElementById("navBar");
-    let dropDown = document.getElementById("dropdownMenu");
-
 //this funcion shows the buttons and changes the navbar css to dark insead of light
     const buttonEnable = () => {
         toTop.classList.add("show");
         darkModeButton.classList.add("show");
         navBar.classList.add("navDark");
-        navBar.classList.remove("navLight");
-        dropDown.classList.add("navDark");
-        dropDown.classList.remove("navLight");
+        navBar.classList.remove('navLight');
     }
 
 //this function makes the buttons disappear and changes the navbar to light instead of dark css
     const buttonDisable = () => {
         toTop.classList.remove("show");
         darkModeButton.classList.remove("show");
-        navBar.classList.remove("navDark");
         navBar.classList.add("navLight");
-        dropDown.classList.remove("navDark");
-        dropDown.classList.add("navLight");
     }
 
 //this calls the functions above when the page has reached 600 pixels from the top
@@ -233,13 +226,5 @@ const findColor = () => {
             break;
     }
 //localStorage.clear();
-
-
-
-
-
-
-
-
 }
 findColor();
