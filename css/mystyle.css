@@ -139,12 +139,12 @@ a:hover {
 
 /* ----- Navbar scroll opacity classes ----- */
 .navDark {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     transition: ease-in-out;
     transition-duration: 0.5s;
 }
 .navLight {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     transition: ease-in-out;
     transition-duration: 0.5s;
 }
