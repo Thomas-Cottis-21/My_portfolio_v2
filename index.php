@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="I can create you an effective money making machine to help you on your way to success without breaking the bank.">
     <meta name="author" content="Thomas Joseph Cottis">
+    <meta name="keywords" content="Local, Web developer, Web designer, cheap, good">
     <title>Thomas Cottis Website Design & Development</title>
     
 
