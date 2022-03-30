@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio V2</title>
+    <meta name="description" content="I can create you an effective money making machine to help you on your way to success without breaking the bank.">
+    <meta name="author" content="Thomas Joseph Cottis">
+    <title>Thomas Cottis Website Design & Development</title>
+    
 
     <!-- -------------------- Bootstrap CDN link -------------------- -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
