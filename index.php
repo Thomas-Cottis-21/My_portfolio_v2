@@ -92,6 +92,7 @@
                                 <li><button class="preferences-color-button light-blue" id="light-blue">Light Blue</button></li>
                                 <li><button class="preferences-color-button dark-blue" id="dark-blue">Dark Blue</button></li>
                                 <li><button class="preferences-color-button gray" id="gray">Gray</button></li>
+                                <li><button class="preferences-color-button pink" id="pink">Pink</button></li>
                             </ul>
                         </div>
                     </li>

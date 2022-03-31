@@ -68,7 +68,9 @@
                         $email_subject = "New Message!";
                         $email_message = $firstName . " " . $lastName . "\n" . $email . "\n" . $number . "\n" . wordwrap($content, 70, "\r\n");
 
-                        mail($email_to, $email_subject, $email_message, $headers);*/
+                        mail($email_to, $email_subject, $email_message, $headers);
+                        
+                        */
                 ?>
                     <div class="thanks-header-main">
                         <div class="mt-4 color">Thank you</div>

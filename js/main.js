@@ -117,6 +117,7 @@ darkModeButton.addEventListener("click", trigger);
     let buttonLightBlue = document.getElementById("light-blue");
     let buttonDarkBlue = document.getElementById("dark-blue");
     let buttonGray = document.getElementById("gray");
+    let buttonPink = document.getElementById("pink");
     
 //naming variables that define each color
     const green = "#a2c80a";
@@ -125,6 +126,7 @@ darkModeButton.addEventListener("click", trigger);
     const lightBlue = "#00beff";
     const darkBlue = "#007eff";
     const gray = "#aaaaaa";
+    const pink = "#ff8989";
 
 //first function that loops through all the elements with the color class, creates and applies the color class, passing in the argument type, which will later be filled by one of the color variables
 function changeColor(type) {
@@ -183,6 +185,11 @@ if (path !== "/php/thanks.php") {
         changeBorderColor(gray);
         changeBackgroundColor(gray);
     });
+    buttonPink.addEventListener("click", function() {
+        changeColor(pink);
+        changeBorderColor(pink);
+        changeBackgroundColor(pink);
+    });
 }
 
 //the switch that will apply the current color saved on the local storage
@@ -222,6 +229,12 @@ const findColor = () => {
             changeColor(gray);
             changeBorderColor(gray);
             changeBackgroundColor(gray);
+            console.log(selectColor);
+            break;
+        case "#ff8989":
+            changeColor(pink);
+            changeBorderColor(pink);
+            changeBackgroundColor(pink);
             console.log(selectColor);
             break;
     }
