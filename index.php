@@ -1,3 +1,109 @@
+<?php 
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
+    $firstName = $lastName = $number = $email = $contact = $content = "";
+
+    $fNameErr = $fNameFormatErr = $emailErr = $emailFormatErr = $contentErr = $contactErr = "";
+
+    $formErr = FALSE;
+
+    function data_filter($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $firstName = data_filter($_POST["fname"]);
+        $lastName = data_filter($_POST["lname"]);
+        $number = data_filter($_POST["number"]);
+        $email = data_filter($_POST["email"]);
+        //$contact = data_filter($_POST["contact"]);
+        $content = data_filter($_POST["content"]);
+
+
+        if (empty($_POST["fname"])) {
+            $fNameErr = "* First or business name is required";
+            $formErr = TRUE;
+        } else {
+            $firstName = data_filter($_POST["fname"]);
+
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
+                $fNameFormatErr = "Only letters and white space please";
+                $formErr = TRUE;
+            }
+        }
+
+        if (empty($_POST["email"])) {
+            $emailErr = "* Email is required";
+            $formErr = TRUE;
+        } else {
+            $email = data_filter($_POST["email"]);
+            
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $emailFormatErr = "Invalid email format";
+                $formErr = TRUE;
+            }
+        }
+        /*
+        if (empty($_POST["contact"])) {
+            $contactErr = "* Prefered method of contact is required";
+            $formErr = TRUE;
+        } else {
+            $contact = data_filter($_POST["contact"]);
+        }
+        */
+        if (empty($_POST["Message"])) {
+            $contentErr = "* A general message is required (Say Hi!)";
+            $formErr = TRUE;
+        } else {
+            $content = data_filter($_POST["content"]);
+        }
+    }
+
+    if (($_SERVER["REQUEST_METHOD"] == "POST") && (!($formErr))) {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        //$databasename = "test";
+
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=test", $username, $password);
+
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $sql = "INSERT INTO Clients (firstname, lastname, email) VALUES (:firstname, :lastname, :email)";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(":firstname", $firstName, PDO::PARAM_STR);
+            $stmt->bindParam(":lastname", $lastName, PDO::PARAM_STR);
+            $stmt->bindParam(":email", $email, PDO::PARAM_STR);
+            $stmt->execute();
+
+            $_SESSION["message"] = "<p>Your form was successfully submitted.</p>";
+
+            $_SESSION["complete"] = true;
+
+            header("Location: " . $_SERVER["REQUEST-URI"]);
+            return;
+
+        } catch(PDOException $error) {
+            $_SESSION["message"] = "<p>We apologize, the form was not submitted successfully. Please try again at a later time.</p>";
+
+            echo "<script>console.log('DB Error: " . addslashes($error->getMessage()) . "')</script>";
+            
+            $_SESSION["complete"] = true;
+
+            header("Location: " . $_SERVER["REQUEST_URI"]);
+            return;
+
+            $conn = null;
+        }
+    } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -297,55 +403,78 @@
     <section id="contact">
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color">Contact</div>
         <div id="contactForm" class="container">
-            <form id="myForm" action="/php/thanks.php" method="POST">
+            <form id="myForm" action="<?= $_SERVER["PHP_SELF"]; ?>" method="POST">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>
-                        <input class="border-color" type="text" id="fname" name="fname" required placeholder="First name">
+                        <input class="border-color" type="text" id="fname" name="fname" value="<?= $firstName ?>" placeholder="First name">
+                        <span class="error"><?= $fNameErr ?></span>
+                        <span class="error"><?= $fNameFormatErr ?></span>
                     </div>
 
                     <div class="col-lg-6">
                         <label for="last-name"></label>
-                        <input class="border-color" type="text" id="lname" name="lname" placeholder="Last name">
+                        <input class="border-color" type="text" id="lname" name="lname" value="<?= $lastName ?>" placeholder="Last name">
                     </div>
 
                     <div class="col-lg-2">
                         <label for="number"></label>
-                        <input class="border-color" type="text" id="number" name="number" placeholder="Number">
+                        <input class="border-color" type="text" id="number" name="number" value="<?= $number ?>" placeholder="Number">
                     </div>
 
                     <div class="col-lg-6">
                         <label for="email"></label>
-                        <input class="border-color" type="email" id="email" name="email" required placeholder="Email">
+                        <input class="border-color" type="email" id="email" name="email" value="<?= $email ?>" placeholder="Email">
+                        <span class="error"><?= $emailErr ?></span>
+                        <span class="error"><?= $emailFormatErr ?></span>
                     </div>
                     <div class="contact-checkbox-section mt-4">
                         <div>What is your prefered method of contact?</div>
+                        <span class="error"><?= $contactErr ?></span>
                         <div class="contact-checkboxes d-flex mt-4">
                             <div class="col-lg-2">
                                 <label for="contact">Text message</label>
-                                <input type="checkbox" id="textbox" name="Text" value="Text">
+                                <input type="checkbox" name="contact[]">
                             </div>
 
                             <div class="col-lg-2">
                                 <label for="contact">Phone call</label>
-                                <input type="checkbox" id="callbox" name="Call" value="Call">
+                                <input type="checkbox" name="contact[]">
                             </div>
 
                             <div class="col-lg-2">
                                 <label for="contact">Email</label>
-                                <input type="checkbox" id="emailbox" name="Email" value="email">
+                                <input type="checkbox" name="contact[]">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <label for="content"></label>
-                        <textarea class="border-color" name="content" id="content" placeholder="Message"></textarea>
+                        <textarea class="border-color" name="content" id="content" value="<?= $content ?>" placeholder="Message"></textarea>
+                        <span class="error"><?= $contentErr ?></span>
                     </div>
                     <button id="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" type="submit">Send</button>
                 </div>
             </form>
         </div>
     </section>
+    <div id="thanksModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                    <h4 class="modal-title">Modal header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is the modal body</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- -------------------- End Contact Section -------------------- -->
 
     <!-- -------------------- Bootstrap CDN -------------------- -->

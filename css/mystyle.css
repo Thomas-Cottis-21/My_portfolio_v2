@@ -372,6 +372,12 @@ li {
     border: none;
     border-radius: 10px;
 }
+.error {
+    font-family: "Oxygen", sans-serif;
+    color: red;
+    text-align: left;
+    font-size: 15px;
+}
 /* ----- End Contact Section ----- */
 
 /* ----- thanks.php Section ----- */

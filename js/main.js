@@ -35,10 +35,8 @@ const toTopAppear = () => {
 console.log(path);
 
 //this calls the function on scroll
-if (path !== "/php/thanks.php") {
     console.log('you should be seeing this in index');
     window.addEventListener("scroll", toTopAppear);   
-}
 
 //Dark Mode
 
@@ -50,9 +48,7 @@ let darkModeButton = document.getElementById("toggleDm");
 
 //this function changes the background to dark by adding dark class to body element as well as changing the button style respectively
 const enableDarkMode = () => {
-    if (path !== "/php/thanks.php") {
-        darkModeButtonEnable();
-    }
+    darkModeButtonEnable();
     document.body.classList.add("dark-mode");
     localStorage.setItem("darkMode", "enabled");
     console.log("enabled");
@@ -60,9 +56,7 @@ const enableDarkMode = () => {
 
 //this function changes the background to light by adding dark class to body element as well as changing the button style respectively
 const disableDarkMode = () => {
-    if (path !== "/php/thanks.php") {
-        darkModeButtonDisable();
-    }
+    darkModeButtonDisable();
     document.body.classList.remove("dark-mode");
     localStorage.setItem("darkMode", "disabled");
     console.log("disabled");
@@ -99,10 +93,8 @@ const trigger = () => {
 }
 
 //runs trigger on click
-if (path !== "/php/thanks.php") {
 darkModeButton.addEventListener("click", trigger);
 //localStorage.clear();
-}
 
 
 //adding class "color" to all queries in order to change color of entire site based on one class
@@ -154,7 +146,6 @@ function changeBackgroundColor(typeBackground) {
 }
 
 //event listeners that will trigger the functions above to create and apply the classes
-if (path !== "/php/thanks.php") {
     buttonGreen.addEventListener("click", function() {
         changeColor(green);
         changeBorderColor(green);
@@ -190,7 +181,6 @@ if (path !== "/php/thanks.php") {
         changeBorderColor(pink);
         changeBackgroundColor(pink);
     });
-}
 
 //the switch that will apply the current color saved on the local storage
 const findColor = () => {
