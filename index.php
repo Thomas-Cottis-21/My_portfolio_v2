@@ -391,7 +391,7 @@
     <section id="contact">
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color">Contact</div>
         <div id="contactForm" class="container">
-            <form id="myForm" action="<?= $_SERVER["PHP_SELF"]; ?>" method="POST">
+            <form id="myForm" action="" method="POST">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>
