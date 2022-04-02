@@ -2,28 +2,21 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
+    $dbname = "test";
 
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=test", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Database connected successfully";
+        echo "Database connected successfully ";
 
-        $stmt = $conn->prepare("INSERT INTO Clients (firstname, lastname, email)
-        VALUES (:firstname, :lastname, :email)");
-        $stmt->bindParam(":firstname", $firstName, PDO::PARAM_STR);
-        $stmt->bindParam(":lastname", $lastName, PDO::PARAM_STR);
-        $stmt->bindParam(":email", $email, PDO::PARAM_STR);
-        $stmt->execute();
+        $sql = "INSERT INTO clients (firstname, lastname, email) VALUES ('Thomas', 'Cottis', 'email')";
 
-        $firstName = "testfname";
-        $lastName = "testlName";
-        $email = "testEmail";
-        $stmt ->execute();
-
-
+        $conn->exec($sql);
+        
     } catch(PDOException $error) {
-        echo "Connection failed: " . "/n" . $error->getMessage();
+        echo $sql . $error->getMessage();
     }
+
     $conn = null;
 ?>

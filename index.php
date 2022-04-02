@@ -3,9 +3,9 @@
         session_start();
     }
 
-    $firstName = $lastName = $number = $email = $contact = $content = "";
+    $firstName = $lastName = $number = $email = $content = "";
 
-    $fNameErr = $fNameFormatErr = $emailErr = $emailFormatErr = $contentErr = $contactErr = "";
+    $fNameErr = $fNameFormatErr = $emailErr = $emailFormatErr = $contactErr = $contentErr = "";
 
     $formErr = FALSE;
 
@@ -21,7 +21,7 @@
         $lastName = data_filter($_POST["lname"]);
         $number = data_filter($_POST["number"]);
         $email = data_filter($_POST["email"]);
-        //$contact = data_filter($_POST["contact"]);
+        $contact = ($_POST["contact"]);
         $content = data_filter($_POST["content"]);
 
 
@@ -29,7 +29,7 @@
             $fNameErr = "* First or business name is required";
             $formErr = TRUE;
         } else {
-            $firstName = data_filter($_POST["fname"]);
+            $firstName;
 
             if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
                 $fNameFormatErr = "Only letters and white space please";
@@ -41,26 +41,26 @@
             $emailErr = "* Email is required";
             $formErr = TRUE;
         } else {
-            $email = data_filter($_POST["email"]);
+            $email;
             
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $emailFormatErr = "Invalid email format";
                 $formErr = TRUE;
             }
         }
-        /*
+        
         if (empty($_POST["contact"])) {
             $contactErr = "* Prefered method of contact is required";
             $formErr = TRUE;
         } else {
-            $contact = data_filter($_POST["contact"]);
+            $contact;
         }
-        */
-        if (empty($_POST["Message"])) {
+        
+        if (empty($_POST["content"])) {
             $contentErr = "* A general message is required (Say Hi!)";
             $formErr = TRUE;
         } else {
-            $content = data_filter($_POST["content"]);
+            $contactStr = implode(", ", $contact);
         }
     }
 
@@ -68,40 +68,28 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        //$databasename = "test";
+        $dbname = "test";
 
         try {
-            $conn = new PDO("mysql:host=$servername;dbname=test", $username, $password);
-
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+            
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+            $stmt = $conn->prepare("INSERT INTO clients (firstname, lastname, email, message, contact) VALUES (:firstname, :lastname, :email, :message, :contact)");
+            $stmt->bindParam(':firstname', $firstName);
+            $stmt->bindParam(':lastname', $lastName);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':contact', $contactStr);
+            $stmt->bindParam(':message', $content);
 
-            $sql = "INSERT INTO Clients (firstname, lastname, email) VALUES (:firstname, :lastname, :email)";
-
-            $stmt = $conn->prepare($sql);
-            $stmt->bindParam(":firstname", $firstName, PDO::PARAM_STR);
-            $stmt->bindParam(":lastname", $lastName, PDO::PARAM_STR);
-            $stmt->bindParam(":email", $email, PDO::PARAM_STR);
             $stmt->execute();
-
-            $_SESSION["message"] = "<p>Your form was successfully submitted.</p>";
-
-            $_SESSION["complete"] = true;
-
-            header("Location: " . $_SERVER["REQUEST-URI"]);
-            return;
+            
 
         } catch(PDOException $error) {
-            $_SESSION["message"] = "<p>We apologize, the form was not submitted successfully. Please try again at a later time.</p>";
-
-            echo "<script>console.log('DB Error: " . addslashes($error->getMessage()) . "')</script>";
-            
-            $_SESSION["complete"] = true;
-
-            header("Location: " . $_SERVER["REQUEST_URI"]);
-            return;
-
-            $conn = null;
+            echo "ERROR: " . $error->getMessage();
         }
+
+        $conn = null;
     } 
 ?>
 <!DOCTYPE html>
@@ -434,42 +422,60 @@
                         <div class="contact-checkboxes d-flex mt-4">
                             <div class="col-lg-2">
                                 <label for="contact">Text message</label>
-                                <input type="checkbox" name="contact[]">
+                                <input type="checkbox" name="contact[]" value="Text">
                             </div>
 
                             <div class="col-lg-2">
                                 <label for="contact">Phone call</label>
-                                <input type="checkbox" name="contact[]">
+                                <input type="checkbox" name="contact[]" value="Call">
                             </div>
 
                             <div class="col-lg-2">
                                 <label for="contact">Email</label>
-                                <input type="checkbox" name="contact[]">
+                                <input type="checkbox" name="contact[]" value="Email">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <label for="content"></label>
-                        <textarea class="border-color" name="content" id="content" value="<?= $content ?>" placeholder="Message"></textarea>
+                        <textarea class="border-color" name="content" id="content" value="" placeholder="Message"><?php if (isset($content)) echo $content ?></textarea>
                         <span class="error"><?= $contentErr ?></span>
                     </div>
-                    <button id="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" type="submit">Send</button>
+                    <button id="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" type="submit" data-toggle="modal" data-target="#thanksModal">Send</button>
                 </div>
             </form>
         </div>
     </section>
-    <div id="thanksModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    
+    <ul>
+        <li><?=$firstName?></li>
+        <li><?=$lastName?></li>
+        <li><?=$email?></li>
+        <li><?=$content?></li>
+        <?php 
+            if (!empty($_POST["contact"])) {
+                foreach($_POST["contact"] as $value) {
+                    ?><li><?= $value ?></li><?php
+                }
+            }
+            ?>
+    </ul>
+
+    <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times</button>
-                    <h4 class="modal-title">Modal header</h4>
+                    <h5 class="modal-title" id="modalLabel">Modal Title</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">$times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <p>This is the modal body</p>
+                    <p>Modal content</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="button">Save Changes</button>
                 </div>
             </div>
         </div>
@@ -480,7 +486,7 @@
     <!-- -------------------- Bootstrap CDN -------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
+    
     <!-- -------------------- Custom js -------------------- -->
 
     <script src="/js/main.js"></script>
