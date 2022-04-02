@@ -441,41 +441,39 @@
                         <textarea class="border-color" name="content" id="content" value="" placeholder="Message"><?php if (isset($content)) echo $content ?></textarea>
                         <span class="error"><?= $contentErr ?></span>
                     </div>
-                    <button id="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" type="submit" data-toggle="modal" data-target="#thanksModal">Send</button>
+                    <button id="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" type="submit">Send</button>
                 </div>
             </form>
         </div>
     </section>
-    
-    <ul>
-        <li><?=$firstName?></li>
-        <li><?=$lastName?></li>
-        <li><?=$email?></li>
-        <li><?=$content?></li>
-        <?php 
-            if (!empty($_POST["contact"])) {
-                foreach($_POST["contact"] as $value) {
-                    ?><li><?= $value ?></li><?php
-                }
-            }
-            ?>
-    </ul>
 
-    <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <button id="modalFire" class="btn background-color justify-content-center" data-bs-toggle="modal" data-bs-target="#thanksModal">Trigger modal</button>
+
+    <div id="thanksModal" class="modal fade" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true" role="dialog">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Modal Title</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">$times;</span>
-                    </button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="thanksModalLabel">Modal Header</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Modal content</p>
+                    <p>Modal body content</p>
+                    <ul>
+                        <li><?=$firstName?></li>
+                        <li><?=$lastName?></li>
+                        <li><?=$email?></li>
+                        <li><?=$content?></li>
+                        <?php 
+                            if (!empty($_POST["contact"])) {
+                                foreach($_POST["contact"] as $value) {
+                                    ?><li><?= $value ?></li><?php
+                                }
+                            }
+                        ?>
+                    </ul>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" type="button">Save Changes</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -486,7 +484,7 @@
     <!-- -------------------- Bootstrap CDN -------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    
+
     <!-- -------------------- Custom js -------------------- -->
 
     <script src="/js/main.js"></script>

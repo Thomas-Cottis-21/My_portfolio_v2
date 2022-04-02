@@ -15,10 +15,10 @@ p {
 }
 /* ----- Dark Mode ----- */
 .dark-mode {
-    background-color: #8e8e8e;
+    background-color: #3f3f3f;
 }
 .dark-mode-button {
-    background-color: #8e8e8e;
+    background-color: #3f3f3f;
     color: #f9f9f9;
 }
 .light-mode-button {
@@ -379,70 +379,3 @@ li {
     font-size: 15px;
 }
 /* ----- End Contact Section ----- */
-
-/* ----- thanks.php Section ----- */
-.thanks-page {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-.thanks-header-main, .thanks-information-content {
-    font-family: "Oxygen", sans-serif;
-}
-.thanks-header-main {
-    font-size: 140px;
-}
-.thanks-information-content {
-    font-size: 60px;
-}
-@media (max-width: 1400px) {
-    .thanks-header-main {
-        font-size: 140px;
-    }
-    .thanks-information-content {
-        font-size: 60px;
-    }
-}
-@media (max-width: 1100px) {
-    .thanks-header-main {
-        font-size: 120px;
-    }
-    .thanks-information-content {
-        font-size: 50px;
-    }
-    .contact-checkboxes {
-        flex-direction: column;
-        align-items: center;
-    }
-    .thanks-page {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
-    .thanks-header-main {
-        font-size: 100px;
-    }
-    .thanks-information-content {
-        font-size: 40px;
-    }
-    .thanks-page {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-@media (max-width: 500px) {
-    .thanks-header-main {
-        font-size: 70px;
-    }
-    .thanks-information-content {
-        font-size: 30px;
-    }
-    .thanks-page {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-/* ----- End thanks.php Section ----- */
-
