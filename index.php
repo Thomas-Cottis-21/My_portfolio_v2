@@ -240,24 +240,24 @@
             </div>
             <div class="col col-right-intro">
                 <h1 class="display-5 intro-header-main color">Lorem ipsum dolor sit amet</h1>
-                <p class="intro-content">Nulla dui tellus, blandit sed ipsum sed, pellentesque pretium ante. Pellentesque ut lectus eros. Donec cursus, felis ut luctus fermentum, nibh magna condimentum nulla, in fringilla nunc lacus sit amet tortor.</p>
+                <p class="intro-content dialog">Nulla dui tellus, blandit sed ipsum sed, pellentesque pretium ante. Pellentesque ut lectus eros. Donec cursus, felis ut luctus fermentum, nibh magna condimentum nulla, in fringilla nunc lacus sit amet tortor.</p>
                 <hr> 
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="display-6 intro-header-content color">fact1</div>
-                        <p class="intro-content">Vivamus ultricies ipsum mauris, vestibulum iaculis quam viverra ut. Nullam posuere leo a lectus iaculis, venenatis mollis eros mollis.</p>
+                        <p class="intro-content dialog">Vivamus ultricies ipsum mauris, vestibulum iaculis quam viverra ut. Nullam posuere leo a lectus iaculis, venenatis mollis eros mollis.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="display-6 intro-header-content color">fact2</div>
-                        <p class="intro-content">Curabitur ac risus lacinia, sollicitudin ante et, dignissim velit. Quisque id odio nibh. Aenean magna est, feugiat eu faucibus a, rhoncus sit amet nisl.</p>
+                        <p class="intro-content dialog">Curabitur ac risus lacinia, sollicitudin ante et, dignissim velit. Quisque id odio nibh. Aenean magna est, feugiat eu faucibus a, rhoncus sit amet nisl.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="display-6 intro-header-content color">fact3</div>
-                        <p class="intro-content">Quisque lobortis, ex nec venenatis porta, nisl magna pellentesque quam, non mollis neque dolor in magna. Nunc vitae vestibulum odio, non congue ex. Cras pretium mauris non odio laoreet, ac egestas velit scelerisque.</p>
+                        <p class="intro-content dialog">Quisque lobortis, ex nec venenatis porta, nisl magna pellentesque quam, non mollis neque dolor in magna. Nunc vitae vestibulum odio, non congue ex. Cras pretium mauris non odio laoreet, ac egestas velit scelerisque.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="display-6 intro-header-content color">fact4</div>
-                        <p class="intro-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales. Pellentesque maximus tempus purus, sed rhoncus est tincidunt sed.</p>
+                        <p class="intro-content dialog">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales. Pellentesque maximus tempus purus, sed rhoncus est tincidunt sed.</p>
                     </div>
                 </div>
             </div>
@@ -271,27 +271,27 @@
         <div class="row">
                 <div class="col-lg-4 col-md-6 col-xs mt-5">
                     <div class="display-6 d-flex soft-skills-header-content color">skill set one</div>
-                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                    <p class="mt-4 soft-skills-content dialog">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs mt-5">
                     <div class="display-6 d-flex soft-skills-header-content color">skill set two</div>
-                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                    <p class="mt-4 soft-skills-content dialog">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs mt-5">
                     <div class="display-6 d-flex soft-skills-header-content color">skill set three</div>
-                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                    <p class="mt-4 soft-skills-content dialog">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs mt-5">
                     <div class="display-6 d-flex soft-skills-header-content color">skill set four</div>
-                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                    <p class="mt-4 soft-skills-content dialog">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs mt-5">
                     <div class="display-6 d-flex soft-skills-header-content color">skill set five</div>
-                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                    <p class="mt-4 soft-skills-content dialog">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs mt-5">
                     <div class="display-6 d-flex soft-skills-header-content color">skill set six</div>
-                    <p class="mt-4 soft-skills-content">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                    <p class="mt-4 soft-skills-content dialog">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
                 </div>
             </div>
         </div>
@@ -300,33 +300,33 @@
     <!-- -------------------- Hard Skills Section -------------------- -->
     <div class="container" id="skills2">
         <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color">Hard Skills</div>
-        <p class="mt-4 text-center hard-skills-content">Fusce dui eros, semper ac rutrum et, tempus sed velit. Mauris a interdum nisi. Fusce ornare urna pretium nulla gravida porttitor. Ut et est ut lectus venenatis cursus vel vitae leo. Donec mattis purus eu dignissim luctus. Phasellus quis quam et felis fringilla egestas ac nec leo. Nam lobortis ipsum id nisi mollis, eu viverra felis pharetra.</p>
+        <p class="mt-4 text-center hard-skills-content dialog">Fusce dui eros, semper ac rutrum et, tempus sed velit. Mauris a interdum nisi. Fusce ornare urna pretium nulla gravida porttitor. Ut et est ut lectus venenatis cursus vel vitae leo. Donec mattis purus eu dignissim luctus. Phasellus quis quam et felis fringilla egestas ac nec leo. Nam lobortis ipsum id nisi mollis, eu viverra felis pharetra.</p>
     </div>
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-lg-4 col-md-6 col-xs">
                 <div class="display-6 hard-skills-header-gauge color">HTML</div>
-                <p>//This is where the wheel goes</p>
+                <p class="dialog">//This is where the wheel goes</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs">
                 <div class="display-6 hard-skills-header-gauge color">CSS</div>
-                <p>//This is where the wheel goes</p>
+                <p class="dialog">//This is where the wheel goes</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs">
                 <div class="display-6 hard-skills-header-gauge color">Bootstrap</div>
-                <p>//This is where the wheel goes</p>
+                <p class="dialog">//This is where the wheel goes</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs">
                 <div class="display-6 hard-skills-header-gauge color">JavaScript</div>
-                <p>//This is where the wheel goes</p>
+                <p class="dialog">//This is where the wheel goes</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs">
                 <div class="display-6 hard-skills-header-gauge color">PHP</div>
-                <p>//This is where the wheel goes</p>
+                <p class="dialog">//This is where the wheel goes</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs">
                 <div class="display-6 hard-skills-header-gauge color">MySQL</div>
-                <p>//This is where the wheel goes</p>
+                <p class="dialog">//This is where the wheel goes</p>
             </div>
         </div>
     </div>
@@ -335,17 +335,17 @@
     <!-- -------------------- Education Section -------------------- -->
     <div class="container" id="education">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main color">Education</div>
-        <p class="mt-4 text-center education-content-main">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
+        <p class="mt-4 text-center education-content-main dialog">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
         <div class="row row-col-2 text-center">
             <div class="col-xl col-xs education-content-right">
                 <div class="display-6 education-header-content color">Alta High School</div>
                 <hr>
-                <p>//Education descriptions</p>
+                <p class="dialog">//Education descriptions</p>
             </div>
             <div class="col-xl col-xs education-content-left">
                 <div class="display-6 education-header-content color">Salt Lake Community College</div>
                 <hr>
-                <p>//Education descriptions</p>
+                <p class="dialog">//Education descriptions</p>
             </div>
         </div>
     </div>
@@ -358,28 +358,28 @@
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="firstPort">My First Portfolio</div>
-                    <p class="mb-2">//This is where the description for the iframes will go</p>
+                    <p class="mb-2 dialog">//This is where the description for the iframes will go</p>
                     <iframe class="project-iframe" src="https://google.com/" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="polygraph">Grandpas' Polygraph Business</div>
-                    <p class="mb-2">//This is where the description for the iframes will go</p>
+                    <p class="mb-2 dialog">//This is where the description for the iframes will go</p>
                     <iframe class="project-iframe" src="https://projectpolygraph.netlify.app/" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="flute">Friends' flute instructor freelance</div>
-                    <p class="mb-2">//This is where the description for the iframes will go</p>
+                    <p class="mb-2 dialog">//This is where the description for the iframes will go</p>
                     <iframe class="project-iframe" src="https://shaloraflute.netlify.app/" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="cerakote">Cerakote business startup</div>
-                    <p class="mb-2">//This is where the description for the iframes will go</p>
+                    <p class="mb-2 dialog">//This is where the description for the iframes will go</p>
                     <iframe class="project-iframe" src="https://joshcerakote.netlify.app/" frameborder="0"></iframe>
                 </div>
             </div>
@@ -417,21 +417,21 @@
                         <span class="error"><?= $emailFormatErr ?></span>
                     </div>
                     <div class="contact-checkbox-section mt-4">
-                        <div>What is your prefered method of contact?</div>
+                        <div class="dialog">What is your prefered method of contact?</div>
                         <span class="error"><?= $contactErr ?></span>
                         <div class="contact-checkboxes d-flex mt-4">
                             <div class="col-lg-2">
-                                <label for="contact">Text message</label>
+                                <label for="contact" class="dialog">Text message</label>
                                 <input type="checkbox" name="contact[]" value="Text">
                             </div>
 
                             <div class="col-lg-2">
-                                <label for="contact">Phone call</label>
+                                <label for="contact" class="dialog">Phone call</label>
                                 <input type="checkbox" name="contact[]" value="Call">
                             </div>
 
                             <div class="col-lg-2">
-                                <label for="contact">Email</label>
+                                <label for="contact" class="dialog">Email</label>
                                 <input type="checkbox" name="contact[]" value="Email">
                             </div>
                         </div>
@@ -448,21 +448,22 @@
     </section>
 
     <button id="modalFire" class="btn background-color justify-content-center" data-bs-toggle="modal" data-bs-target="#thanksModal">Trigger modal</button>
-
     <div id="thanksModal" class="modal fade" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" id="thanksModalLabel">Modal Header</h4>
+                    <h4 class="modal-title" id="thanksModalLabel">Your data has been received</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body content</p>
+                    <p class="color">Thank you</p>
                     <ul>
-                        <li><?=$firstName?></li>
+                        <li class="color"><?=$firstName?></li>
                         <li><?=$lastName?></li>
+                        <li>Your data has been recorded as follows:</li>
                         <li><?=$email?></li>
                         <li><?=$content?></li>
+                        <li>If you wish to reinsert entries, please close modal and resubmit form</li>
                         <?php 
                             if (!empty($_POST["contact"])) {
                                 foreach($_POST["contact"] as $value) {

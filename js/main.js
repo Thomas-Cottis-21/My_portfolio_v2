@@ -32,10 +32,8 @@ const toTopAppear = () => {
         console.log("disappearing");
     }
 }
-console.log(path);
 
 //this calls the function on scroll
-    console.log('you should be seeing this in index');
     window.addEventListener("scroll", toTopAppear);   
 
 //Dark Mode
@@ -46,10 +44,14 @@ let currentState = localStorage.getItem("darkMode");
 //naming the button
 let darkModeButton = document.getElementById("toggleDm");
 
+//naming dialog
+const dialog = document.getElementsByClassName("dialog");
+
 //this function changes the background to dark by adding dark class to body element as well as changing the button style respectively
 const enableDarkMode = () => {
     darkModeButtonEnable();
     document.body.classList.add("dark-mode");
+    makeDialogLight();
     localStorage.setItem("darkMode", "enabled");
     console.log("enabled");
 }
@@ -58,6 +60,7 @@ const enableDarkMode = () => {
 const disableDarkMode = () => {
     darkModeButtonDisable();
     document.body.classList.remove("dark-mode");
+    makeDialogDark();
     localStorage.setItem("darkMode", "disabled");
     console.log("disabled");
 }
@@ -72,6 +75,18 @@ const darkModeButtonEnable = () => {
 const darkModeButtonDisable = () => {
     darkModeButton.classList.remove("light-mode-button");
     darkModeButton.classList.add("dark-mode-button");
+}
+
+const makeDialogLight = () => {
+    for (let i = 0; i < dialog.length; i++) {
+        dialog[i].style.color = "#bfbfbf";
+    }
+}
+
+const makeDialogDark = () => {
+    for (let i = 0; i < dialog.length; i++) {
+        dialog[i].style.color = "#3f3f3f";
+    }
 }
 
 //this function checks the status of the body element so that on load the system rememebers if it was enabled or disabled based on local storage status
@@ -96,6 +111,7 @@ const trigger = () => {
 darkModeButton.addEventListener("click", trigger);
 //localStorage.clear();
 
+//Color Preference
 
 //adding class "color" to all queries in order to change color of entire site based on one class
 

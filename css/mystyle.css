@@ -15,7 +15,7 @@ p {
 }
 /* ----- Dark Mode ----- */
 .dark-mode {
-    background-color: #3f3f3f;
+    background-color: #313131;
 }
 .dark-mode-button {
     background-color: #3f3f3f;
@@ -379,3 +379,8 @@ li {
     font-size: 15px;
 }
 /* ----- End Contact Section ----- */
+
+/* ----- Modal ----- */
+.modal-content {
+    font-family: "Oxygen", sans-serif;
+}
