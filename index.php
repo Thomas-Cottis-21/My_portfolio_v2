@@ -239,25 +239,25 @@
                 <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
             </div>
             <div class="col col-right-intro">
-                <h1 class="display-5 intro-header-main color">Lorem ipsum dolor sit amet</h1>
-                <p class="intro-content dialog">Nulla dui tellus, blandit sed ipsum sed, pellentesque pretium ante. Pellentesque ut lectus eros. Donec cursus, felis ut luctus fermentum, nibh magna condimentum nulla, in fringilla nunc lacus sit amet tortor.</p>
+                <h1 class="display-5 intro-header-main color" data-aos="fade-down" data-aos-duration="1400">Lorem ipsum dolor sit amet</h1>
+                <p class="intro-content dialog" data-aos="fade-up" data-duration="1500" data-aos-delay="300">Nulla dui tellus, blandit sed ipsum sed, pellentesque pretium ante. Pellentesque ut lectus eros. Donec cursus, felis ut luctus fermentum, nibh magna condimentum nulla, in fringilla nunc lacus sit amet tortor.</p>
                 <hr> 
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
-                        <div class="display-6 intro-header-content color">fact1</div>
-                        <p class="intro-content dialog">Vivamus ultricies ipsum mauris, vestibulum iaculis quam viverra ut. Nullam posuere leo a lectus iaculis, venenatis mollis eros mollis.</p>
+                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000">fact1</div>
+                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="100">Vivamus ultricies ipsum mauris, vestibulum iaculis quam viverra ut. Nullam posuere leo a lectus iaculis, venenatis mollis eros mollis.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="display-6 intro-header-content color">fact2</div>
-                        <p class="intro-content dialog">Curabitur ac risus lacinia, sollicitudin ante et, dignissim velit. Quisque id odio nibh. Aenean magna est, feugiat eu faucibus a, rhoncus sit amet nisl.</p>
+                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="110">fact2</div>
+                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="100">Curabitur ac risus lacinia, sollicitudin ante et, dignissim velit. Quisque id odio nibh. Aenean magna est, feugiat eu faucibus a, rhoncus sit amet nisl.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="display-6 intro-header-content color">fact3</div>
-                        <p class="intro-content dialog">Quisque lobortis, ex nec venenatis porta, nisl magna pellentesque quam, non mollis neque dolor in magna. Nunc vitae vestibulum odio, non congue ex. Cras pretium mauris non odio laoreet, ac egestas velit scelerisque.</p>
+                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="120">fact3</div>
+                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="100">Quisque lobortis, ex nec venenatis porta, nisl magna pellentesque quam, non mollis neque dolor in magna. Nunc vitae vestibulum odio, non congue ex. Cras pretium mauris non odio laoreet, ac egestas velit scelerisque.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="display-6 intro-header-content color">fact4</div>
-                        <p class="intro-content dialog">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales. Pellentesque maximus tempus purus, sed rhoncus est tincidunt sed.</p>
+                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="110">fact4</div>
+                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="100">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales. Pellentesque maximus tempus purus, sed rhoncus est tincidunt sed.</p>
                     </div>
                 </div>
             </div>
