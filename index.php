@@ -296,32 +296,32 @@
     <div class="container" id="skills">
         <div class="display-3 d-flex mt-5 justify-content-center soft-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Soft Skills</div>
         <div class="row">
-                <div class="col-lg-4 col-md-6 col-xs mt-5">
-                    <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set one</div>
-                    <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs mt-5">
-                    <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set two</div>
-                    <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs mt-5">
-                    <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set three</div>
-                    <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs mt-5">
-                    <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set four</div>
-                    <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs mt-5">
-                    <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set five</div>
-                    <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs mt-5">
-                    <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set six</div>
-                    <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
-                </div>
+            <div class="col-lg-4 col-md-6 col-xs mt-5">
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set one</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs mt-5">
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set two</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs mt-5">
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set three</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs mt-5">
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set four</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs mt-5">
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set five</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs mt-5">
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set six</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
             </div>
         </div>
+    </div>    
     <!-- -------------------- End Soft Skills Section -------------------- -->
 
     <!-- -------------------- Hard Skills Section -------------------- -->
@@ -360,7 +360,7 @@
     <!-- -------------------- End Hard Skills Section -------------------- -->
 
     <!-- -------------------- Education Section -------------------- -->
-    <div class="container-fluid" id="education">
+    <div class="container" id="education">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Education</div>
         <p class="mt-4 text-center education-content-main dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
         <div class="row row-col-2 text-center">

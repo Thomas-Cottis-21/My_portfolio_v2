@@ -80,7 +80,7 @@ a:hover {
 /* ----- Navbar ----- */
 #navBar {
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: center;
 }
 .navbar-brand {
     align-items: center;
