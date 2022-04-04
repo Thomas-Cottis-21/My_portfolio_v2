@@ -248,12 +248,4 @@ const findColor = () => {
 }
 findColor();
 
-//modal test
-
-let modalTrigger = document.getElementById("modalFire");
-
-const showModal = () => {
-    console.log("modal should be appearing");
-}
-
-modalTrigger.addEventListener("click", showModal);
+//modal
