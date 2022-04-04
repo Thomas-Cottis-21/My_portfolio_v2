@@ -247,5 +247,3 @@ const findColor = () => {
 //localStorage.clear();
 }
 findColor();
-
-//modal
