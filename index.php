@@ -446,18 +446,18 @@
                     <div class="contact-checkbox-section mt-4">
                         <div class="dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">What is your prefered method of contact?</div>
                         <span class="error"><?= $contactErr ?></span>
-                        <div class="contact-checkboxes d-flex mt-4">
-                            <div class="col-lg-2">
+                        <div class="contact-checkboxes d-flex mt-4 row">
+                            <div class="col-lg-2 col-md-5 col-xs-7">
                                 <label for="contact" class="dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Text message</label>
                                 <input type="checkbox" name="contact[]" value="Text" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="400">
                             </div>
 
-                            <div class="col-lg-2">
+                            <div class="col-lg-2 col-md-5 col-xs-7">
                                 <label for="contact" class="dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Phone call</label>
                                 <input type="checkbox" name="contact[]" value="Call" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="400">
                             </div>
 
-                            <div class="col-lg-2">
+                            <div class="col-lg-2 col-md-5 col-xs-7">
                                 <label for="contact" class="dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Email</label>
                                 <input type="checkbox" name="contact[]" value="Email" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">
                             </div>
