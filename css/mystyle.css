@@ -227,7 +227,7 @@ a:hover {
     font-weight: 200;
 }
 .intro-header-content {
-    font-weight: 600;
+    font-weight: 100;
 }
 .intro-content {
     font-family: "Oxygen", sans-serif;
@@ -253,9 +253,10 @@ a:hover {
 /* ----- Soft Skills Section ----- */
 .soft-skills-header-main, .soft-skills-header-content, .hard-skills-header-main, .hard-skills-header-gauge {
     font-family: "Oxygen", sans-serif;
+    text-align: center;
 }
 .soft-skills-header-content {
-    font-weight: 600;
+    font-weight: 200;
     justify-content: center;
 }
 .soft-skills-content {
@@ -267,7 +268,7 @@ a:hover {
 /* ----- Hard Skills Section ----- */
 .hard-skills-header-gauge {
     margin-top: 10px;
-    font-weight: 600;
+    font-weight: 200;
     
 }
 .hard-skills-content {
@@ -308,7 +309,7 @@ a:hover {
     font-family: "Oxygen", sans-serif;
 }
 .project-header-iframe {
-    font-weight: 600;
+    font-weight: 200;
     
 }
 .project-iframe {

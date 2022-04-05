@@ -98,7 +98,7 @@
                 <li>Your data has been recieved as follows:</li>
                 <li class='color'> $email </li>
                 <li>Your prefered contact methods: <span class='color'> $contactStr </span></li>
-                <hr>
+                <hr class='dialog'>
                 <li>Your message: </li>
                 <li class='color'> $content </li>
             </ul>";
@@ -138,6 +138,10 @@
     
     <!-- -------------------- Bootstrap icons CDN link -------------------- -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- -------------------- Progress Status CSS & JS -------------------- -->
+    <link rel="stylesheet" type="text/css" href="/assets/progress_bar/loading-bar.css"/>
+    <script type="text/javascript" src="/assets/progress_bar/loading-bar.js"></script>
 
     <!-- -------------------- Custom CSS -------------------- -->
     <link rel="stylesheet" href="/css/mystyle.css">
@@ -184,10 +188,10 @@
                         <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="#skills" class="nav-link">Soft Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills2" class="nav-link">Skills 2</a>
+                        <a href="#skills2" class="nav-link">Hard Skills</a>
                     </li>
                     <li class="nav-item">
                         <a href="#education" class="nav-link">Education</a>
@@ -234,24 +238,24 @@
                 <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/Img/hero/mountain-bike-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
-                            <div class="carousel-header">Title for carousel 1</div>
-                            <div class="carousel-content">Content for carousel 1</div>
+                            <div class="carousel-header">I am an explorer</div>
+                            <div class="carousel-content">I love to explore and discover new hobbies and skills, like mountain biking and welding.</div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/Img/hero/rock-climbing-rope-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
-                            <div class="carousel-header">Title for carousel 1</div>
-                            <div class="carousel-content">Content for carousel 1</div>
+                            <div class="carousel-header">I challenge myself everyday</div>
+                            <div class="carousel-content">Getting into rock climbing has been a great adventure and an even better oportunity to keep improving myself</div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/Img/hero/overlander-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
-                            <div class="carousel-header">Title for carousel 1</div>
-                            <div class="carousel-content">Content for carousel 1</div>
+                            <div class="carousel-header">I love to engineer and build new things</div>
+                            <div class="carousel-content">From software to metal works, I love to design and build new things</div>
                         </div>
                     </div>
                 </div>
@@ -268,25 +272,25 @@
                 <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
             </div>
             <div class="col col-right-intro">
-                <h1 class="display-5 intro-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Lorem ipsum dolor sit amet</h1>
-                <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Nulla dui tellus, blandit sed ipsum sed, pellentesque pretium ante. Pellentesque ut lectus eros. Donec cursus, felis ut luctus fermentum, nibh magna condimentum nulla, in fringilla nunc lacus sit amet tortor.</p>
-                <hr data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400"> 
+                <h1 class="display-5 intro-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">I am truly passionate about a few things</h1>
+                <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">I believe that once someone finds something that they are passionate about, they no longer worry about what they want to be when they grow up</p>
+                <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400"> 
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
-                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">fact1</div>
-                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">Vivamus ultricies ipsum mauris, vestibulum iaculis quam viverra ut. Nullam posuere leo a lectus iaculis, venenatis mollis eros mollis.</p>
+                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Programming</div>
+                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">Although I am relativley new to the programming world, it has quickly become one of my greatest endeavors. I am decided on being a web developer because I find joy and satisfaction here.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="110">fact2</div>
-                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">Curabitur ac risus lacinia, sollicitudin ante et, dignissim velit. Quisque id odio nibh. Aenean magna est, feugiat eu faucibus a, rhoncus sit amet nisl.</p>
+                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="110">Design</div>
+                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">I love to design and build furniture that lasts forever. I love to 3D-print new tools and machines. I love to create aesthetic things. Engineering and designing new things now enables me for a bright future.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="120">fact3</div>
-                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">Quisque lobortis, ex nec venenatis porta, nisl magna pellentesque quam, non mollis neque dolor in magna. Nunc vitae vestibulum odio, non congue ex. Cras pretium mauris non odio laoreet, ac egestas velit scelerisque.</p>
+                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="120">Hard work</div>
+                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">I am passionate about working hard because I work hard at the things that I am passionate about. Not stopping until I've finished what I'm doing or found a solution, working hard is something that I believe in with my all.</p>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="110">fact4</div>
-                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales. Pellentesque maximus tempus purus, sed rhoncus est tincidunt sed.</p>
+                        <div class="display-6 intro-header-content color" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="110">Learning</div>
+                        <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">I have many hobbies and skills. One of my greatest passions is learning new things. I love the idea of being able to apply myself in many different things in order to help those that I love and those that I don't know as well.</p>
                     </div>
                 </div>
             </div>
@@ -296,31 +300,31 @@
 
     <!-- -------------------- Skills Section -------------------- -->
     <div class="container" id="skills">
-        <div class="display-3 d-flex mt-5 justify-content-center soft-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Soft Skills</div>
+        <div class="display-3 d-flex mt-5 justify-content-center soft-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">My values | What do I stand for?</div>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-xs mt-5">
-                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set one</div>
-                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Solving problems</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">No matter the job, something is bound to go wrong. Problem solvers need to be there in real time to effectivley "put out the fires" that can arise in everyday scenarios in order to keep the cash flowing. I believe in being a problem solver, and in doing so also being a humble team player.</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs mt-5">
-                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set two</div>
-                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Team work</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">There's nothing better than working on an unstoppable team that works together well. I am a team player because I help individuals work together in an efficient manner. Working on an efficient team is the best way to accomplish something greater than yourself.</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs mt-5">
-                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set three</div>
-                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Efficiency</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-right" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">I truly dislike doing things over and over again. I believe that's why I love programming so much, because it's all about being efficient, with time and other resources. I've learned to be efficient with my time all my life, especially while serving a mission for The Church of Jesus Christ of Latter-Day Saints</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs mt-5">
-                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set four</div>
-                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Creativity</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">My creative skills have flourished alongside my growing passions for creating things that no one else has, like websites for unique people or something new in the 3D-printer.</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs mt-5">
-                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set five</div>
-                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Attention to detail</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">I really never knew how detailed I would have to be in order to program until I started to learn JavaScript. Every semicolin and bracket matters. Whatever it is that I have put myself to doing, it's always better to do it right the first time. I believe that being organized and humble helps me to do the work and pay close attention the details that matter.</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs mt-5">
-                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">skill set six</div>
-                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">Sed congue risus turpis, eu pellentesque neque iaculis sit amet. Donec faucibus mauris ac orci dictum rutrum. Nam vulputate sagittis ipsum ut sodales.</p>
+                <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Responsibility</div>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">I believe in being responsible and honest for my own actions, good or poor. It is only in that way that I can improve and move on, while not slowing down the rest of the team there to make money. To me, this is one of the greatest and most effective skills that I posess</p>
             </div>
         </div>
     </div>    
@@ -328,8 +332,8 @@
 
     <!-- -------------------- Hard Skills Section -------------------- -->
     <div class="container" id="skills2">
-        <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Hard Skills</div>
-        <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Fusce dui eros, semper ac rutrum et, tempus sed velit. Mauris a interdum nisi. Fusce ornare urna pretium nulla gravida porttitor. Ut et est ut lectus venenatis cursus vel vitae leo. Donec mattis purus eu dignissim luctus. Phasellus quis quam et felis fringilla egestas ac nec leo. Nam lobortis ipsum id nisi mollis, eu viverra felis pharetra.</p>
+        <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Hard Skills | What can I do?</div>
+        <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My main study is Web Development, so that is what I have based my hard skills on. It is excatly what I am passionate about, creating something beautiful as well as funcional. These are my skills and what I peronally rank myself as, with the help of some peers to give a second opinion.</p>
     </div>
     <div class="container-fluid">
         <div class="row text-center">
@@ -368,12 +372,12 @@
         <div class="row row-col-2 text-center">
             <div class="col-xl col-xs education-content-right">
                 <div class="display-6 education-header-content color" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Alta High School</div>
-                <hr data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+                <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
                 <p class="dialog" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">//Education descriptions</p>
             </div>
             <div class="col-xl col-xs education-content-left">
                 <div class="display-6 education-header-content color" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Salt Lake Community College</div>
-                <hr data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+                <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
                 <p class="dialog" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">//Education descriptions</p>
             </div>
         </div>
