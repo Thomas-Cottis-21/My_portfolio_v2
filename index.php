@@ -89,9 +89,9 @@
 
             $stmt->execute();
 
-            $modalHeader = "Data Recieved Successfully";
+            $_SESSION["modalHeader"] = "Data Was Recieved Successfully";
 
-            $modalMessage = 
+            $_SESSION["modalMessage"] = 
             "<p class='color'>Thank you</p>
             <ul>
                 <li>Thank you, <span class='color'>$firstName $lastName</span> for having interest in me and my experiences. I will get back to you within 24 hours.</li>
@@ -103,16 +103,22 @@
                 <li class='color'> $content </li>
             </ul>";
 
-            $_SESSION["complete"] = true;
+            $_SESSION["complete"] = TRUE;
 
-            
+            header("Location: " .  $_SERVER['REQUEST_URI']);
+            return;
         } catch(PDOException $error) {
-            $_SESSION["complete"] = true;
+
+            $_SESSION["complete"] = TRUE;
+
             echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
 
-            $modalHeader = "Data was not recieved";
+            $_SESSION["modalHeader"] = "Data was not recieved";
 
-            $modalMessage = "<p>I'm sorry to let you know, $firstName $lastName that your data was not received. Please resubmit or try again later</p><br><p>I still thank you for your interest in me and my persuits. Please, if you are still unable to submit your form, contact me personally here and I will get back to you within 24 hours:</p><br><p class='color'>385-335-2336<br>tomcottis21@gmail.com</p>";
+            $_SESSION["modalMessage"] = "<p>I'm sorry to let you know,<span class='color'> $firstName $lastName </span>that your data was not received. Please resubmit or try again later</p><br><p>I still thank you for your interest in me and my persuits. Please, if you are still unable to submit your form, contact me personally here and I will get back to you within 24 hours:</p><br><p class='color'><a class='color' href='tel:+13853352336'>385-335-2336</a></p><p><a class='color' href='mailto:tomcottis21@gmail.com'<br>tomcottis21@gmail.com</a></p>";
+
+            header("Location: " .  $_SERVER['REQUEST_URI']);
+            return;
         }
 
         $conn = null;
@@ -123,7 +129,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="I can create you an effective money making machine to help you on your way to success without breaking the bank.">
     <meta name="author" content="Thomas Joseph Cottis">
     <meta name="keywords" content="Local, Web developer, Web designer, cheap, good">
@@ -415,6 +421,22 @@
     <!-- -------------------- End Projects Section -------------------- -->
 
     <!-- -------------------- Contact Section -------------------- -->
+    <div id="thanksModal" class="modal fade" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title" id="thanksModalLabel"><?= $_SESSION["modalHeader"] ?></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <?= $_SESSION["modalMessage"] ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="contact">
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Contact</div>
         <div id="contactForm" class="container">
@@ -463,7 +485,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
+                    <div>
                         <label for="content"></label>
                         <textarea class="border-color dialog" name="content" id="content" value="" placeholder="Message" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"><?php if (isset($content)) echo $content ?></textarea>
                         <span class="error"><?= $contentErr ?></span>
@@ -473,22 +495,6 @@
             </form>
         </div>
     </section>
-    <div id="thanksModal" class="modal fade" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" id="thanksModalLabel"><?= $modalHeader ?></h4>
-                </div>
-                <div class="modal-body">
-                    <?= $modalMessage ?>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <?php 
         if ($_SESSION["complete"]) {
             echo "<script>$(document).ready(function() {
@@ -500,8 +506,7 @@
     <!-- -------------------- End Contact Section -------------------- -->
 
     <!-- -------------------- Bootstrap CDN -------------------- -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <!-- -------------------- Custom js -------------------- -->
     <script src="/js/main.js"></script>
