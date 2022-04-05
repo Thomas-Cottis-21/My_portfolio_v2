@@ -105,19 +105,15 @@
 
             $_SESSION["complete"] = TRUE;
 
-            header("Location: " .  $_SERVER['REQUEST_URI']);
-            return;
         } catch(PDOException $error) {
-
             $_SESSION["complete"] = TRUE;
+            $_SESSION["modalHeader"] = "Data was not recieved";
+
+            $_SESSION["modalMessage"] = "<p>I'm sorry to let you know,<span class='color'> $firstName $lastName </span>that your data was not received. Please resubmit or try again later</p><p>I still thank you for your interest in me and my persuits. Please, if you are still unable to submit your form, contact me personally here and I will get back to you within 24 hours:</p><br><p class='color'><a class='color' href='tel:+13853352336'>385-335-2336</a></p><p><a class='color' href='mailto:tomcottis21@gmail.com'<br>tomcottis21@gmail.com</a></p>";
 
             echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
 
-            $_SESSION["modalHeader"] = "Data was not recieved";
-
-            $_SESSION["modalMessage"] = "<p>I'm sorry to let you know,<span class='color'> $firstName $lastName </span>that your data was not received. Please resubmit or try again later</p><br><p>I still thank you for your interest in me and my persuits. Please, if you are still unable to submit your form, contact me personally here and I will get back to you within 24 hours:</p><br><p class='color'><a class='color' href='tel:+13853352336'>385-335-2336</a></p><p><a class='color' href='mailto:tomcottis21@gmail.com'<br>tomcottis21@gmail.com</a></p>";
-
-            header("Location: " .  $_SERVER['REQUEST_URI']);
+            header("Location: " . $_SERVER['REQUEST_URI']);
             return;
         }
 
@@ -425,11 +421,11 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h4 class="modal-title" id="thanksModalLabel"><?= $_SESSION["modalHeader"] ?></h4>
+                <h4 class="modal-title" id="thanksModalLabel"><?=$_SESSION["modalHeader"]?></h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <?= $_SESSION["modalMessage"] ?>
+                    <?=$_SESSION["modalMessage"]?>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
@@ -444,26 +440,26 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>
-                        <input class="border-color dialog" type="text" id="fname" name="fname" value="<?= $firstName ?>" placeholder="First name" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
-                        <span class="error"><?= $fNameErr ?></span>
-                        <span class="error"><?= $fNameFormatErr ?></span>
+                        <input class="border-color dialog" type="text" id="fname" name="fname" value="<?=$firstName?>" placeholder="First name" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
+                        <span class="error"><?=$fNameErr?></span>
+                        <span class="error"><?=$fNameFormatErr?></span>
                     </div>
 
                     <div class="col-lg-6">
                         <label for="last-name"></label>
-                        <input class="border-color dialog" type="text" id="lname" name="lname" value="<?= $lastName ?>" placeholder="Last name" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
+                        <input class="border-color dialog" type="text" id="lname" name="lname" value="<?=$lastName?>" placeholder="Last name" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
                     </div>
 
                     <div class="col-lg-2">
                         <label for="number"></label>
-                        <input class="border-color dialog" type="text" id="number" name="number" value="<?= $number ?>" placeholder="Number" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
+                        <input class="border-color dialog" type="text" id="number" name="number" value="<?=$number?>" placeholder="Number" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
                     </div>
 
                     <div class="col-lg-6">
                         <label for="email"></label>
-                        <input class="border-color dialog" type="email" id="email" name="email" value="<?= $email ?>" placeholder="Email" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
-                        <span class="error"><?= $emailErr ?></span>
-                        <span class="error"><?= $emailFormatErr ?></span>
+                        <input class="border-color dialog" type="email" id="email" name="email" value="<?=$email?>" placeholder="Email" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
+                        <span class="error"><?=$emailErr?></span>
+                        <span class="error"><?=$emailFormatErr?></span>
                     </div>
                     <div class="contact-checkbox-section mt-4">
                         <div class="dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">What is your prefered method of contact?</div>
