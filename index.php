@@ -1,27 +1,29 @@
 <?php 
+//starts a new session if one isn't yet started
     if (!isset($_SESSION)) {
         session_start();
     }
-
+//naming variabeles to ""
     $firstName = $lastName = $number = $email = $content = "";
 
     $fNameErr = $fNameFormatErr = $emailErr = $emailFormatErr = $contactErr = $contentErr = "";
 
     $formErr = FALSE;
-
+//cleaning data to avoid attacks
     function data_filter($data){
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
     }
-
+//assings the cleaned input data to variables
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $firstName = data_filter($_POST["fname"]);
         $lastName = data_filter($_POST["lname"]);
         $number = data_filter($_POST["number"]);
         $email = data_filter($_POST["email"]);
-
+    }
+//if statements to control error messages
         if (!empty($_POST["contact"])) {
             $contact = ($_POST["contact"]);
         } else {
@@ -35,10 +37,11 @@
             $fNameErr = "* First or business name is required";
             $formErr = TRUE;
         } else {
+            $fNameErr = "";
             $firstName;
 
             if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
-                $fNameFormatErr = "Only letters and white space please";
+                $fNameFormatErr = "* Only words and spaces";
                 $formErr = TRUE;
             }
         }
@@ -47,10 +50,11 @@
             $emailErr = "* Email is required";
             $formErr = TRUE;
         } else {
+            $emailErr = "";
             $email;
             
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailFormatErr = "Invalid email format";
+                $emailFormatErr = "* Invalid email format";
                 $formErr = TRUE;
             }
         }
@@ -59,6 +63,7 @@
             $contactErr = "* Prefered method of contact is required";
             $formErr = TRUE;
         } else {
+            $contactErr = "";
             $contact;
             $contactStr = implode(", ", $contact);
         }
@@ -66,29 +71,31 @@
         if (empty($_POST["content"])) {
             $contentErr = "* A general message is required (Say Hi!)";
             $formErr = TRUE;
+        } else {
+            $contentErr = "";
         }
-    }
 
     if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
         $servername = "localhost";
         $username = "root";
         $password = "";
         $dbname = "test";
-
+//try catch statemnet to either connect to the database and proceed with data modal, or procceed with the error modal
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-            
+//retrieving error
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
+//prepared statement that sends information to the database
             $stmt = $conn->prepare("INSERT INTO clients (firstname, lastname, email, message, contact) VALUES (:firstname, :lastname, :email, :message, :contact)");
             $stmt->bindParam(':firstname', $firstName);
             $stmt->bindParam(':lastname', $lastName);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':message', $content);
             $stmt->bindParam(':contact', $contactStr);
-
+//excecuting the prepared statement
             $stmt->execute();
-
+//session variables that show the modal messages. Need to be session variables in order to be accessed beyond page refresh
             $_SESSION["modalHeader"] = "Data Was Recieved Successfully";
 
             $_SESSION["modalMessage"] = 
@@ -102,21 +109,26 @@
                 <li>Your message: </li>
                 <li class='color'> $content </li>
             </ul>";
-
+//sets session variable complete. This triggers the modal
             $_SESSION["complete"] = TRUE;
+
+            header("Location: " . $SERVER["REQUEST_URI"]);
+            return;
 
         } catch(PDOException $error) {
-            $_SESSION["complete"] = TRUE;
+//session variables with error message to be displayed in the modal
             $_SESSION["modalHeader"] = "Data was not recieved";
 
             $_SESSION["modalMessage"] = "<p>I'm sorry to let you know,<span class='color'> $firstName $lastName </span>that your data was not received. Please resubmit or try again later</p><p>I still thank you for your interest in me and my persuits. Please, if you are still unable to submit your form, contact me personally here and I will get back to you within 24 hours:</p><br><p class='color'><a class='color' href='tel:+13853352336'>385-335-2336</a></p><p><a class='color' href='mailto:tomcottis21@gmail.com'<br>tomcottis21@gmail.com</a></p>";
-
+//echoing error message to the console instead of the user screen
             echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
+
+            $_SESSION["complete"] = TRUE;
 
             header("Location: " . $_SERVER['REQUEST_URI']);
             return;
         }
-
+//killinng the connection
         $conn = null;
     } 
 ?>
@@ -129,7 +141,7 @@
     <meta name="description" content="I can create you an effective money making machine to help you on your way to success without breaking the bank.">
     <meta name="author" content="Thomas Joseph Cottis">
     <meta name="keywords" content="Local, Web developer, Web designer, cheap, good">
-    <title>Thomas Cottis Website Design & Development</title>
+    <title>Thomas Cottis</title>
     
     <!-- -------------------- Bootstrap CDN -------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -368,7 +380,7 @@
     <!-- -------------------- Education Section -------------------- -->
     <div class="container" id="education">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Education</div>
-        <p class="mt-4 text-center education-content-main dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Phasellus quis finibus lectus. Vivamus ultricies, mi nec finibus sagittis, felis ex blandit ante, quis tincidunt augue leo id ex. Donec ultricies est lacus, consequat faucibus nulla scelerisque in. Integer non vestibulum mi. Mauris fringilla velit eu metus elementum, non varius nulla interdum. In hac habitasse platea dictumst. Nulla sit amet arcu sem. In et facilisis turpis. Aliquam non efficitur magna. Aenean massa magna, maximus sit amet luctus ut, malesuada ac augue.</p>
+        <p class="mt-4 text-center education-content-main dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I graduated from ALta High School in 2018. From there I left on a mission for The Church of Jesus Christ of Latter-Day Saints to Lima, Peru for 2 years where I learned Spanish. Upon returning, I entered the Web Design and Develpment program in SLCC to get me started. I am currently enrolled in the program.</p>
         <div class="row row-col-2 text-center">
             <div class="col-xl col-xs education-content-right">
                 <div class="display-6 education-header-content color" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Alta High School</div>
@@ -391,28 +403,28 @@
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="firstPort" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">My First Portfolio</div>
-                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">//This is where the description for the iframes will go</p>
+                    <p class="mb-2 dialog project-content" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">This was my first true go at web development. This was the project with which I learned a lot of important fundementals of web design and development. Although there are a few things that I don't like about it now, it's one of the most important stepping stones in my journey of becoming a proficient developer.</p>
                     <iframe class="project-iframe" src="https://google.com/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="polygraph" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Grandpas' Polygraph Business</div>
-                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">//This is where the description for the iframes will go</p>
+                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My grandfather, Joseph Cottis worked for the F.B.I as a lie detector. He was in need of a new, modern website in order to better connect him to the younger generations, as his old website was slowly being outdated. I made him this website without knowing if he would implement it to get more practice in. I used a bootstrap theme because there is no better way to learn than to jump in head first.</p>
                     <iframe class="project-iframe" src="https://projectpolygraph.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="flute" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Friends' flute instructor freelance</div>
-                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">//This is where the description for the iframes will go</p>
+                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I started telling my friends about my new career path and all the exciting progress that I was making. Eager to find more projects, my best friend's wife, Shalora presented me an idea for her. She wants to be a freelancing flute instructor, but doesn't know where to start. I am currently working with them in order to put new content out as well as building a new database to keep track of clients, appointment and class times.</p>
                     <iframe class="project-iframe" src="https://shaloraflute.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="cerakote" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Cerakote business startup</div>
-                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">//This is where the description for the iframes will go</p>
+                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My brother in-law, Josh is extremley creative and talented with many things, especially creative things like photography and painting. He is currently in the proccess of starting his own cerakote business and needs a powerful website to keep track of all of the data that is associated with an entire start-up as well as a creative and attractive front-end to keep the traffic coming</p>
                     <iframe class="project-iframe" src="https://joshcerakote.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
@@ -440,7 +452,7 @@
     <section id="contact">
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Contact</div>
         <div id="contactForm" class="container">
-            <form id="myForm" action="" method="POST">
+            <form id="myForm" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>

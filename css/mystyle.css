@@ -305,8 +305,11 @@ a:hover {
 .projects-dropdown-button:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
-.project-header-main, .project-header-iframe {
+.project-header-main, .project-header-iframe, .project-content {
     font-family: "Oxygen", sans-serif;
+}
+.project-content {
+    font-weight: 100;
 }
 .project-header-iframe {
     font-weight: 200;
@@ -390,5 +393,5 @@ li {
     font-family: "Oxygen", sans-serif;
 }
 body.modal-open {
-    overflow-y: initial !important;
+    overflow: auto !important;
 }
