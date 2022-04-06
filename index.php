@@ -16,7 +16,7 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-//assings the cleaned input data to variables
+//passing the cleaned input data to variables if the form has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $firstName = data_filter($_POST["fname"]);
         $lastName = data_filter($_POST["lname"]);
@@ -37,7 +37,7 @@
             $fNameErr = "* First or business name is required";
             $formErr = TRUE;
         } else {
-            $fNameErr = "";
+            $fNameErr = null;
             $firstName;
 
             if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
@@ -50,7 +50,7 @@
             $emailErr = "* Email is required";
             $formErr = TRUE;
         } else {
-            $emailErr = "";
+            $emailErr = null;
             $email;
             
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -63,7 +63,7 @@
             $contactErr = "* Prefered method of contact is required";
             $formErr = TRUE;
         } else {
-            $contactErr = "";
+            $contactErr = null;
             $contact;
             $contactStr = implode(", ", $contact);
         }
@@ -250,8 +250,10 @@
                 <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/Img/hero/mountain-bike-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
-                            <div class="carousel-header">I am an explorer</div>
-                            <div class="carousel-content">I love to explore and discover new hobbies and skills, like mountain biking and welding.</div>
+                            <div class="hero-content-container">
+                                <div class="carousel-header">I am an explorer</div>
+                                <div class="carousel-content">I love to explore and discover new hobbies and skills, like mountain biking and welding.</div>
+                            </div>
                         </div>
                     </div>
                 </div>

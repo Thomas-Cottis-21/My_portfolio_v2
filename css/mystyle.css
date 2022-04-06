@@ -186,19 +186,42 @@ a:hover {
     position: relative;
     transition: 0.5s;
 }
+.hero-content-container {
+    margin: 0;
+}
 .carousel-caption {
     top: 50%;
     transform: translateY(-50%);
+    margin: 0px;
+    padding: 0px;
 }
 .carousel-header {
     font-family: "Oxygen", sans-serif;
     font-size: 70px;
     top: 50%;
     transform: translateY(-50%);
+    margin-bottom: 0px;
 }
 .carousel-content {
     font-family: "Oxygen", sans-serif;
     font-size: 25px;
+    margin-top: 0px;
+}
+@media (max-width: 500px) {
+    .carousel-header {
+        font-size: 35px;
+    }
+    .carousel-content {
+        font-size: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .carousel-header {
+        font-size: 45px;
+    }
+    .carousel-content {
+        font-size: 35px;
+    }
 }
 /* ----- End Hero Section -----*/
 
@@ -337,13 +360,12 @@ input:focus, textarea:focus, button.btn:focus {
     outline: none;
 }
 input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active, 
-textarea:-webkit-autofill:active {
-    -webkit-transition-delay: 9999s;
-    transition-delay: 9999s;
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #dedede inset !important;
 }
+
 .contact-checkbox-section {
     font-family: "Oxygen", sans-serif;
     font-size: 20px;
@@ -391,7 +413,4 @@ li {
 /* ----- Modal ----- */
 .modal-content {
     font-family: "Oxygen", sans-serif;
-}
-body.modal-open {
-    overflow: auto !important;
 }
