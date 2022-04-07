@@ -9,6 +9,7 @@
     $fNameErr = $fNameFormatErr = $emailErr = $emailFormatErr = $contactErr = $contentErr = "";
 
     $formErr = FALSE;
+
 //cleaning data to avoid attacks
     function data_filter($data){
         $data = trim($data);
@@ -16,22 +17,21 @@
         $data = htmlspecialchars($data);
         return $data;
     }
+
 //passing the cleaned input data to variables if the form has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $firstName = data_filter($_POST["fname"]);
         $lastName = data_filter($_POST["lname"]);
         $number = data_filter($_POST["number"]);
         $email = data_filter($_POST["email"]);
-    }
-//if statements to control error messages
+        $content = data_filter($_POST["content"]);
+    
+//if statements to control error messages if user doesnt fill entire form
         if (!empty($_POST["contact"])) {
             $contact = ($_POST["contact"]);
         } else {
             $contact = null;
         }
-        
-        $content = data_filter($_POST["content"]);
-
 
         if (empty($_POST["fname"])) {
             $fNameErr = "* First or business name is required";
@@ -74,15 +74,18 @@
         } else {
             $contentErr = "";
         }
-
+    }
+//attempts to connect to the server when the user submits the entire form with no errors
     if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
         $servername = "localhost";
         $username = "root";
         $password = "";
         $dbname = "test";
-//try catch statemnet to either connect to the database and proceed with data modal, or procceed with the error modal
+
+//try catch statemnet to either connect to the database and proceed with success modal, or procceed with the error modal
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+
 //retrieving error
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
@@ -93,8 +96,10 @@
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':message', $content);
             $stmt->bindParam(':contact', $contactStr);
+
 //excecuting the prepared statement
             $stmt->execute();
+
 //session variables that show the modal messages. Need to be session variables in order to be accessed beyond page refresh
             $_SESSION["modalHeader"] = "Data Was Recieved Successfully";
 
@@ -109,25 +114,29 @@
                 <li>Your message: </li>
                 <li class='color'> $content </li>
             </ul>";
+
 //sets session variable complete. This triggers the modal
             $_SESSION["complete"] = TRUE;
 
-            header("Location: " . $SERVER["REQUEST_URI"]);
+            header("Location: " . $_SERVER["REQUEST_URI"]);
             return;
 
         } catch(PDOException $error) {
 //session variables with error message to be displayed in the modal
+
             $_SESSION["modalHeader"] = "Data was not recieved";
 
             $_SESSION["modalMessage"] = "<p>I'm sorry to let you know,<span class='color'> $firstName $lastName </span>that your data was not received. Please resubmit or try again later</p><p>I still thank you for your interest in me and my persuits. Please, if you are still unable to submit your form, contact me personally here and I will get back to you within 24 hours:</p><br><p class='color'><a class='color' href='tel:+13853352336'>385-335-2336</a></p><p><a class='color' href='mailto:tomcottis21@gmail.com'<br>tomcottis21@gmail.com</a></p>";
 //echoing error message to the console instead of the user screen
+
             echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
 
             $_SESSION["complete"] = TRUE;
 
-            header("Location: " . $_SERVER['REQUEST_URI']);
+            header("Location: " . $_SERVER["REQUEST_URI"]);
             return;
         }
+
 //killinng the connection
         $conn = null;
     } 
@@ -510,10 +519,12 @@
         </div>
     </section>
     <?php 
+//whether or not the form data was sent, displays modal with error or success message
         if ($_SESSION["complete"]) {
             echo "<script>$(document).ready(function() {
                 $('#thanksModal').modal('show');
             });</script>";
+//unsets the current session since the form was submitted
             session_unset();
         }
     ?>
