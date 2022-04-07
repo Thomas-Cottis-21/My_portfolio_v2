@@ -160,10 +160,6 @@
     <!-- -------------------- Bootstrap icons CDN link -------------------- -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    <!-- -------------------- Progress Status CSS & JS -------------------- -->
-    <link rel="stylesheet" type="text/css" href="/assets/progress_bar/loading-bar.css"/>
-    <script type="text/javascript" src="/assets/progress_bar/loading-bar.js"></script>
-
     <!-- -------------------- Custom CSS -------------------- -->
     <link rel="stylesheet" href="/css/mystyle.css">
 
