@@ -160,6 +160,9 @@
     <!-- -------------------- Bootstrap icons CDN link -------------------- -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
+    <!-- -------------------- Animate CDN link -------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- -------------------- Custom CSS -------------------- -->
     <link rel="stylesheet" href="/css/mystyle.css">
 
@@ -205,10 +208,10 @@
                         <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="nav-link">Soft Skills</a>
+                        <a href="#softSkills" class="nav-link">Soft Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills2" class="nav-link">Hard Skills</a>
+                        <a href="#hardSkills" class="nav-link">Hard Skills</a>
                     </li>
                     <li class="nav-item">
                         <a href="#education" class="nav-link">Education</a>
@@ -218,7 +221,6 @@
                             <p class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown">Projects</p>
 
                             <ul class="dropdown-menu navLight" id="dropdownMenu">
-                                <li><a href="#firstPort" class="projects-dropdown-button">My First Portfolio</a></li>
                                 <li><a href="#polygraph" class="projects-dropdown-button">Polygraph Business</a></li>
                                 <li><a href="#flute" class="projects-dropdown-button">Flute Instructor</a></li>
                                 <li><a href="#cerakote" class="projects-dropdown-button">Cerakote Business</a></li>
@@ -252,40 +254,41 @@
     <div class="container-fluid p-0 hero-container">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/Img/hero/mountain-bike-hero.jpg);">
+                <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/Img/hero/cave-man-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
                             <div class="hero-content-container">
-                                <div class="carousel-header">I am an explorer</div>
-                                <div class="carousel-content">I love to explore and discover new hobbies and skills, like mountain biking and welding.</div>
+                                <div class="carousel-header animate__animated animate__fadeInDown">I am an explorer</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">I love to explore and discover new hobbies and skills, like mountain biking and welding.</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/Img/hero/rock-climbing-rope-hero.jpg);">
+                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/Img/hero/climbing-1pp-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
-                            <div class="carousel-header">I challenge myself everyday</div>
-                            <div class="carousel-content">Getting into rock climbing has been a great adventure and an even better oportunity to keep improving myself</div>
+                            <div class="carousel-header animate__animated animate__fadeInDown">I love to find solutions to challenges</div>
+                            <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Getting into rock climbing has been a great adventure and an even better opportunity to keep improving myself</div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/Img/hero/overlander-hero.jpg);">
+                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/Img/hero/printer-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
-                            <div class="carousel-header">I love to engineer and build new things</div>
-                            <div class="carousel-content">From software to metal works, I love to design and build new things</div>
+                            <div class="carousel-header animate__animated animate__fadeInDown">I love to create</div>
+                            <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">From software to 3d printing and design, I love to think up and build new things</div>
                         </div>
                     </div>
                 </div>
             </div>    
         </div>
     </div>
+    <div id="about"></div>
 </section>
     <!-- -------------------- End Hero Section -------------------- -->
 
     <!-- -------------------- Intro Section -------------------- -->
-    <div class="container d-flex" id="about">
+    <div class="container d-flex">
         <div id="intro-container-row" class="row">
             <div class="col-6 intro-container-image">
                 <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
@@ -315,10 +318,11 @@
             </div>
         </div>
     </div>
+    <div id="softSkills"></div>
     <!-- -------------------- End Intro Section -------------------- -->
 
     <!-- -------------------- Skills Section -------------------- -->
-    <div class="container" id="skills">
+    <div class="container">
         <div class="display-3 d-flex mt-5 justify-content-center soft-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">My values | What do I stand for?</div>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-xs mt-5">
@@ -346,11 +350,12 @@
                 <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">I believe in being responsible and honest for my own actions, good or poor. It is only in that way that I can improve and move on, while not slowing down the rest of the team there to make money. To me, this is one of the greatest and most effective skills that I posess</p>
             </div>
         </div>
-    </div>    
+    </div> 
+    <div id="hardSkills"></div>   
     <!-- -------------------- End Soft Skills Section -------------------- -->
 
     <!-- -------------------- Hard Skills Section -------------------- -->
-    <div class="container" id="skills2">
+    <div class="container">
         <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Hard Skills | What can I do?</div>
         <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My main study is Web Development, so that is what I have based my hard skills on. It is excatly what I am passionate about, creating something beautiful as well as funcional. These are my skills and what I peronally rank myself as, with the help of some peers to give a second opinion.</p>
     </div>
@@ -382,10 +387,11 @@
             </div>
         </div>
     </div>
+    <div id="education"></div>
     <!-- -------------------- End Hard Skills Section -------------------- -->
 
     <!-- -------------------- Education Section -------------------- -->
-    <div class="container" id="education">
+    <div class="container">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Education</div>
         <p class="mt-4 text-center education-content-main dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I graduated from ALta High School in 2018. From there I left on a mission for The Church of Jesus Christ of Latter-Day Saints to Lima, Peru for 2 years where I learned Spanish. Upon returning, I entered the Web Design and Develpment program in SLCC to get me started. I am currently enrolled in the program.</p>
         <div class="row row-col-2 text-center">
@@ -405,25 +411,18 @@
 
     <!-- -------------------- Projects Section -------------------- -->
     <div class="container-fluid" id="projects">
-        <div class="display-3 d-flex mt-5 justify-content-center project-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Projects</div>
+        <div class="display-3 d-flex mt-5 justify-content-center project-header-main color" id="polygraph" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Projects</div>
         <div class="row row-cols-1 d-flex justify-content-center text-center">
             <div class="col">
                 <div class="embed-responsive">
-                    <div class="display-6 mt-5 project-header-iframe color" id="firstPort" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">My First Portfolio</div>
-                    <p class="mb-2 dialog project-content" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">This was my first true go at web development. This was the project with which I learned a lot of important fundementals of web design and development. Although there are a few things that I don't like about it now, it's one of the most important stepping stones in my journey of becoming a proficient developer.</p>
-                    <iframe class="project-iframe" src="https://google.com/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
-                </div>
-            </div>
-            <div class="col">
-                <div class="embed-responsive">
-                    <div class="display-6 mt-5 project-header-iframe color" id="polygraph" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Grandpas' Polygraph Business</div>
+                    <div class="display-6 mt-5 project-header-iframe color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Grandpas' Polygraph Business</div>
                     <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My grandfather, Joseph Cottis worked for the F.B.I as a lie detector. He was in need of a new, modern website in order to better connect him to the younger generations, as his old website was slowly being outdated. I made him this website without knowing if he would implement it to get more practice in. I used a bootstrap theme because there is no better way to learn than to jump in head first.</p>
                     <iframe class="project-iframe" src="https://projectpolygraph.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
-                    <div class="display-6 mt-5 project-header-iframe color" id="flute" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Friends' flute instructor freelance</div>
+                    <div class="display-6 mt-5 project-header-iframe color" id="flute" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Shaloras' flute instructor freelance</div>
                     <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I started telling my friends about my new career path and all the exciting progress that I was making. Eager to find more projects, my best friend's wife, Shalora presented me an idea for her. She wants to be a freelancing flute instructor, but doesn't know where to start. I am currently working with them in order to put new content out as well as building a new database to keep track of clients, appointment and class times.</p>
                     <iframe class="project-iframe" src="https://shaloraflute.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
@@ -436,6 +435,7 @@
                 </div>
             </div>
         </div>
+        <div id="contact"></div>
     </div>
     <!-- -------------------- End Projects Section -------------------- -->
 
@@ -456,7 +456,7 @@
             </div>
         </div>
     </div>
-    <section id="contact">
+    <section>
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Contact</div>
         <div id="contactForm" class="container">
             <form id="myForm" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">

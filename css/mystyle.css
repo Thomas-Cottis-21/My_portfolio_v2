@@ -209,18 +209,18 @@ a:hover {
 }
 @media (max-width: 500px) {
     .carousel-header {
-        font-size: 35px;
+        font-size: 40px !important;
     }
     .carousel-content {
-        font-size: 20px;
+        font-size: 15px !important;
     }
 }
 @media (max-width: 800px) {
     .carousel-header {
-        font-size: 45px;
+        font-size: 55px;
     }
     .carousel-content {
-        font-size: 35px;
+        font-size: 25px;
     }
 }
 /* ----- End Hero Section -----*/
@@ -228,6 +228,7 @@ a:hover {
 /* ----- Intro Section -----*/
 #intro-container-row {
     align-items: center;
+    margin-top: 60px;
 }
 .intro-container-image {
     width: auto;
@@ -274,6 +275,9 @@ a:hover {
 /* ----- End Intro Section ----- */
 
 /* ----- Soft Skills Section ----- */
+.soft-skills-header-main {
+    padding-top: 25px;
+}
 .soft-skills-header-main, .soft-skills-header-content, .hard-skills-header-main, .hard-skills-header-gauge {
     font-family: "Oxygen", sans-serif;
     text-align: center;
@@ -289,10 +293,12 @@ a:hover {
 /* ----- End Soft Skills Section ----- */
 
 /* ----- Hard Skills Section ----- */
+.hard-skills-header-main {
+    padding-top: 20px;
+}
 .hard-skills-header-gauge {
     margin-top: 10px;
     font-weight: 200;
-    
 }
 .hard-skills-content {
     font-family: "Oxygen", sans-serif;
@@ -303,6 +309,7 @@ a:hover {
 /* ----- Education Section ----- */
 .education-header-main {
     font-family: "Oxygen", sans-serif;
+    padding-top: 20px;
 }
 .education-content-main {
     font-family: "Oxygen", sans-serif;
@@ -336,6 +343,7 @@ a:hover {
 }
 .project-header-iframe {
     font-weight: 200;
+    padding-top: 30px;
     
 }
 .project-iframe {
@@ -348,6 +356,7 @@ a:hover {
 /* ----- Contact Section ----- */
 .contact-header-main {
     font-family: "Oxygen", sans-serif;
+    padding-top: 30px;
 }
 input{
     border: none;
