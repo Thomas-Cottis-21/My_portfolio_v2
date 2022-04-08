@@ -120,7 +120,6 @@
 
             header("Location: " . $_SERVER["REQUEST_URI"]);
             return;
-
         } catch(PDOException $error) {
 //session variables with error message to be displayed in the modal
 
@@ -132,9 +131,6 @@
             echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
 
             $_SESSION["complete"] = TRUE;
-
-            header("Location: " . $_SERVER["REQUEST_URI"]);
-            return;
         }
 
 //killinng the connection
@@ -509,7 +505,7 @@
                         <textarea class="border-color dialog" name="content" id="content" value="" placeholder="Message" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"><?php if (isset($content)) echo $content ?></textarea>
                         <span class="error"><?= $contentErr ?></span>
                     </div>
-                    <button id="submit" type="submit" data-bs-toggle="modal" data-bs-target="#thanksModal" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Send</button>
+                    <button id="submit" type="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Send</button>
                 </div>
             </form>
         </div>
