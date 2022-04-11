@@ -300,12 +300,30 @@ a:hover {
     padding-top: 20px;
 }
 .hard-skills-header-gauge {
-    margin-top: 10px;
+    margin: 10px 0 20px 0px;
     font-weight: 200;
+}
+.hard-skills-card-container {
+    display: flex;
+    flex-direction: column;
+}
+.progress {
+    width: 45vw;
+    align-self: center;
 }
 .hard-skills-content {
     font-family: "Oxygen", sans-serif;
     font-weight: 100;
+}
+@media (min-width: 768px) {
+    .progress {
+        width: 30vw;
+    }
+}
+@media (max-width: 768px) {
+    .progress {
+        width: 75vw;
+    }
 }
 /* ----- End Hard Skills Section ----- */
 

@@ -371,29 +371,41 @@
     </div>
     <div class="container-fluid">
         <div class="row text-center">
-            <div class="col-lg-4 col-md-6 col-xs">
+            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">HTML</div>
-                <p class="dialog">//This is where the wheel goes</p>
+                <div class="progress">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-xs">
+            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">CSS</div>
-                <p class="dialog">//This is where the wheel goes</p>
+                <div class="progress">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-xs">
+            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Bootstrap</div>
-                <p class="dialog">//This is where the wheel goes</p>
+                <div class="progress">
+                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-xs">
+            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">JavaScript</div>
-                <p class="dialog">//This is where the wheel goes</p>
+                <div class="progress">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-xs">
+            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">PHP</div>
-                <p class="dialog">//This is where the wheel goes</p>
+                <div class="progress">
+                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-xs">
+            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">MySQL</div>
-                <p class="dialog">//This is where the wheel goes</p>
+                <div class="progress">
+                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
         </div>
     </div>
