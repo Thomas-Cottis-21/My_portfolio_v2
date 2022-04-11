@@ -6,7 +6,7 @@
 //naming variabeles to ""
     $firstName = $lastName = $number = $email = $content = "";
 
-    $fNameErr = $fNameFormatErr = $emailErr = $emailFormatErr = $contactErr = $contentErr = "";
+    $fNameErr = $fNameFormatErr = $lNameFormatErr = $emailErr = $emailFormatErr = $contactErr = $contentErr = $numberErr = "";
 
     $formErr = FALSE;
 
@@ -18,6 +18,10 @@
         return $data;
     }
 
+    function validateMobile($mobile) {
+        return preg_match('/^\D+$/', $mobile);
+    }
+
 //passing the cleaned input data to variables if the form has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $firstName = data_filter($_POST["fname"]);
@@ -27,11 +31,6 @@
         $content = data_filter($_POST["content"]);
     
 //if statements to control error messages if user doesnt fill entire form
-        if (!empty($_POST["contact"])) {
-            $contact = ($_POST["contact"]);
-        } else {
-            $contact = null;
-        }
 
         if (empty($_POST["fname"])) {
             $fNameErr = "* First or business name is required";
@@ -44,6 +43,16 @@
                 $fNameFormatErr = "* Only words and spaces";
                 $formErr = TRUE;
             }
+        }
+
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName)) {
+            $lNameFormatErr = "* Only words and spaces";
+            $formErr = TRUE;
+        }
+
+        if (validateMobile($number)){
+            $numberErr = "* Please use only numbers";
+            $formErr = TRUE;
         }
 
         if (empty($_POST["email"])) {
@@ -64,7 +73,7 @@
             $formErr = TRUE;
         } else {
             $contactErr = null;
-            $contact;
+            $contact = $_POST["contact"];
             $contactStr = implode(", ", $contact);
         }
         
@@ -72,15 +81,18 @@
             $contentErr = "* A general message is required (Say Hi!)";
             $formErr = TRUE;
         } else {
-            $contentErr = "";
+            $contentErr = null;
+            if ((!preg_match("/^[a-zA-Z-' ]*$/", $content))) {
+                $contentErr = "* Please use only words and spaces";
+            }
         }
     }
 //attempts to connect to the server when the user submits the entire form with no errors
     if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
         $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "test";
+        $username = "homasan5_thomas";
+        $password = "JohanaRamirez21$$";
+        $dbname = "homasan5_portfolio_clients_database";
 
 //try catch statemnet to either connect to the database and proceed with success modal, or procceed with the error modal
         try {
@@ -90,12 +102,13 @@
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
 //prepared statement that sends information to the database
-            $stmt = $conn->prepare("INSERT INTO clients (firstname, lastname, email, message, contact) VALUES (:firstname, :lastname, :email, :message, :contact)");
+            $stmt = $conn->prepare("INSERT INTO clients (first_name, last_name, number, email, contact, message) VALUES (:firstname, :lastname, :number, :email, :contact, :message)");
             $stmt->bindParam(':firstname', $firstName);
             $stmt->bindParam(':lastname', $lastName);
+            $stmt->bindParam(':number', $number);
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':message', $content);
             $stmt->bindParam(':contact', $contactStr);
+            $stmt->bindParam(':message', $content);
 
 //excecuting the prepared statement
             $stmt->execute();
@@ -109,6 +122,7 @@
                 <li>Thank you, <span class='color'>$firstName $lastName</span> for having interest in me and my experiences. I will get back to you within 24 hours.</li>
                 <li>Your data has been recieved as follows:</li>
                 <li class='color'> $email </li>
+                <li class='color'> $number </li>
                 <li>Your prefered contact methods: <span class='color'> $contactStr </span></li>
                 <hr class='dialog'>
                 <li>Your message: </li>
@@ -467,11 +481,13 @@
                     <div class="col-lg-6">
                         <label for="last-name"></label>
                         <input class="border-color dialog" type="text" id="lname" name="lname" value="<?=$lastName?>" placeholder="Last name" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
+                        <span class="error"><?=$lNameFormatErr?></span>
                     </div>
 
                     <div class="col-lg-2">
                         <label for="number"></label>
                         <input class="border-color dialog" type="text" id="number" name="number" value="<?=$number?>" placeholder="Number" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
+                        <span class="error"><?= $numberErr ?></span>
                     </div>
 
                     <div class="col-lg-6">
