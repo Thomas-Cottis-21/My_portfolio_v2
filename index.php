@@ -4,13 +4,16 @@
         session_start();
     }
 //naming variabeles to ""
+
+//form variables
     $firstName = $lastName = $number = $email = $content = "";
 
+//form error variables
     $fNameErr = $fNameFormatErr = $lNameFormatErr = $emailErr = $emailFormatErr = $contactErr = $contentErr = $numberErr = "";
 
     $formErr = FALSE;
 
-//cleaning data to avoid attacks
+//cleaning and validating input data to avoid attacks
     function data_filter($data){
         $data = trim($data);
         $data = stripslashes($data);
@@ -30,44 +33,45 @@
         $email = data_filter($_POST["email"]);
         $content = data_filter($_POST["content"]);
     
-//if statements to control error messages if user doesnt fill entire form
+//if statements to control error messages if user doesnt fill entire form or if form error is thrown
 
+//first name error handling
         if (empty($_POST["fname"])) {
             $fNameErr = "* First or business name is required";
+            $formErr = TRUE;
+        } else if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
+            $fNameFormatErr = "* Only words and spaces";
             $formErr = TRUE;
         } else {
             $fNameErr = null;
             $firstName;
-
-            if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
-                $fNameFormatErr = "* Only words and spaces";
-                $formErr = TRUE;
-            }
         }
 
+//last name not required, but only allows letters and spaces
         if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName)) {
             $lNameFormatErr = "* Only words and spaces";
             $formErr = TRUE;
         }
 
+//calling validation of number input
         if (validateMobile($number)){
             $numberErr = "* Please use only numbers";
             $formErr = TRUE;
         }
 
+//email error handling
         if (empty($_POST["email"])) {
             $emailErr = "* Email is required";
+            $formErr = TRUE;
+        } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailFormatErr = "* Invalid email format";
             $formErr = TRUE;
         } else {
             $emailErr = null;
             $email;
-            
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailFormatErr = "* Invalid email format";
-                $formErr = TRUE;
-            }
         }
-        
+
+//contact error handling
         if (empty($_POST["contact"])) {
             $contactErr = "* Prefered method of contact is required";
             $formErr = TRUE;
@@ -76,17 +80,18 @@
             $contact = $_POST["contact"];
             $contactStr = implode(", ", $contact);
         }
-        
+
+//textarea error handling
         if (empty($_POST["content"])) {
             $contentErr = "* A general message is required (Say Hi!)";
             $formErr = TRUE;
+        } else if ((!preg_match("/^[a-zA-Z-' ]*$/", $content))) {
+            $contentErr = "* Please use only words and spaces";
         } else {
             $contentErr = null;
-            if ((!preg_match("/^[a-zA-Z-' ]*$/", $content))) {
-                $contentErr = "* Please use only words and spaces";
-            }
         }
     }
+
 //attempts to connect to the server when the user submits the entire form with no errors
     if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
         $servername = "localhost";
@@ -101,7 +106,7 @@
 //retrieving error
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
-//prepared statement that sends information to the database
+//prepared statement that first binds php variables to mysql variables, then sends information to database
             $stmt = $conn->prepare("INSERT INTO clients (first_name, last_name, number, email, contact, message) VALUES (:firstname, :lastname, :number, :email, :contact, :message)");
             $stmt->bindParam(':firstname', $firstName);
             $stmt->bindParam(':lastname', $lastName);
@@ -129,19 +134,21 @@
                 <li class='color'> $content </li>
             </ul>";
 
-//sets session variable complete. This triggers the modal
+//sets the session variable complete to true. The modal is triggered when this is set, and this is only set when the form is error free and submitted
             $_SESSION["complete"] = TRUE;
 
+//on submit, redirecting to the current page... Could be cause of small bug
             header("Location: " . $_SERVER["REQUEST_URI"]);
             return;
-        } catch(PDOException $error) {
-//session variables with error message to be displayed in the modal
 
+        } catch(PDOException $error) {
+
+//session variables with error message to be displayed in the modal
             $_SESSION["modalHeader"] = "Data was not recieved";
 
             $_SESSION["modalMessage"] = "<p>I'm sorry to let you know,<span class='color'> $firstName $lastName </span>that your data was not received. Please resubmit or try again later</p><p>I still thank you for your interest in me and my persuits. Please, if you are still unable to submit your form, contact me personally here and I will get back to you within 24 hours:</p><br><p class='color'><a class='color' href='tel:+13853352336'>385-335-2336</a></p><p><a class='color' href='mailto:tomcottis21@gmail.com'<br>tomcottis21@gmail.com</a></p>";
-//echoing error message to the console instead of the user screen
 
+//echoing error message to the console instead of the user screen
             echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
 
             $_SESSION["complete"] = TRUE;
@@ -532,6 +539,7 @@
             echo "<script>$(document).ready(function() {
                 $('#thanksModal').modal('show');
             });</script>";
+            
 //unsets the current session since the form was submitted
             session_unset();
         }
