@@ -381,37 +381,37 @@
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">HTML</div>
                 <div class="progress">
-                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">CSS</div>
                 <div class="progress">
-                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Bootstrap</div>
                 <div class="progress">
-                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">JavaScript</div>
                 <div class="progress">
-                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">PHP</div>
                 <div class="progress">
-                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">MySQL</div>
                 <div class="progress">
-                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
         </div>
@@ -422,7 +422,7 @@
     <!-- -------------------- Education Section -------------------- -->
     <div class="container">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Education</div>
-        <p class="mt-4 text-center education-content-main dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I graduated from ALta High School in 2018. From there I left on a mission for The Church of Jesus Christ of Latter-Day Saints to Lima, Peru for 2 years where I learned Spanish. Upon returning, I entered the Web Design and Develpment program in SLCC to get me started. I am currently enrolled in the program.</p>
+        <p class="mt-4 text-center education-content-main dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I graduated from Alta High School in 2018. From there I left on a mission for The Church of Jesus Christ of Latter-Day Saints to Lima, Peru for 2 years where I learned Spanish. Upon returning, I entered the Web Design and Develpment program in SLCC to get me started. I am currently enrolled in the program.</p>
         <div class="row row-col-2 text-center">
             <div class="col-xl col-xs education-content-right">
                 <div class="display-6 education-header-content color" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Alta High School</div>
