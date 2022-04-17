@@ -262,10 +262,10 @@
                     <li class="nav-item active">
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
-                    <div class="login-nav-container">
-                        <li class="nav-item"><button class="access"></button></li>
-                    </div>
                 </ul>
+                <div class="login-nav-container">
+                    <li class="nav-item"><button class="access background-color"><i class="bi bi-person-fill"></i></button></li>
+                </div>
             </div>
         </nav>
     </header>

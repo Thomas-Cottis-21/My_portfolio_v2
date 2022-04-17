@@ -82,6 +82,7 @@ a:hover {
 /* ----- Navbar ----- */
 #navBar {
     align-items: center;
+    justify-content: space-between;
 }
 .navbar-brand {
     align-items: center;
@@ -111,13 +112,19 @@ p.nav-link.dropdown-toggle {
 .login-nav-container {
     display: flex;
     align-items: center;
-    border: solid 2px red;
+    margin: 0 25px 0 auto;
 }
 .login-nav-container .access {
+    display: flex;
     border: 1px solid;
     border-radius: 60px;
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+}
+.login-nav-container i {
+    font-size: 35px;
 }
 /* ----- Nav Color Preferences ----- */
 .color {
