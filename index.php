@@ -376,6 +376,7 @@
         <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Hard Skills | What can I do?</div>
         <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My main study is Web Development, so that is what I have based my hard skills on. It is excatly what I am passionate about, creating something beautiful as well as funcional. These are my skills and what I peronally rank myself as, with the help of some peers to give a second opinion.</p>
     </div>
+    <!-- Plan to make progress bars from css and not bootstrap -->
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
