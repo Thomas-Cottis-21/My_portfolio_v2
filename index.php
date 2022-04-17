@@ -181,7 +181,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- -------------------- Custom CSS -------------------- -->
-    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="/assets/css/mystyle.css">
 
     <!-- -------------------- data-aos onscroll library -------------------- -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -271,7 +271,7 @@
     <div class="container-fluid p-0 hero-container">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/Img/hero/cave-man-hero.jpg);">
+                <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/Img/hero/cave-man-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
                             <div class="hero-content-container">
@@ -281,7 +281,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/Img/hero/climbing-1pp-hero.jpg);">
+                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/Img/hero/climbing-1pp-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
                             <div class="carousel-header animate__animated animate__fadeInDown">I love to find solutions to challenges</div>
@@ -289,7 +289,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/Img/hero/printer-hero.jpg);">
+                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/Img/hero/printer-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
                             <div class="carousel-header animate__animated animate__fadeInDown">I love to create</div>
@@ -308,7 +308,7 @@
     <div class="container d-flex">
         <div id="intro-container-row" class="row">
             <div class="col-6 intro-container-image">
-                <img src="/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
+                <img src="/assets/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
             </div>
             <div class="col col-right-intro">
                 <h1 class="display-5 intro-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">I am truly passionate about a few things</h1>
