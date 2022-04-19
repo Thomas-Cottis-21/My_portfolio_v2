@@ -31,13 +31,15 @@
 
         echo "Database connection successful -> ";
 
-        $stmt = $conn->prepare('SELECT password FROM accounts WHERE username = ?');
+        $stmt = $conn->prepare('SELECT accountId, password FROM accounts WHERE username = ?');
 
         $stmt->execute([$loginUsername]);
 
         $user = $stmt->fetch();
 
-        if ($user) {
+        $userPassword = $user[1];
+
+        if ($user &&  $userPassword === $loginPassword) {
             echo "access granted";
         } else {
             echo "access denied";
@@ -58,7 +60,7 @@
     <body>
         <h2><?=$loginUsername?></h2><br>
         <h2><?=$loginPassword?></h2>
-        <h2><?=print_r($user)?></h2>
+        <h2><?=$userPassword?></h2>
         <h2></h2>
     </body>
 </html>
