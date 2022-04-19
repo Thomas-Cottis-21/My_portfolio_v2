@@ -31,13 +31,17 @@
 
         echo "Database connection successful -> ";
 
-        $stmt = $conn->prepare('SELECT accountId, password FROM accounts WHERE username = ?');
+        $stmt = $conn->prepare('SELECT accountId, username, password FROM accounts WHERE username = :username');
 
-        $stmt->execute([$loginUsername]);
+        $stmt->bindParam(":username", $loginUsername);
+
+        $stmt->execute();
 
         $user = $stmt->fetch();
 
-        $userPassword = $user[1];
+        $userName = $user[1];
+
+        $userPassword = $user[2];
 
         if ($user &&  $userPassword === $loginPassword) {
             echo "access granted";
@@ -58,9 +62,14 @@
 
     </head>
     <body>
+        <h1>What the user entered: </h1>
         <h2><?=$loginUsername?></h2><br>
         <h2><?=$loginPassword?></h2>
+        <h1>What is in the database saved under their account row: </h1>
+        <h2><?=$userName?></h2>
         <h2><?=$userPassword?></h2>
+        <h1>What the array user is fetching from the database</h1>
+        <h2><?=print_r($user)?></h2>
         <h2></h2>
     </body>
 </html>
