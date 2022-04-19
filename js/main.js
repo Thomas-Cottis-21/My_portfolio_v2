@@ -247,3 +247,21 @@ const findColor = () => {
 //localStorage.clear();
 }
 findColor();
+
+const authenticateForm = () => {
+    const usernameField = document.forms["loginForm"]["username"].value;
+    const passwordField = document.forms["loginForm"]["password"].value;
+
+    const userErrorSpan = document.getElementById("userErrorSpan");
+    const passErrorSpan = document.getElementById("passErrorSpan");
+
+    if (usernameField == "") {
+        userErrorSpan.innerText = "*Please fill out username field";
+        return false;
+    }
+
+    if (passwordField == "") {
+        passErrorSpan.innerText = "*Please fill out password field";
+        return false;
+    }
+}

@@ -116,15 +116,32 @@ p.nav-link.dropdown-toggle {
 }
 .login-nav-container .access {
     display: flex;
-    border: 1px solid;
-    border-radius: 60px;
-    width: 55px;
-    height: 55px;
+    border: none;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
-.login-nav-container i {
-    font-size: 35px;
+.login-nav-container p {
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+    font-family: "Oxygen", sans-serif;
+    font-size: 20px;
+}
+.login-nav-container p:hover {
+    color: #aaaaaa;
+}
+.modal .submit {
+    padding: 5px 10px 5px 10px;
+    margin: 20px 0 0 0;
+    font-family: "Oxygen", sans-serif;
+    border: none;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
 }
 /* ----- Nav Color Preferences ----- */
 .color {

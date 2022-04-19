@@ -14,7 +14,7 @@
     $formErr = FALSE;
 
 //cleaning and validating input data to avoid attacks
-    function data_filter($data){
+    function data_filter($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
@@ -264,11 +264,35 @@
                     </li>
                 </ul>
                 <div class="login-nav-container">
-                    <li class="nav-item"><button class="access background-color"><i class="bi bi-person-fill"></i></button></li>
+                    <li class="nav-item"><button type="button" class="access" data-bs-toggle="modal" data-bs-target="#user-access-modal"><p>Log in</p></button></li>
                 </div>
             </div>
         </nav>
     </header>
+    <div class="modal fade" id="user-access-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Log in | Admin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form name="loginForm" action="php/authenticate.php" method="POST" onsubmit="return authenticateForm()">
+                        <input type="text" class="border-color" id="username" name="username" placeholder="Username">
+                        <div class="error" id="userErrorSpan"></div>
+
+                        <input type="text" class="border-color" id="password" name="password" placeholder="Password">
+                        <div class="error" id="passErrorSpan"></div>
+
+                        <button type="submit" name="submitLogin" class="submit background-color">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="modal" class="btn btn-default background-color" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- -------------------- Hero Section -------------------- -->
 <section id="hero">
     <div class="container-fluid p-0 hero-container">
@@ -478,13 +502,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <h4 class="modal-title" id="thanksModalLabel"><?=$_SESSION["modalHeader"]?></h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <?=$_SESSION["modalMessage"]?>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default background-color" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
