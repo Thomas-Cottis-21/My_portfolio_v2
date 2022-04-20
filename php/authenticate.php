@@ -56,6 +56,7 @@
         }
         
     } catch(PDOException $error) {
+        header("Location: /index.php");
         echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
         echo "Database failed to connect";
     }
