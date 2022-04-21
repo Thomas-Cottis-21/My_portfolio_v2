@@ -1,0 +1,6 @@
+4/18/22
+Finished the start of login admin authentication, fetching data from database and creating home.php to house displaying data.
+
+*Encrypted passwords in database through the hash function and password_verify
+
+*Learn more about fetching from database and how to display which data where, effectivley
