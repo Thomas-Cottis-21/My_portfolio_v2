@@ -18,11 +18,20 @@
 
         echo "<script>console.log('Database connection successfull -> Access Granted')</script>";
 
-        $stmt = $conn->prepare('SELECT * FROM clients');
-
+        $stmt = $conn->prepare('SELECT * FROM new_clients');
         $stmt->execute();
 
-        $clientInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->bindColumn('clientId', $clientId);
+        $stmt->bindColumn('first_name', $clientFirstName);
+        $stmt->bindColumn('last_name', $clientLastName);
+        $stmt->bindColumn('number', $clientNumber);
+        $stmt->bindColumn('email', $clientEmail);
+        $stmt->bindColumn('contact', $clientContactMethod);
+        $stmt->bindColumn('message', $clientMessage);
+        $stmt->bindColumn('date', $clientDate);
+
+        /* var_dump($client); */
+
 
     } catch(PDOException $error) {
         echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
@@ -95,54 +104,27 @@
                     <p>These are your new clients that you still need to interact with!</p>
                 </div>
                 <div class="card-container">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <h6 class="card-subtitle">Subtitle</h6>
-                            <p class="card-text">card text in order to display data about client, who will have their own card of data</p>
-                            <button class="btn btn-default">Make regular</button>
-                            <button class="btn btn-default">Delete Client</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <h6 class="card-subtitle">Subtitle</h6>
-                            <p class="card-text">card text in order to display data about client, who will have their own card of data</p>
-                            <button class="btn btn-default">Make regular</button>
-                            <button class="btn btn-default">Delete Client</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <h6 class="card-subtitle">Subtitle</h6>
-                            <p class="card-text">card text in order to display data about client, who will have their own card of data</p>
-                            <button class="btn btn-default">Make regular</button>
-                            <button class="btn btn-default">Delete Client</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <h6 class="card-subtitle">Subtitle</h6>
-                            <p class="card-text">card text in order to display data about client, who will have their own card of data</p>
-                            <button class="btn btn-default">Make regular</button>
-                            <button class="btn btn-default">Delete Client</button>
-                        </div>
-                    </div>
+                    <?php 
+                        while ($stmt->fetch(PDO::FETCH_BOUND)) {
+                            echo "
+                                <div class='card'>
+                                    <div class='card-body'>
+                                        <h5 class='card-title'>$clientFirstName</h5>
+                                        <h6 class='card-subtitle'>$clientLastName</h6>
+                                        <p class='card-text'>$clientMessage</p>
+                                        <p></p>
+                                        <button class='btn btn-default'>Make regular</button>
+                                        <button class='btn btn-default'>Delete Client</button>
+                                    </div>
+                                </div>
+                            ";
+                        }
+                    ?>
                 </div>
             </div>
         </div>
     </section>
     <div>
-        <?php 
-            foreach ($clientInfo as $arrayLarge) {
-                foreach ($arrayLarge as $arraySmall) {
-                    echo "<p>$arraySmall</p>";
-                }
-            }
-        ?>
     </div>
     <!-- Javascript-->
 
