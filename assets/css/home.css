@@ -62,6 +62,12 @@ p {
     margin: 10px auto 10px auto;
     justify-content: space-between;
 }
+.new-clients .card-body {
+    
+}
+.new-clients p.card-text {
+    height: auto;
+}
 .new-clients button {
     background-color: greenyellow;
 }
