@@ -29,9 +29,9 @@
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        echo "Database connection successful -> ";
+        echo "Database connection successful -> Access Granted!";
 
-        $stmt = $conn->prepare('SELECT accountId, username, password FROM accounts WHERE username = :username');
+        $stmt = $conn->prepare('SELECT accountId, username, password, name FROM accounts WHERE username = :username');
 
         $stmt->bindParam(":username", $loginUsername);
         $stmt->execute();
@@ -41,13 +41,14 @@
         $userId = $user[0];
         $userName = $user[1];
         $userPassword = $user[2];
+        $userRealName = $user[3];
 
         if ($userName === $loginUsername &&  $userPassword === $loginPassword) {
             header("Location: home.php");
             echo "Access Granted!";
             session_regenerate_id();
             $_SESSION["loggedin"] = TRUE;
-            $_SESSION["name"] = $userName;
+            $_SESSION["name"] = $userRealName;
             $_SESSION["id"] = $userId;
         } else {
             header("Location: /index.php");
@@ -55,6 +56,7 @@
         }
         
     } catch(PDOException $error) {
+        header("Location: /index.php");
         echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
         echo "Database failed to connect";
     }

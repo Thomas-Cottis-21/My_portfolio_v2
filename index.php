@@ -107,7 +107,7 @@
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
 //prepared statement that first binds php variables to mysql variables, then sends information to database
-            $stmt = $conn->prepare("INSERT INTO clients (first_name, last_name, number, email, contact, message) VALUES (:firstname, :lastname, :number, :email, :contact, :message)");
+            $stmt = $conn->prepare("INSERT INTO new_clients (first_name, last_name, number, email, contact, message) VALUES (:firstname, :lastname, :number, :email, :contact, :message)");
             $stmt->bindParam(':firstname', $firstName);
             $stmt->bindParam(':lastname', $lastName);
             $stmt->bindParam(':number', $number);

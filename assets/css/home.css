@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+}
+body {
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+}
+p {
+    font-size: 20px;
+}
+
+/*  ----- Welcome ----- */
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    font-family: "Oxygen", sans-serif;
+}
+.welcome .header {
+    text-align: center;
+    padding: 5px;
+    margin: 15px 0 15px 0;
+}
+.welcome hr {
+    width: 50%;
+    margin: auto;
+}   
+
+/* ----- Agenda ----- */
+
+.agenda {
+    display: flex;
+    flex-direction: column;
+    font-family: "Oxygen", sans-serif;
+}
+.agenda .header {
+    text-align: center;
+}
+
+/* ----- New Clients ----- */
+
+.new-clients {
+    display: flex;
+    flex-direction: column;
+    font-family: "Oxygen", sans-serif;
+}
+.new-clients .header {
+    text-align: center;
+}
+.new-clients hr {
+    width: 50%;
+    margin: auto;
+}
+.new-clients .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.new-clients .card {
+    width: 22%;
+    height: auto;
+    margin: 10px auto 10px auto;
+    justify-content: space-between;
+}
+.new-clients .card-body {
+    
+}
+.new-clients p.card-text {
+    height: auto;
+}
+.new-clients button {
+    background-color: greenyellow;
+}
+.new-clients button:hover {
+    transition: ease-in-out;
+    transition-duration: .3s;
+    background-color: lightgrey;
+}
