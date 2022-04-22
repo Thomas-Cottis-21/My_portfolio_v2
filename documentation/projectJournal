@@ -1,0 +1,25 @@
+4/18/22
+Finished the start of login admin authentication, fetching data from database and creating home.php to house displaying data.
+
+*Encrypted passwords in database through the hash function and password_verify
+
+*Learn more about fetching from database and how to display which data where, effectivley
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+4/20/22
+I managed to fetch data from database, create cards and fill those cards with correct data! 
+
+How it works: 
+I pull data from the new_clients table. I then store that data in cards. Each of these cards has a move and delete button which will allow the user to move the data into another table in the database. This will allow them manage who is new (still needs to be contacted) and who are those who have been contacted as well as future tables that will store data of those who have already been contacted and dealt with. 
+
+My next move will be to update the css, UI and UX of the home page as well as create more tables to store more data. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+4/21/22
+Mimiced the hero section and navbar from index. Decided to not use the index.php code entirely because I want something new for the admin dashboard, but I want somethig along those lines, to keep it consistent. 
+
+My next move will be to change the css of the cards completely. I want the cards to be modular, fitting to only what they need. I don't want them to all be the same size, regardless of content size. I want them to be different sizes based on content.
+
+The move that I am planning after editing the cards is to create better styling of the overall page so far. Definitely looking at .welcome

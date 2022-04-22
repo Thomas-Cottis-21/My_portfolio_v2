@@ -72,6 +72,45 @@
 
 </head>
 <body>
+    <header class="fixed-top header-transparent">
+        <nav class="navbar navbar-expand-lg navLight">
+            <a href="#" class="navbar-brand"><?=$_SESSION["name"]?></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">New Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Current Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Old Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">All Clients</a>
+                    </li>
+                </ul>
+                <div class="login-nav-container">
+                    <li class="nav-item"><button><p>Log out</p></button></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="container-fluid p-0 hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url(/assets/img/hero/cave-man-hero.jpg);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section>
         <div class="container-fluid">
             <div class="welcome">
@@ -109,8 +148,17 @@
                             echo "
                                 <div class='card'>
                                     <div class='card-body'>
-                                        <h5 class='card-title'>$clientFirstName</h5>
-                                        <h6 class='card-subtitle'>$clientLastName</h6>
+                                        <div class='client-info'>
+                                            <div class='client-names'>
+                                                <h5 class='card-title'>$clientFirstName</h5>
+                                                <h6 class='card-subtitle'>$clientLastName</h6>
+                                            </div>
+                                            <div class='client-contact-info'>
+                                                <h5 class='client-email'>$clientEmail</h5>
+                                                <h6 class='client-number'>$clientNumber</h6>
+                                            </div>
+                                        </div>
+                                        <div class='clients-contact-method'>$clientContactMethod</div>
                                         <p class='card-text'>$clientMessage</p>
                                         <p></p>
                                         <button class='btn btn-default'>Make regular</button>

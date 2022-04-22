@@ -298,7 +298,7 @@
     <div class="container-fluid p-0 hero-container">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/Img/hero/cave-man-hero.jpg);">
+                <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/cave-man-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
                             <div class="hero-content-container">
