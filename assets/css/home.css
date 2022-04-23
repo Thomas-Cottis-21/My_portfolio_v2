@@ -132,6 +132,72 @@ p.nav-link.dropdown-toggle {
     text-align: center;
 }
 
+/* ----- Global card styles ----- */
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.client-card {
+    width: 47vw;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 5px auto 5px auto;
+    justify-content: space-between;
+}
+.client-card-body {
+    display: block;
+    margin: 10px;
+}
+.client-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.client-names {
+    margin: 0 10px 15px 10px;
+}
+.client-contact-info {
+    padding: 0;
+    margin: 0 10px 0 10px;
+}
+.client-contact-method {
+    margin: 0 10px 0 10px;
+}
+p.card-text {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    margin: 0 10px 0 10px;
+}
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* media queries */
+@media (max-width: 500px) {
+    .client-info {
+        flex-direction: column;
+    }
+}
+@media (max-width: 800px) {
+    .card-container {
+        flex-direction: column;
+    }
+}
+@media (max-width: 1160px) {
+    .card-container {
+        flex-direction: column;
+    }
+    .client-card {
+        width: 80vw;
+    }
+}
+
 /* ----- New Clients ----- */
 
 .new-clients {
@@ -147,75 +213,24 @@ p.nav-link.dropdown-toggle {
     width: 50%;
     margin: auto;
 }
-.new-clients .card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.new-clients .new-client-card {
-    width: 47vw;
-    height: auto;
-    border: 1px solid gray;
-    border-radius: 5px;
-    margin: 5px auto 5px auto;
-    justify-content: space-between;
-}
-.new-clients .new-client-card-body {
-    display: block;
-    margin: 10px;
-}
-.new-clients .client-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.new-clients .client-names {
-    margin: 0 10px 15px 10px;
-}
-.new-clients .client-contact-info {
-    padding: 0;
-    margin: 0 10px 0 10px;
-}
-.new-clients .client-contact-method {
-    margin: 0 10px 0 10px;
-}
-.new-clients p.card-text {
-    width: auto;
-    height: auto;
-    font-size: 16px;
-    margin: 0 10px 0 10px;
-}
 /* new client button classes */
 .new-clients .btn-pass {
     background-color: #53ca24;
+    margin: 5px;
 }
 .new-clients .btn-message {
     background-color: #24a7ca;
+    margin: 5px;
 }
 .new-clients .btn-delete {
     background-color: #e74c3c;
+    margin: 5px;
 }
 .new-clients button:hover {
     transition: ease-in-out;
     transition-duration: .2s;
     background-color: lightgrey;
-}
-/* media queries */
-@media (max-width: 500px) {
-    .new-clients .client-info {
-        flex-direction: column;
-    }
-}
-@media (max-width: 800px) {
-    .new-clients .card-container {
-        flex-direction: column;
-    }
-}
-@media (max-width: 1160px) {
-    .new-clients .card-container {
-        flex-direction: column;
-    }
+    border-radius: 10px;
 }
 
 /* ----- Active Clients ----- */
@@ -232,4 +247,26 @@ p.nav-link.dropdown-toggle {
 .active-clients hr {
     width: 50%;
     margin: auto;
+}
+.active-clients .btn-pass {
+    background-color: #53ca24;
+    margin: 5px;
+}
+.active-clients .btn-message {
+    background-color: #24a7ca;
+    margin: 5px;
+}
+.active-clients .btn-notes {
+    background-color: #ffb61a;
+    margin: 5px;
+}
+.active-clients .btn-delete {
+    background-color: #e74c3c;
+    margin: 5px;
+}
+.active-clients button:hover {
+    transition: ease-in-out;
+    transition-duration: .2s;
+    background-color: lightgrey;
+    border-radius: 10px;
 }

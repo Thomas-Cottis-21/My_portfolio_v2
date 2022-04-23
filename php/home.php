@@ -39,7 +39,7 @@
         $stmt2->bindColumn('number', $clientNumber);
         $stmt2->bindColumn('email', $clientEmail);
         $stmt2->bindColumn('contact', $clientContactMethod);
-        $stmt2->bindColumn('message', $clientMessage);
+        $stmt2->bindColumn('client_message', $clientMessage);
         $stmt2->bindColumn('date', $clientDate);
 
         /* var_dump($client); */
@@ -158,8 +158,8 @@
                     <?php 
                         while ($stmt->fetch(PDO::FETCH_BOUND)) {
                             echo "
-                                <div class='new-client-card '>
-                                    <div class='new-client-card-body'>
+                                <div class='client-card '>
+                                    <div class='client-card-body'>
                                         <div class='client-info'>
                                             <div class='client-names'>
                                                 <h3>$clientFirstName</h5>
@@ -173,10 +173,11 @@
                                         </div>
                                         <h6 class='client-contact-method'>$clientContactMethod</h6>
                                         <p class='card-text'>$clientMessage</p>
-                                        <p></p>
-                                        <button class='btn btn-default btn-pass'>Pass to active</button>
-                                        <button class='btn btn-default btn-message'>Message</button>
-                                        <button class='btn btn-default btn-delete'>Delete Client</button>
+                                        <div class='button-container'>
+                                            <button class='btn btn-default btn-pass'>Pass to active</button>
+                                            <button class='btn btn-default btn-message'>Message</button>
+                                            <button class='btn btn-default btn-delete'>Delete Client</button>
+                                        </div>
                                     </div>
                                 </div>
                             ";
@@ -198,21 +199,27 @@
                     <?php 
                         while ($stmt2->fetch(PDO::FETCH_BOUND)) {
                             echo "
-                                <div class='card'>
-                                    <div class='card-body'>
+                                <div class='client-card'>
+                                    <div class='client-card-body'>
                                         <div class='client-info'>
                                             <div class='client-names'>
                                                 <h4>$clientFirstName</h4>
                                                 <h5>$clientLastName</h5>
                                             </div>
                                             <div class='client-contact-info'>
-                                                <h4>$clientEmail</h4>
-                                                <h5>$clientNumber</h5>
-                                                <h5>$clientDate</h5>
+                                                <h5>$clientEmail</h5>
+                                                <h6>$clientNumber</h6>
+                                                <h5>no date</h5>
                                             </div>
                                         </div>
                                         <div class='clients-contact-method'>$clientContactMethod</div>
                                         <div>$clientMessage</div>
+                                        <div class='button-container'>
+                                            <button class='btn btn-default btn-pass'>Pass to active</button>
+                                            <button class='btn btn-default btn-message'>Message</button>
+                                            <button class='btn btn-default btn-notes'>Client Notes</button>
+                                            <button class='btn btn-default btn-delete'>Delete Client</button>
+                                        </div>
                                     </div>
                                 </div>
                             ";
