@@ -132,6 +132,7 @@ p.nav-link.dropdown-toggle {
 .new-clients {
     display: flex;
     flex-direction: column;
+    margin: 25px 0 25px 0;
     font-family: "Oxygen", sans-serif;
 }
 .new-clients .header {
@@ -183,4 +184,20 @@ p.nav-link.dropdown-toggle {
     .new-clients .client-info {
         flex-direction: column;
     }
+}
+
+/* ----- Active Clients ----- */
+
+.active-clients {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0 25px 0;
+    font-family: "Oxygen", sans-serif;
+}
+.active-clients .header {
+    text-align: center;
+}
+.active-clients hr {
+    width: 50%;
+    margin: auto;
 }

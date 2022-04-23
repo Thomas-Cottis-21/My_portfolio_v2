@@ -20,6 +20,6 @@ My next move will be to update the css, UI and UX of the home page as well as cr
 4/21/22
 Mimiced the hero section and navbar from index. Decided to not use the index.php code entirely because I want something new for the admin dashboard, but I want somethig along those lines, to keep it consistent. 
 
-My next move will be to change the css of the cards completely. I want the cards to be modular, fitting to only what they need. I don't want them to all be the same size, regardless of content size. I want them to be different sizes based on content.
+My next move will be to change the css of the cards completely. I want the cards to be modular, fitting to only what they need. I don't want them to all be the same size, regardless of content size. I want them to be different sizes based on content. I'm also going to create a callback function that displays real time errors if there are any for the forms.
 
 The move that I am planning after editing the cards is to create better styling of the overall page so far. Definitely looking at .welcome

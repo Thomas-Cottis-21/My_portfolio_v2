@@ -21,6 +21,9 @@
         $stmt = $conn->prepare('SELECT * FROM new_clients');
         $stmt->execute();
 
+        $stmt2 = $conn->prepare('SELECT * FROM active_clients');
+        $stmt2->execute();
+
         $stmt->bindColumn('clientId', $clientId);
         $stmt->bindColumn('first_name', $clientFirstName);
         $stmt->bindColumn('last_name', $clientLastName);
@@ -29,6 +32,15 @@
         $stmt->bindColumn('contact', $clientContactMethod);
         $stmt->bindColumn('message', $clientMessage);
         $stmt->bindColumn('date', $clientDate);
+
+        $stmt2->bindColumn('clientId', $clientId);
+        $stmt2->bindColumn('first_name', $clientFirstName);
+        $stmt2->bindColumn('last_name', $clientLastName);
+        $stmt2->bindColumn('number', $clientNumber);
+        $stmt2->bindColumn('email', $clientEmail);
+        $stmt2->bindColumn('contact', $clientContactMethod);
+        $stmt2->bindColumn('message', $clientMessage);
+        $stmt2->bindColumn('date', $clientDate);
 
         /* var_dump($client); */
 
@@ -172,8 +184,42 @@
             </div>
         </div>
     </section>
-    <div>
-    </div>
+    <section>
+        <div class="container-fluid">
+            <div class="active-clients">
+                <div class="header">
+                    <h3>Active clients</h3>
+                    <hr>
+                    <p>These are the clients that are active, meaning that they are activley messaging you, have purchased a service or you are doing some kind of work for them</p>
+                </div>
+                <div class="card-container">
+                    <?php 
+                        while ($stmt2->fetch(PDO::FETCH_BOUND)) {
+                            echo "
+                                <div class='card'>
+                                    <div class='card-body'>
+                                        <div class='client-info'>
+                                            <div class='client-names'>
+                                                <h4>$clientFirstName</h4>
+                                                <h5>$clientLastName</h5>
+                                            </div>
+                                            <div class='client-contact-info'>
+                                                <h4>$clientEmail</h4>
+                                                <h5>$clientNumber</h5>
+                                                <h5>$clientDate</h5>
+                                            </div>
+                                        </div>
+                                        <div class='clients-contact-method'>$clientContactMethod</div>
+                                        <div>$clientMessage</div>
+                                    </div>
+                                </div>
+                            ";
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Javascript-->
 
     <!-- -------------------- Bootstrap CDN -------------------- -->
