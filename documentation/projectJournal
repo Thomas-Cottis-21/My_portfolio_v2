@@ -23,3 +23,12 @@ Mimiced the hero section and navbar from index. Decided to not use the index.php
 My next move will be to change the css of the cards completely. I want the cards to be modular, fitting to only what they need. I don't want them to all be the same size, regardless of content size. I want them to be different sizes based on content.
 
 The move that I am planning after editing the cards is to create better styling of the overall page so far. Definitely looking at .welcome
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+4/22/22
+Styled new client cards with buttons that will soon either delete, transfer or give message funcionality to the user admin. Made cards reactive to mobile and desktop screens. Still need to test with laptops. Styled welcome section further, but not completely.
+
+My next move will be to update the welcome section, making it modern, as well as discrete. I want to avoid too many unneccesary things. I want to only display a welcome message to the left and a clock to the right with the date and time. My next move after that is to implement the dark mode and preferences from index into the home page. My next move after that will be to create the next data section. Active clients. These cards will be similiar, but I want even more information to be displayed. 
+
+**idea - it would be cool to have a timer going in all of the cards in the new client section, displaying how much time it has been there. Once I either delete it or move it, the timer will be reset, giving the admin a sense of timing to his work.

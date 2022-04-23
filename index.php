@@ -224,10 +224,10 @@
                     <li class="nav-item">
                         <a href="#about" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-nowwrap">
                         <a href="#softSkills" class="nav-link">Soft Skills</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-nowwrap">
                         <a href="#hardSkills" class="nav-link">Hard Skills</a>
                     </li>
                     <li class="nav-item">

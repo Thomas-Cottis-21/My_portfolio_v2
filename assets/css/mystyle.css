@@ -93,6 +93,7 @@ a:hover {
     color: whitesmoke;
     font-family: "Oxygen", sans-serif;
     font-size: 20px;
+    white-space: nowrap;
 }
 .nav-link:hover,
 .nav-link:active,
@@ -130,6 +131,7 @@ p.nav-link.dropdown-toggle {
     color: whitesmoke;
     font-family: "Oxygen", sans-serif;
     font-size: 20px;
+    white-space: nowrap;
 }
 .login-nav-container p:hover {
     color: #aaaaaa;
