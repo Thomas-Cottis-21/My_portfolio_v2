@@ -117,7 +117,7 @@
                 <div class="header">
                     <h2>Welcome, <?=$_SESSION["name"]?>!</h2>
                     <hr>
-                    <p>I am so glad that you were able to get through that, while still managing to learn so many great things! You'll be able to apply this very well!</p>
+                    <p>I am so glad that you were able to get through that, while still managing to learn so many great things! You'll be able to apply this very well! The following data are your clients and their needs! It is divided up between the different classes of clients and even their specific needs, defined by you!</p>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
         <div class="container">
             <div class="agenda">
                 <div class="header">
-                    <h3>We'll, we have a lot of work to do <?=$_SESSION["name"]?>!</h3>
+                    <h3>You need to get to work, <?=$_SESSION["name"]?>!</h3>
                     <p>Let's see who's new on the list</p>
                 </div>
             </div>
@@ -146,23 +146,25 @@
                     <?php 
                         while ($stmt->fetch(PDO::FETCH_BOUND)) {
                             echo "
-                                <div class='card'>
-                                    <div class='card-body'>
+                                <div class='new-client-card '>
+                                    <div class='new-client-card-body'>
                                         <div class='client-info'>
                                             <div class='client-names'>
-                                                <h5 class='card-title'>$clientFirstName</h5>
-                                                <h6 class='card-subtitle'>$clientLastName</h6>
+                                                <h3>$clientFirstName</h5>
+                                                <h4>$clientLastName</h4>
                                             </div>
                                             <div class='client-contact-info'>
-                                                <h5 class='client-email'>$clientEmail</h5>
-                                                <h6 class='client-number'>$clientNumber</h6>
+                                                <h5>$clientEmail</h5>
+                                                <h6>$clientNumber</h6>
+                                                <h6>$clientDate</h6>
                                             </div>
                                         </div>
-                                        <div class='clients-contact-method'>$clientContactMethod</div>
+                                        <h6 class='client-contact-method'>$clientContactMethod</h6>
                                         <p class='card-text'>$clientMessage</p>
                                         <p></p>
-                                        <button class='btn btn-default'>Make regular</button>
-                                        <button class='btn btn-default'>Delete Client</button>
+                                        <button class='btn btn-default btn-pass'>Pass to active</button>
+                                        <button class='btn btn-default btn-message'>Message</button>
+                                        <button class='btn btn-default btn-delete'>Delete Client</button>
                                     </div>
                                 </div>
                             ";

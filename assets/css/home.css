@@ -107,9 +107,14 @@ p.nav-link.dropdown-toggle {
     font-family: "Oxygen", sans-serif;
 }
 .welcome .header {
+    align-self: center;
     text-align: center;
     padding: 5px;
     margin: 45px 0 15px 0;
+    width: 65vw;
+}
+.welcome h2 {
+    font-size: 60px;
 }
 .welcome hr {
     width: 50%;
@@ -145,42 +150,72 @@ p.nav-link.dropdown-toggle {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
-.new-clients .card {
-    width: 35vw;
+.new-clients .new-client-card {
+    width: 47vw;
     height: auto;
-    margin: 10px auto 10px auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 5px auto 5px auto;
     justify-content: space-between;
 }
-.new-clients p.card-text {
-    height: auto;
-    font-size: 16px;
+.new-clients .new-client-card-body {
+    display: block;
+    margin: 10px;
 }
 .new-clients .client-info {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
-/* client names class */
+.new-clients .client-names {
+    margin: 0 10px 15px 10px;
+}
 .new-clients .client-contact-info {
     padding: 0;
-    margin: 5px 10px 5px 0;
+    margin: 0 10px 0 10px;
 }
-.new-clients button {
-    background-color: greenyellow;
+.new-clients .client-contact-method {
+    margin: 0 10px 0 10px;
+}
+.new-clients p.card-text {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    margin: 0 10px 0 10px;
+}
+/* new client button classes */
+.new-clients .btn-pass {
+    background-color: #53ca24;
+}
+.new-clients .btn-message {
+    background-color: #24a7ca;
+}
+.new-clients .btn-delete {
+    background-color: #e74c3c;
 }
 .new-clients button:hover {
     transition: ease-in-out;
-    transition-duration: .3s;
+    transition-duration: .2s;
     background-color: lightgrey;
+}
+/* media queries */
+@media (max-width: 500px) {
+    .new-clients .client-info {
+        flex-direction: column;
+    }
 }
 @media (max-width: 800px) {
     .new-clients .card-container {
         flex-direction: column;
     }
-    .new-clients .card {
-        width: 80vw;
-    }
-    .new-clients .client-info {
+}
+@media (max-width: 1160px) {
+    .new-clients .card-container {
         flex-direction: column;
+    }
+    .new-clients .new-client-card {
+        width: 90vw;
     }
 }
