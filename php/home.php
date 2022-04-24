@@ -24,6 +24,10 @@
         $stmt2 = $conn->prepare('SELECT * FROM active_clients');
         $stmt2->execute();
 
+        $stmt3 = $conn->prepare('SELECT * FROM former_clients');
+        $stmt3->execute();
+
+        /* new clients table */
         $stmt->bindColumn('clientId', $clientId);
         $stmt->bindColumn('first_name', $clientFirstName);
         $stmt->bindColumn('last_name', $clientLastName);
@@ -33,6 +37,7 @@
         $stmt->bindColumn('message', $clientMessage);
         $stmt->bindColumn('date', $clientDate);
 
+        /* active clinets table */
         $stmt2->bindColumn('clientId', $clientId);
         $stmt2->bindColumn('first_name', $clientFirstName);
         $stmt2->bindColumn('last_name', $clientLastName);
@@ -40,7 +45,17 @@
         $stmt2->bindColumn('email', $clientEmail);
         $stmt2->bindColumn('contact', $clientContactMethod);
         $stmt2->bindColumn('client_message', $clientMessage);
-        $stmt2->bindColumn('date', $clientDate);
+        /* $stmt2->bindColumn('date', $clientDate); */
+
+        /* former clients table */
+        $stmt3->bindColumn('clientId', $formerClientId);
+        $stmt3->bindColumn('first_name', $formerClientFirstName);
+        $stmt3->bindColumn('last_name', $formerClientLastName);
+        $stmt3->bindColumn('number', $formerClientNumber);
+        $stmt3->bindColumn('email', $formerClientEmail);
+        $stmt3->bindColumn('contact', $formerClientContactMethod);
+        $stmt3->bindColumn('message', $formerClientMessage);
+        /* $stmt3->bindColumn('date', $clientDate); */
 
         /* var_dump($client); */
 
@@ -84,10 +99,20 @@
 
 </head>
 <body>
+    <!-- -------------------- Back To Top -------------------- -->
+    <div>
+        <a href="#" id="backToTop" class="return-to-top-button bi bi-arrow-up background-color"></a>
+    </div>
+
+    <!-- -------------------- Dark Mode -------------------- -->
+    <button id="toggleDm" class="buttonDm bi bi-lamp"></button>
+
     <header class="fixed-top header-transparent">
         <nav class="navbar navbar-expand-lg navLight">
             <a href="#" class="navbar-brand"><?=$_SESSION["name"]?></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse">
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -107,6 +132,20 @@
                     <li class="nav-item">
                         <a href="" class="nav-link">All Clients</a>
                     </li>
+                    <div class="dropdown btn-group">
+                        <p class="nav-link dropdown-toggle color" type="button"
+                        data-bs-toggle="dropdown">Preferences</p>
+
+                        <ul class="dropdown-menu navLight" id="dropdownMenu">
+                            <li><button class="preferences-color-button green" id="green">Green</button></li>
+                            <li><button class="preferences-color-button orange" id="orange">Orange</button></li>
+                            <li><button class="preferences-color-button red" id="red">Red</button></li>
+                            <li><button class="preferences-color-button light-blue" id="light-blue">Light Blue</button></li>
+                            <li><button class="preferences-color-button dark-blue" id="dark-blue">Dark Blue</button></li>
+                            <li><button class="preferences-color-button gray" id="gray">Gray</button></li>
+                            <li><button class="preferences-color-button pink" id="pink">Pink</button></li>
+                        </ul>
+                    </div>
                 </ul>
                 <div class="login-nav-container">
                     <li class="nav-item"><button><p>Log out</p></button></li>
@@ -118,18 +157,41 @@
         <div class="container-fluid p-0 hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" style="background-image: url(/assets/img/hero/cave-man-hero.jpg);"></div>
-                </div>
+                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/punch.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">Be better every day!</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Look at what you've created! Keep learning!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item"  data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/snowy_mountain.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">Be a problem solver!</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">It's perfectly normal to get stuck and have to look to others for help!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/italy.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">Keep improving!</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">This is only the beginning of what you'll do for others</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
     </section>
     <section>
         <div class="container-fluid">
             <div class="welcome">
-                <div class="header">
-                    <h2>Welcome, <?=$_SESSION["name"]?>!</h2>
+                <div class="header dialog">
+                    <h2>Hey, <span class="color"><?=$_SESSION["name"]?></span>!</h2>
+                    <h3>Let's see what your day looks like</h3>
                     <hr>
-                    <p>I am so glad that you were able to get through that, while still managing to learn so many great things! You'll be able to apply this very well! The following data are your clients and their needs! It is divided up between the different classes of clients and even their specific needs, defined by you!</p>
                 </div>
             </div>
         </div>
@@ -138,21 +200,18 @@
     <section>
         <div class="container">
             <div class="agenda">
-                <div class="header">
-                    <h3>You need to get to work, <?=$_SESSION["name"]?>!</h3>
-                    <p>Let's see who's new on the list</p>
-                </div>
+                <!-- weather api -->
+
+                <!-- clock -->
             </div>
         </div>
     </section>
-
     <section>
         <div class="container-fluid">
             <div class="new-clients">
-                <div class="header">
+                <div class="header dialog">
                     <h3>New Clients</h3>
                     <hr>
-                    <p>These are your new clients that you still need to interact with!</p>
                 </div>
                 <div class="card-container">
                     <?php 
@@ -190,10 +249,9 @@
     <section>
         <div class="container-fluid">
             <div class="active-clients">
-                <div class="header">
+                <div class="header dialog">
                     <h3>Active clients</h3>
                     <hr>
-                    <p>These are the clients that are active, meaning that they are activley messaging you, have purchased a service or you are doing some kind of work for them</p>
                 </div>
                 <div class="card-container">
                     <?php 
@@ -229,7 +287,47 @@
             </div>
         </div>
     </section>
-    <!-- Javascript-->
+    <section>
+        <div class="container-fluid">
+            <div class="former-clients">
+                <div class="header dialog">
+                    <h3>Former Clients</h3>
+                    <hr>
+                </div>
+                <div class="card-container">
+                    <?php 
+                        while ($stmt3->fetch(PDO::FETCH_BOUND)) {
+                            echo "
+                                <div class='client-card'>
+                                    <div class='client-card-body'>
+                                        <div class='client-info'>
+                                            <div class='client-names'>
+                                                <h4>$formerClientFirstName</h4>
+                                                <h5>$formerClientLastName</h5>
+                                            </div>
+                                            <div class='client-contact-info'>
+                                                <h5>$formerClientEmail</h5>
+                                                <h6>$formerClientNumber</h6>
+                                                <h5>No date</h5>
+                                            </div>
+                                        </div>
+                                        <div class='clients-contact-method'>$formerClientContactMethod</div>
+                                        <div>$formerClientMessage</div>
+                                        <div class='button-container'>
+                                            <button class='btn btn-default btn-pass'>Pass to active</button>
+                                            <button class='btn btn-default btn-message'>Message</button>
+                                            <button class='btn btn-default btn-notes'>Client Notes</button>
+                                            <button class='btn btn-default btn-delete'>Delete Client</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ";
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- -------------------- Bootstrap CDN -------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

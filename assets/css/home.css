@@ -9,6 +9,76 @@ p {
     font-size: 20px;
 }
 
+/* ----- Dark Mode ----- */
+.dark-mode {
+    background-color: #313131;
+}
+.dark-mode-button {
+    background-color: #3f3f3f;
+    color: #f9f9f9;
+}
+.light-mode-button {
+    background-color: #f9f9f9;
+    color: #5e5e5e;
+}
+.buttonDm {
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 100px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+/* ----- End Dark Mode ----- */
+
+/* ----- Back To Top ----- */
+.return-to-top-button {
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: 0.2s;
+}
+@media(max-width: 400px) {
+    .buttonDm, .return-to-top-button {
+        width: 40px;
+        height: 40px;
+    }
+}
+.show {
+    opacity: 1;
+    transition: 0.5s;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
 /* ----- Nav ----- */
 #navBar {
     align-items: center;
@@ -77,10 +147,55 @@ p.nav-link.dropdown-toggle {
     height: auto;
     background-color: transparent;
 }
-.navLight {
+.navDark {
     background-color: rgba(0, 0, 0, 0.7);
+    transition: ease-in-out;
+    transition-duration: 0.5s;
 }
+.navLight {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+/* ----- Nav Color Preferences ----- */
 
+.color {
+    transition: 0.5s;
+}
+.preferences-color-button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+.preferences-color-button:hover {
+    background-color:rgba(0, 0, 0, 0.6);
+}
+.green {
+    color: #a2c80a;
+}
+.orange {
+    color: #ffc600;
+}
+.red {
+    color: #ff4000;
+}
+.light-blue {
+    color: #00beff;
+}
+.dark-blue {
+    color: #007eff;
+}
+.gray {
+    color: #aaaaaa;
+}
+.pink {
+    color: #ff8989;
+}
 /* ----- Hero ----- */
 
 .hero-container {
@@ -93,10 +208,47 @@ p.nav-link.dropdown-toggle {
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     position: relative;
     transition: 0.5s;
+}
+.hero-content-container {
+    margin: 0;
+}
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px;
+    padding: 0px;
+}
+.carousel-header {
+    font-family: "Oxygen", sans-serif;
+    font-size: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-bottom: 0px;
+}
+.carousel-content {
+    font-family: "Oxygen", sans-serif;
+    font-size: 25px;
+    margin-top: 0px;
+}
+@media (max-width: 500px) {
+    .carousel-header {
+        font-size: 40px !important;
+    }
+    .carousel-content {
+        font-size: 15px !important;
+    }
+}
+@media (max-width: 800px) {
+    .carousel-header {
+        font-size: 55px;
+    }
+    .carousel-content {
+        font-size: 25px;
+    }
 }
 
 /*  ----- Welcome ----- */
@@ -107,8 +259,8 @@ p.nav-link.dropdown-toggle {
     font-family: "Oxygen", sans-serif;
 }
 .welcome .header {
-    align-self: center;
-    text-align: center;
+    align-self: left;
+    text-align: left;
     padding: 5px;
     margin: 45px 0 15px 0;
     width: 65vw;
@@ -116,8 +268,11 @@ p.nav-link.dropdown-toggle {
 .welcome h2 {
     font-size: 60px;
 }
+.welcome h3 {
+    font-size: 45px;
+}
 .welcome hr {
-    width: 50%;
+    width: 100%;
     margin: auto;
 }   
 
@@ -127,9 +282,6 @@ p.nav-link.dropdown-toggle {
     display: flex;
     flex-direction: column;
     font-family: "Oxygen", sans-serif;
-}
-.agenda .header {
-    text-align: center;
 }
 
 /* ----- Global card styles ----- */
@@ -143,7 +295,8 @@ p.nav-link.dropdown-toggle {
 .client-card {
     width: 47vw;
     height: auto;
-    border: 1px solid gray;
+    background-color: #bfbfbf;
+    border: none;
     border-radius: 5px;
     margin: 5px auto 5px auto;
     justify-content: space-between;
@@ -178,6 +331,28 @@ p.card-text {
     flex-direction: row;
     flex-wrap: wrap;
 }
+.btn-pass {
+    background-color: #a2c80a;
+    margin: 5px;
+}
+.btn-message {
+    background-color: #24a7ca;
+    margin: 5px;
+}
+.btn-notes {
+    background-color: #ffb61a;
+    margin: 5px;
+}
+.btn-delete {
+    background-color: #e74c3c;
+    margin: 5px;
+} 
+button:hover {
+    transition: ease-in-out;
+    transition-duration: .2s;
+    background-color: darkgrey;
+    border-radius: 10px;
+}
 /* media queries */
 @media (max-width: 500px) {
     .client-info {
@@ -209,28 +384,12 @@ p.card-text {
 .new-clients .header {
     text-align: center;
 }
+.new-clients .header h3 {
+    font-size: 35px;
+}
 .new-clients hr {
     width: 50%;
     margin: auto;
-}
-/* new client button classes */
-.new-clients .btn-pass {
-    background-color: #53ca24;
-    margin: 5px;
-}
-.new-clients .btn-message {
-    background-color: #24a7ca;
-    margin: 5px;
-}
-.new-clients .btn-delete {
-    background-color: #e74c3c;
-    margin: 5px;
-}
-.new-clients button:hover {
-    transition: ease-in-out;
-    transition-duration: .2s;
-    background-color: lightgrey;
-    border-radius: 10px;
 }
 
 /* ----- Active Clients ----- */
@@ -244,29 +403,29 @@ p.card-text {
 .active-clients .header {
     text-align: center;
 }
+.active-clients h3 {
+    font-size: 35px;
+}
 .active-clients hr {
     width: 50%;
     margin: auto;
 }
-.active-clients .btn-pass {
-    background-color: #53ca24;
-    margin: 5px;
+
+/* Former Clients */
+
+.former-clients {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0 25px 0;
+    font-family: "Oxygen", sans-serif;
 }
-.active-clients .btn-message {
-    background-color: #24a7ca;
-    margin: 5px;
+.former-clients .header {
+    text-align: center;
 }
-.active-clients .btn-notes {
-    background-color: #ffb61a;
-    margin: 5px;
+.former-clients .header h3 {
+    font-size: 35px;
 }
-.active-clients .btn-delete {
-    background-color: #e74c3c;
-    margin: 5px;
-}
-.active-clients button:hover {
-    transition: ease-in-out;
-    transition-duration: .2s;
-    background-color: lightgrey;
-    border-radius: 10px;
+.former-clients hr {
+    width: 50%;
+    margin: auto;
 }

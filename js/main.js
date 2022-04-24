@@ -258,10 +258,14 @@ const authenticateForm = () => {
     if (usernameField == "") {
         userErrorSpan.innerText = "*Please fill out username field";
         return false;
+    } else {
+        userErrorSpan.innerText = "";
     }
 
     if (passwordField == "") {
         passErrorSpan.innerText = "*Please fill out password field";
         return false;
+    } else {
+        userErrorSpan.innerText = "";
     }
 }

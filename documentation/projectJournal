@@ -32,3 +32,11 @@ Styled new client cards with buttons that will soon either delete, transfer or g
 My next move will be to update the welcome section, making it modern, as well as discrete. I want to avoid too many unneccesary things. I want to only display a welcome message to the left and a clock to the right with the date and time. My next move after that is to implement the dark mode and preferences from index into the home page. My next move after that will be to create the next data section. Active clients. These cards will be similiar, but I want even more information to be displayed. 
 
 **idea - it would be cool to have a timer going in all of the cards in the new client section, displaying how much time it has been there. Once I either delete it or move it, the timer will be reset, giving the admin a sense of timing to his work.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+4-23-22
+Implemented new data sections, active clients and former clients with new button, Client Notes. This will allow the admin to place notes about a certain client into the database so that they can better be served. Also implemented dark mode and changing colors preferences.
+
+My next move will be to perfect form error handling. Then I will insert weather api and clock. Then I will add funcionality to the client card buttons to insert, delete and move data in the database.
+I am also going to implement the idea from 4/22/22 and put an active timer on each of the cards to be able to tell how long that card has been in that section. Once data is finally in the old client section, timer will eventually stop, however the data will still be displayed. 
+
