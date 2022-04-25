@@ -9,7 +9,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "test";
+    $dbname = "my_portfolio_v2_test";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -44,18 +44,17 @@
         $stmt2->bindColumn('number', $clientNumber);
         $stmt2->bindColumn('email', $clientEmail);
         $stmt2->bindColumn('contact', $clientContactMethod);
-        $stmt2->bindColumn('client_message', $clientMessage);
-        /* $stmt2->bindColumn('date', $clientDate); */
+        $stmt2->bindColumn('message', $clientMessage);
+        $stmt2->bindColumn('date', $clientDate);
 
         /* former clients table */
-        $stmt3->bindColumn('clientId', $formerClientId);
-        $stmt3->bindColumn('first_name', $formerClientFirstName);
-        $stmt3->bindColumn('last_name', $formerClientLastName);
-        $stmt3->bindColumn('number', $formerClientNumber);
-        $stmt3->bindColumn('email', $formerClientEmail);
-        $stmt3->bindColumn('contact', $formerClientContactMethod);
-        $stmt3->bindColumn('message', $formerClientMessage);
-        /* $stmt3->bindColumn('date', $clientDate); */
+        $stmt3->bindColumn('clientId', $clientFirstName);
+        $stmt3->bindColumn('last_name', $clientLastName);
+        $stmt3->bindColumn('number', $clientNumber);
+        $stmt3->bindColumn('email', $clientEmail);
+        $stmt3->bindColumn('contact', $clientContactMethod);
+        $stmt3->bindColumn('message', $clientMessage);
+        $stmt3->bindColumn('date', $clientDate);
 
         /* var_dump($client); */
 
@@ -113,7 +112,7 @@
             <button class="navbar-toggler" type="button" 
             data-bs-toggle="collapse" 
             data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"><i class="bi bi-arrow-down-up"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -267,7 +266,7 @@
                                             <div class='client-contact-info'>
                                                 <h5>$clientEmail</h5>
                                                 <h6>$clientNumber</h6>
-                                                <h5>no date</h5>
+                                                <h6>$clientDate</h6>
                                             </div>
                                         </div>
                                         <div class='clients-contact-method'>$clientContactMethod</div>
@@ -302,17 +301,17 @@
                                     <div class='client-card-body'>
                                         <div class='client-info'>
                                             <div class='client-names'>
-                                                <h4>$formerClientFirstName</h4>
-                                                <h5>$formerClientLastName</h5>
+                                                <h4>$clientFirstName</h4>
+                                                <h5>$clientLastName</h5>
                                             </div>
                                             <div class='client-contact-info'>
-                                                <h5>$formerClientEmail</h5>
-                                                <h6>$formerClientNumber</h6>
-                                                <h5>No date</h5>
+                                                <h5>$clientEmail</h5>
+                                                <h6>$clientNumber</h6>
+                                                <h6>$clientDate</h6>
                                             </div>
                                         </div>
-                                        <div class='clients-contact-method'>$formerClientContactMethod</div>
-                                        <div>$formerClientMessage</div>
+                                        <div class='clients-contact-method'>$clientContactMethod</div>
+                                        <div>$clientMessage</div>
                                         <div class='button-container'>
                                             <button class='btn btn-default btn-pass'>Pass to active</button>
                                             <button class='btn btn-default btn-message'>Message</button>

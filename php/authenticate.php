@@ -6,7 +6,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "test";
+    $dbname = "my_portfolio_v2_test";
 
 //filter incoming data
     function data_filter($data) {

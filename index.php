@@ -97,7 +97,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "test";
+        $dbname = "my_portfolio_v2_test";
 
 //try catch statemnet to either connect to the database and proceed with success modal, or procceed with the error modal
         try {

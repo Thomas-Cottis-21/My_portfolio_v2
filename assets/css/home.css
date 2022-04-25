@@ -98,10 +98,24 @@ a:hover {
 .nav-link:active,
 .nav-link:focus {
     color: gray;
-
 }
 p.nav-link.dropdown-toggle {
     margin: 0;
+}
+.navbar button {
+    outline: none;
+}
+.navbar button:hover,
+.navbar button:active,
+.navbar button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.navbar-toggler-icon {
+    display: flex;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
 }
 .dropdown-menu {
     padding: 0;
