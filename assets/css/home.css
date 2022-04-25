@@ -360,7 +360,19 @@ p.card-text {
 .btn-delete {
     background-color: #e74c3c;
     margin: 5px;
-} 
+}
+.btn-pass:focus {
+    box-shadow: none;
+}
+.btn-message:focus {
+    box-shadow: none;
+}
+.btn-notes:focus {
+    box-shadow: none;
+}
+.btn-delete:focus {
+    box-shadow: none;
+}
 button:hover {
     transition: ease-in-out;
     transition-duration: .2s;

@@ -48,7 +48,8 @@
         $stmt2->bindColumn('date', $clientDate);
 
         /* former clients table */
-        $stmt3->bindColumn('clientId', $clientFirstName);
+        $stmt3->bindColumn('clientId', $clientId);
+        $stmt3->bindColumn('first_name', $clientFirstName);
         $stmt3->bindColumn('last_name', $clientLastName);
         $stmt3->bindColumn('number', $clientNumber);
         $stmt3->bindColumn('email', $clientEmail);
@@ -220,6 +221,7 @@
                                     <div class='client-card-body'>
                                         <div class='client-info'>
                                             <div class='client-names'>
+                                                <h2>$clientId</h2>
                                                 <h3>$clientFirstName</h5>
                                                 <h4>$clientLastName</h4>
                                             </div>
@@ -260,6 +262,7 @@
                                     <div class='client-card-body'>
                                         <div class='client-info'>
                                             <div class='client-names'>
+                                                <h2>$clientId</h2>
                                                 <h4>$clientFirstName</h4>
                                                 <h5>$clientLastName</h5>
                                             </div>
