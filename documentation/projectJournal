@@ -40,3 +40,8 @@ Implemented new data sections, active clients and former clients with new button
 My next move will be to perfect form error handling. Then I will insert weather api and clock. Then I will add funcionality to the client card buttons to insert, delete and move data in the database.
 I am also going to implement the idea from 4/22/22 and put an active timer on each of the cards to be able to tell how long that card has been in that section. Once data is finally in the old client section, timer will eventually stop, however the data will still be displayed. 
 
+--------------------------------------------------------------------------------------------------------------------------------------------
+4-25-22
+Created a new database on a clean slate in order to better test how it will be set up. I also figured out how to correctly move rows of data safely from one table to another. 
+
+My next move will be to insert weather api and clock as well as learn how to execute PHP on a button click in order to give home.php funcionality. 
