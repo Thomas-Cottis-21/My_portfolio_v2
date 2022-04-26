@@ -222,7 +222,7 @@
                                         <div class='client-info'>
                                             <div class='client-names'>
                                                 <h2>$clientId</h2>
-                                                <h3>$clientFirstName</h5>
+                                                <h3>$clientFirstName</h3>
                                                 <h4>$clientLastName</h4>
                                             </div>
                                             <div class='client-contact-info'>
@@ -263,8 +263,8 @@
                                         <div class='client-info'>
                                             <div class='client-names'>
                                                 <h2>$clientId</h2>
-                                                <h4>$clientFirstName</h4>
-                                                <h5>$clientLastName</h5>
+                                                <h3>$clientFirstName</h3>
+                                                <h4>$clientLastName</h4>
                                             </div>
                                             <div class='client-contact-info'>
                                                 <h5>$clientEmail</h5>

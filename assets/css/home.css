@@ -429,7 +429,7 @@ button:hover {
 .active-clients .header {
     text-align: center;
 }
-.active-clients h3 {
+.active-clients .header h3 {
     font-size: 35px;
 }
 .active-clients hr {
