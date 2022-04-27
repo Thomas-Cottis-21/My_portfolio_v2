@@ -181,6 +181,30 @@
                             </div>
                         </div>
                     </div>
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/fish.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">Learn from the past</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Learn from your mistakes so that you can look to the future wisely</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/church.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">Remember God and your experiences</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Remember that all of this is possible with and only by his grace</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/balance.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">Find balance and rythm</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Balance yourself so that you'll be able to keep moving forward with peace</div>
+                            </div>
+                        </div>
+                    </div>
                 </div> 
             </div>
         </div>
