@@ -51,3 +51,9 @@ My next move will be to insert weather api and clock as well as learn how to exe
 I have successfully created an interactive user interface for updating data in the database and for organizing the data.
 
 My next step will be to insert weather api and clock as well as styling the select statements. I will also make it so that the only data displayed will be the data on the screen while scrolling.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+5-01-22
+I adjusted random css throughout the site. 
+
+My next step will be to add PHPMailer.

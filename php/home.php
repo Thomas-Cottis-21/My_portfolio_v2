@@ -2,7 +2,7 @@
     session_start();
 
     if (!isset($_SESSION["loggedin"])) {
-        header("Location: /index.php");
+        header("Location: index.php");
         exit;
     }
 
@@ -147,11 +147,33 @@
                     </div>
                 </ul>
                 <div class="login-nav-container">
-                    <li class="nav-item"><button><p>Log out</p></button></li>
+                    <li class="nav-item"><button type="button" data-bs-toggle="modal" data-bs-target="#user-logout-modal"><p>Log out</p></button></li>
                 </div>
-            </div>
+            </div>    
         </nav>
     </header>
+    <div class="modal fade" id="user-logout-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Log out</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Are you sure you want to log out, <?=$_SESSION["name"]?>?</h5>
+                    <form action="/php/logout.php" method="POST">
+                        <div class="log-out-control">
+                            <input class="background-color" type="submit" name="yes" value="Yes"/>
+                            <button type="button" data-bs-dismiss="modal">Not yet...</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default background-color" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="hero">
         <div class="container-fluid p-0 hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -159,7 +181,7 @@
                     <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/punch.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
-                                <div class="carousel-header animate__animated animate__fadeInDown">Be better every day!</div>
+                                <div class="carousel-header animate__animated animate__fadeInDown animate__delay-1s">Be better every day!</div>
                                 <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Look at what you've created! Keep learning!</div>
                             </div>
                         </div>
@@ -167,7 +189,7 @@
                     <div class="carousel-item"  data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/snowy_mountain.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
-                                <div class="carousel-header animate__animated animate__fadeInDown">Be a problem solver!</div>
+                                <div class="carousel-header animate__animated animate__fadeInDown animate__delay-1s">Be a problem solver!</div>
                                 <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">It's perfectly normal to get stuck and have to look to others for help!</div>
                             </div>
                         </div>
@@ -175,7 +197,7 @@
                     <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/italy.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
-                                <div class="carousel-header animate__animated animate__fadeInDown">Keep improving!</div>
+                                <div class="carousel-header animate__animated animate__fadeInDown animate__delay-1s">Keep improving!</div>
                                 <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">This is only the beginning of what you'll do for others</div>
                             </div>
                         </div>
@@ -183,7 +205,7 @@
                     <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/fish.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
-                                <div class="carousel-header animate__animated animate__fadeInDown">Learn from the past</div>
+                                <div class="carousel-header animate__animated animate__fadeInDown animate__delay-1s">Learn from the past</div>
                                 <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Learn from your mistakes so that you can look to the future wisely</div>
                             </div>
                         </div>
@@ -191,7 +213,7 @@
                     <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/church.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
-                                <div class="carousel-header animate__animated animate__fadeInDown">Remember God and your experiences</div>
+                                <div class="carousel-header animate__animated animate__fadeInDown animate__delay-1s">Remember God and your experiences</div>
                                 <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Remember that all of this is possible with and only by his grace</div>
                             </div>
                         </div>
@@ -199,7 +221,7 @@
                     <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/home/hero/balance.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
-                                <div class="carousel-header animate__animated animate__fadeInDown">Find balance and rythm</div>
+                                <div class="carousel-header animate__animated animate__fadeInDown animate__delay-1s">Find balance and rythm</div>
                                 <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Balance yourself so that you'll be able to keep moving forward with peace</div>
                             </div>
                         </div>
@@ -263,9 +285,11 @@
                                                     <option value='Former'>Former</option>
                                                     <option value='New'>New</option>
                                                 </select>
-                                                <input type='hidden' id='clientId' name='clientId' value='$clientId'>
-                                                <br/>
-                                                <input class='background-color' type='submit' value='Submit'>
+                                                <div class='card-input'>
+                                                    <input type='hidden' id='clientId' name='clientId' value='$clientId'>
+                                                    <br/>
+                                                    <input class='background-color' type='submit' value='Submit'>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -312,9 +336,11 @@
                                                     <option value='Former'>Former</option>
                                                     <option value='New'>New</option>
                                                 </select>
-                                                <input type='hidden' id='clientId' name='clientId' value='$clientId'>
-                                                <br/>
-                                                <input class='background-color' type='submit' value='Submit'>
+                                                <div class='card-input'>
+                                                    <input type='hidden' id='clientId' name='clientId' value='$clientId'>
+                                                    <br/>
+                                                    <input class='background-color' type='submit' value='Submit'>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -361,9 +387,11 @@
                                                     <option value='Former'>Former</option>
                                                     <option value='New'>New</option>
                                                 </select>
-                                                <input type='hidden' id='clientId' name='clientId' value='$clientId'>
-                                                <br/>
-                                                <input class='background-color' type='submit' value='Submit'>
+                                                <div class='card-input'>
+                                                    <input type='hidden' id='clientId' name='clientId' value='$clientId'>
+                                                    <br/>
+                                                    <input class='background-color' type='submit' value='Submit'>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>

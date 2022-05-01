@@ -107,7 +107,7 @@
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
 //prepared statement that first binds php variables to mysql variables, then sends information to database
-            $stmt = $conn->prepare("INSERT INTO new_clients (first_name, last_name, number, email, contact, message) VALUES (:firstname, :lastname, :number, :email, :contact, :message)");
+            $stmt = $conn->prepare("INSERT INTO clients (first_name, last_name, number, email, contact, message) VALUES (:firstname, :lastname, :number, :email, :contact, :message)");
             $stmt->bindParam(':firstname', $firstName);
             $stmt->bindParam(':lastname', $lastName);
             $stmt->bindParam(':number', $number);
@@ -206,14 +206,14 @@
         <nav class="navbar navbar-expand-lg navLight" id="navBar">
             <a href="#" class="navbar-brand">Thomas Joseph Cottis</a>
 
-            <button class="navbar-toggler background-color" 
+            <button class="navbar-toggler" 
             type="button" 
             data-bs-toggle="collapse" 
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-                <span class="bi bi-arrow-bar-down"></span>
+                <span class="navbar-toggler-icon"><i class="bi bi-arrow-down-up"></i></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -288,7 +288,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="modal" class="btn btn-default background-color" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default background-color" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

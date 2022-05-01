@@ -97,7 +97,7 @@ a:hover {
 }
 .navbar-brand {
     align-items: center;
-    color: whitesmoke;
+    color: rgba(255, 255, 255, 0.7);
     font-family: "Oxygen", sans-serif;
 }
 .nav-link {
@@ -124,9 +124,12 @@ p.nav-link.dropdown-toggle {
 }
 .navbar-toggler-icon {
     display: flex;
-    color: whitesmoke;
+    color: rgba(255, 255, 255, 0.7);
     justify-content: center;
     align-items: center;
+}
+.navbar-toggler-icon:hover {
+    color: #f9f9f9;
 }
 .dropdown-menu {
     padding: 0;
@@ -138,6 +141,10 @@ p.nav-link.dropdown-toggle {
     display: flex;
     align-items: center;
     margin: 0 25px 0 auto;
+    list-style-type: none;
+}
+.login-nav-container:hover {
+    cursor: pointer;
 }
 .login-nav-container .access {
     display: flex;
@@ -159,18 +166,43 @@ p.nav-link.dropdown-toggle {
 .login-nav-container p:hover {
     color: gray;
 }
-.login-nav-container {
-    list-style-type: none;
-}
-.login-nav-container:hover {
-    cursor: pointer;
-}
 .login-nav-container button {
     border: none;
     border-radius: 5px;
     width: auto;
     height: auto;
     background-color: transparent;
+}
+
+/* ----- Log out controls ----- */
+.log-out-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.log-out-control input[type="submit"], 
+.log-out-control button {
+    width: auto;
+    height: auto;
+    padding: 3px 10px 3px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: ease-in-out;
+    transition-duration: .3s;
+}
+.log-out-control button {
+    background-color: lightgrey;
+}
+.log-out-control input[type="submit"]:hover,
+.log-out-control button:hover {
+    border-radius: 0;
+    background-color: darkgray;
+}
+
+/* ----- Modal ----- */
+.modal-content {
+    font-family: "Oxygen", sans-serif;
 }
 .navDark {
     background-color: rgba(0, 0, 0, 0.7);
@@ -358,15 +390,21 @@ p.card-text {
     flex-direction: row;
     flex-wrap: wrap;
 }
-select, input[type=submit] {
-    margin: 10px 0 10px 10px;
+select, .card-input input[type=submit] {
     font-size: 20px;
     border: none;
     border-radius: 5px;
     transition: ease-in-out;
     transition-duration: 0.5s;
 }
-select:hover, input[type=submit]:hover {
+select {
+    margin: 10px 0 0 5px;
+    padding: 0px;
+}
+.card-input input[type=submit] {
+    margin: 0 0 0 5px;
+}
+select:hover, .card-input input[type=submit]:hover {
     border-radius: 0px;
     cursor: pointer;
 }
