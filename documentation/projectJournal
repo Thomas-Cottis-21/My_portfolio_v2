@@ -44,4 +44,10 @@ I am also going to implement the idea from 4/22/22 and put an active timer on ea
 4-25-22
 Created a new database on a clean slate in order to better test how it will be set up. I also figured out how to correctly move rows of data safely from one table to another. 
 
-My next move will be to insert weather api and clock as well as learn how to execute PHP on a button click in order to give home.php funcionality. 
+My next move will be to insert weather api and clock as well as learn how to execute PHP on a button click in order to give home.php funcionality.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+4-30-22
+I have successfully created an interactive user interface for updating data in the database and for organizing the data.
+
+My next step will be to insert weather api and clock as well as styling the select statements. I will also make it so that the only data displayed will be the data on the screen while scrolling.

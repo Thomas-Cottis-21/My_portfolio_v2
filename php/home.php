@@ -18,14 +18,8 @@
 
         echo "<script>console.log('Database connection successfull -> Access Granted')</script>";
 
-        $stmt = $conn->prepare('SELECT * FROM new_clients');
+        $stmt = $conn->prepare('SELECT * FROM `clients` WHERE `status`="New"');
         $stmt->execute();
-
-        $stmt2 = $conn->prepare('SELECT * FROM active_clients');
-        $stmt2->execute();
-
-        $stmt3 = $conn->prepare('SELECT * FROM former_clients');
-        $stmt3->execute();
 
         /* new clients table */
         $stmt->bindColumn('clientId', $clientId);
@@ -37,7 +31,11 @@
         $stmt->bindColumn('message', $clientMessage);
         $stmt->bindColumn('date', $clientDate);
 
-        /* active clinets table */
+
+        $stmt2 = $conn->prepare('SELECT * FROM `clients` WHERE `status`="Active"');
+        $stmt2->execute();
+
+        /* new clients table */
         $stmt2->bindColumn('clientId', $clientId);
         $stmt2->bindColumn('first_name', $clientFirstName);
         $stmt2->bindColumn('last_name', $clientLastName);
@@ -47,7 +45,11 @@
         $stmt2->bindColumn('message', $clientMessage);
         $stmt2->bindColumn('date', $clientDate);
 
-        /* former clients table */
+
+        $stmt3 = $conn->prepare('SELECT * FROM `clients` WHERE `status`="Former"');
+        $stmt3->execute();
+
+        /* new clients table */
         $stmt3->bindColumn('clientId', $clientId);
         $stmt3->bindColumn('first_name', $clientFirstName);
         $stmt3->bindColumn('last_name', $clientLastName);
@@ -258,9 +260,16 @@
                                         <h6 class='client-contact-method'>$clientContactMethod</h6>
                                         <p class='card-text'>$clientMessage</p>
                                         <div class='button-container'>
-                                            <button class='btn btn-default btn-pass'>Pass to active</button>
-                                            <button class='btn btn-default btn-message'>Message</button>
-                                            <button class='btn btn-default btn-delete'>Delete Client</button>
+                                            <form action='/php/status.php' method='POST'>
+                                                <select name='status' id='selectStatus'>
+                                                    <option value='Active'>Active</option>
+                                                    <option value='Former'>Former</option>
+                                                    <option value='New'>New</option>
+                                                </select>
+                                                <input type='hidden' id='clientId' name='clientId' value='$clientId'>
+                                                <br/>
+                                                <input type='submit' value='submit'>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -271,18 +280,19 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container-fluid">
-            <div class="active-clients">
+            <div class="new-clients">
                 <div class="header dialog">
-                    <h3>Active clients</h3>
+                    <h3>Active Clients</h3>
                     <hr>
                 </div>
                 <div class="card-container">
                     <?php 
                         while ($stmt2->fetch(PDO::FETCH_BOUND)) {
                             echo "
-                                <div class='client-card'>
+                                <div class='client-card '>
                                     <div class='client-card-body'>
                                         <div class='client-info'>
                                             <div class='client-names'>
@@ -296,13 +306,19 @@
                                                 <h6>$clientDate</h6>
                                             </div>
                                         </div>
-                                        <div class='clients-contact-method'>$clientContactMethod</div>
-                                        <div>$clientMessage</div>
+                                        <h6 class='client-contact-method'>$clientContactMethod</h6>
+                                        <p class='card-text'>$clientMessage</p>
                                         <div class='button-container'>
-                                            <button class='btn btn-default btn-pass'>Pass to active</button>
-                                            <button class='btn btn-default btn-message'>Message</button>
-                                            <button class='btn btn-default btn-notes'>Client Notes</button>
-                                            <button class='btn btn-default btn-delete'>Delete Client</button>
+                                            <form action='/php/status.php' method='POST'>
+                                                <select name='status' id='selectStatus'>
+                                                    <option value='Active'>Active</option>
+                                                    <option value='Former'>Former</option>
+                                                    <option value='New'>New</option>
+                                                </select>
+                                                <input type='hidden' id='clientId' name='clientId' value='$clientId'>
+                                                <br/>
+                                                <input type='submit' value='submit'>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -313,9 +329,10 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container-fluid">
-            <div class="former-clients">
+            <div class="new-clients">
                 <div class="header dialog">
                     <h3>Former Clients</h3>
                     <hr>
@@ -324,12 +341,13 @@
                     <?php 
                         while ($stmt3->fetch(PDO::FETCH_BOUND)) {
                             echo "
-                                <div class='client-card'>
+                                <div class='client-card '>
                                     <div class='client-card-body'>
                                         <div class='client-info'>
                                             <div class='client-names'>
-                                                <h4>$clientFirstName</h4>
-                                                <h5>$clientLastName</h5>
+                                                <h2>$clientId</h2>
+                                                <h3>$clientFirstName</h3>
+                                                <h4>$clientLastName</h4>
                                             </div>
                                             <div class='client-contact-info'>
                                                 <h5>$clientEmail</h5>
@@ -337,13 +355,19 @@
                                                 <h6>$clientDate</h6>
                                             </div>
                                         </div>
-                                        <div class='clients-contact-method'>$clientContactMethod</div>
-                                        <div>$clientMessage</div>
+                                        <h6 class='client-contact-method'>$clientContactMethod</h6>
+                                        <p class='card-text'>$clientMessage</p>
                                         <div class='button-container'>
-                                            <button class='btn btn-default btn-pass'>Pass to active</button>
-                                            <button class='btn btn-default btn-message'>Message</button>
-                                            <button class='btn btn-default btn-notes'>Client Notes</button>
-                                            <button class='btn btn-default btn-delete'>Delete Client</button>
+                                            <form action='/php/status.php' method='POST'>
+                                                <select name='status' id='selectStatus'>
+                                                    <option value='Active'>Active</option>
+                                                    <option value='Former'>Former</option>
+                                                    <option value='New'>New</option>
+                                                </select>
+                                                <input type='hidden' id='clientId' name='clientId' value='$clientId'>
+                                                <br/>
+                                                <input type='submit' value='submit'>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

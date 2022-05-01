@@ -269,3 +269,13 @@ const authenticateForm = () => {
         userErrorSpan.innerText = "";
     }
 }
+
+/* const changeStatus = () => {
+    statusBtn = document.querySelectorAll("button.status");
+
+    statusBtn.addEventListener("click", function() {
+        statusBtn.style.backgroundColor = "Blue";
+    })
+}
+
+changeStatus(); */
