@@ -38,6 +38,12 @@ p {
     align-items: center;
     transition: 0.2s;
 }
+.buttonDm:hover {
+    transition: ease-in-out;
+    transition-duration: .2s;
+    border-radius: 10px;
+    background-color: darkgray;
+}
 /* ----- End Dark Mode ----- */
 
 /* ----- Back To Top ----- */
@@ -59,6 +65,11 @@ p {
     align-items: center;
     background-color: black;
     transition: 0.2s;
+}
+.return-to-top-button:hover {
+    transition: ease-in-out;
+    transition-duration: .2s;
+    border-radius: 10px;
 }
 @media(max-width: 400px) {
     .buttonDm, .return-to-top-button {
@@ -330,6 +341,7 @@ p.nav-link.dropdown-toggle {
 .client-contact-info {
     padding: 0;
     margin: 0 10px 0 10px;
+    text-align: right;
 }
 .client-contact-method {
     margin: 0 10px 0 10px;
@@ -345,39 +357,17 @@ p.card-text {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.btn-pass {
-    background-color: #a2c80a;
-    margin: 5px;
-}
-.btn-message {
-    background-color: #24a7ca;
-    margin: 5px;
-}
-.btn-notes {
-    background-color: #ffb61a;
-    margin: 5px;
-}
-.btn-delete {
-    background-color: #e74c3c;
-    margin: 5px;
-}
-.btn-pass:focus {
-    box-shadow: none;
-}
-.btn-message:focus {
-    box-shadow: none;
-}
-.btn-notes:focus {
-    box-shadow: none;
-}
-.btn-delete:focus {
-    box-shadow: none;
-}
-button:hover {
+select, input[type=submit] {
+    margin: 10px 0 10px 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
     transition: ease-in-out;
-    transition-duration: .2s;
-    background-color: darkgrey;
-    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+select:hover, input[type=submit]:hover {
+    border-radius: 0px;
+    cursor: pointer;
 }
 /* media queries */
 @media (max-width: 500px) {

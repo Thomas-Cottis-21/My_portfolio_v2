@@ -123,16 +123,13 @@
                         <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">New Clients</a>
+                        <a href="#newClients" class="nav-link">New Clients</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Current Clients</a>
+                        <a href="#activeClients" class="nav-link">Active Clients</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Old Clients</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">All Clients</a>
+                        <a href="#formerClients" Class="nav-link">Former Clients</a>
                     </li>
                     <div class="dropdown btn-group">
                         <p class="nav-link dropdown-toggle color" type="button"
@@ -232,7 +229,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="newClients">
         <div class="container-fluid">
             <div class="new-clients">
                 <div class="header dialog">
@@ -261,14 +258,14 @@
                                         <p class='card-text'>$clientMessage</p>
                                         <div class='button-container'>
                                             <form action='/php/status.php' method='POST'>
-                                                <select name='status' id='selectStatus'>
+                                                <select name='status'>
                                                     <option value='Active'>Active</option>
                                                     <option value='Former'>Former</option>
                                                     <option value='New'>New</option>
                                                 </select>
                                                 <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                 <br/>
-                                                <input type='submit' value='submit'>
+                                                <input class='background-color' type='submit' value='Submit'>
                                             </form>
                                         </div>
                                     </div>
@@ -281,7 +278,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="activeClients">
         <div class="container-fluid">
             <div class="new-clients">
                 <div class="header dialog">
@@ -310,14 +307,14 @@
                                         <p class='card-text'>$clientMessage</p>
                                         <div class='button-container'>
                                             <form action='/php/status.php' method='POST'>
-                                                <select name='status' id='selectStatus'>
+                                                <select name='status'>
                                                     <option value='Active'>Active</option>
                                                     <option value='Former'>Former</option>
                                                     <option value='New'>New</option>
                                                 </select>
                                                 <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                 <br/>
-                                                <input type='submit' value='submit'>
+                                                <input class='background-color' type='submit' value='Submit'>
                                             </form>
                                         </div>
                                     </div>
@@ -330,7 +327,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="formerClients">
         <div class="container-fluid">
             <div class="new-clients">
                 <div class="header dialog">
@@ -359,14 +356,14 @@
                                         <p class='card-text'>$clientMessage</p>
                                         <div class='button-container'>
                                             <form action='/php/status.php' method='POST'>
-                                                <select name='status' id='selectStatus'>
+                                                <select name='status'>
                                                     <option value='Active'>Active</option>
                                                     <option value='Former'>Former</option>
                                                     <option value='New'>New</option>
                                                 </select>
                                                 <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                 <br/>
-                                                <input type='submit' value='submit'>
+                                                <input class='background-color' type='submit' value='Submit'>
                                             </form>
                                         </div>
                                     </div>

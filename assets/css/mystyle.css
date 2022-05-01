@@ -37,6 +37,12 @@ p {
     align-items: center;
     transition: 0.2s;
 }
+.buttonDm:hover {
+    transition: ease-in-out;
+    transition-duration: .2s;
+    border-radius: 10px;
+    background-color: darkgray;
+}
 /* ----- End Dark Mode ----- */
 
 /* ----- Back To Top ----- */
@@ -58,6 +64,11 @@ p {
     align-items: center;
     background-color: black;
     transition: 0.2s;
+}
+.return-to-top-button:hover {
+    transition: ease-in-out;
+    transition-duration: .2s;
+    border-radius: 10px;
 }
 @media(max-width: 400px) {
     .buttonDm, .return-to-top-button {
