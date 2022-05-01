@@ -24,7 +24,7 @@ const toTopAppear = () => {
     }
 
 //this calls the functions above when the page has reached 600 pixels from the top
-    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         buttonEnable();
         console.log("appearing");
     } else {
@@ -269,13 +269,3 @@ const authenticateForm = () => {
         userErrorSpan.innerText = "";
     }
 }
-
-/* const changeStatus = () => {
-    statusBtn = document.querySelectorAll("button.status");
-
-    statusBtn.addEventListener("click", function() {
-        statusBtn.style.backgroundColor = "Blue";
-    })
-}
-
-changeStatus(); */

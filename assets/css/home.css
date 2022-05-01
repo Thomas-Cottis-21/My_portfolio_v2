@@ -237,6 +237,7 @@ p.nav-link.dropdown-toggle {
     background-repeat: no-repeat;
     position: relative;
     transition: 0.5s;
+    background-attachment: fixed;
 }
 .hero-content-container {
     margin: 0;
