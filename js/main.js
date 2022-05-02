@@ -24,7 +24,7 @@ const toTopAppear = () => {
     }
 
 //this calls the functions above when the page has reached 600 pixels from the top
-    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         buttonEnable();
         console.log("appearing");
     } else {
@@ -247,3 +247,25 @@ const findColor = () => {
 //localStorage.clear();
 }
 findColor();
+
+const authenticateForm = () => {
+    const usernameField = document.forms["loginForm"]["username"].value;
+    const passwordField = document.forms["loginForm"]["password"].value;
+
+    const userErrorSpan = document.getElementById("userErrorSpan");
+    const passErrorSpan = document.getElementById("passErrorSpan");
+
+    if (usernameField == "") {
+        userErrorSpan.innerText = "*Please fill out username field";
+        return false;
+    } else {
+        userErrorSpan.innerText = "";
+    }
+
+    if (passwordField == "") {
+        passErrorSpan.innerText = "*Please fill out password field";
+        return false;
+    } else {
+        userErrorSpan.innerText = "";
+    }
+}
