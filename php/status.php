@@ -1,4 +1,7 @@
 <?php
+ob_start();
+
+
     $servername = "localhost";
     $username = "homasan5_thomas";
     $password = "JohanaRamirez21$$";
