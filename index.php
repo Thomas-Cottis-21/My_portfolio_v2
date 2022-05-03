@@ -94,10 +94,15 @@
 
 //attempts to connect to the server when the user submits the entire form with no errors
     if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
-        $servername = "localhost";
+        /* $servername = "localhost";
         $username = "homasan5_thomas";
         $password = "JohanaRamirez21$$";
-        $dbname = "homasan5_portfolio_clients_database";
+        $dbname = "homasan5_portfolio_clients_database"; */
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "my_portfolio_v2_test";
 
 //try catch statemnet to either connect to the database and proceed with success modal, or procceed with the error modal
         try {

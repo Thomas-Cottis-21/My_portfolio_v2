@@ -2,14 +2,19 @@
     session_start();
 
     if (!isset($_SESSION["loggedin"])) {
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit;
     }
 
-    $servername = "localhost";
+    /* $servername = "localhost";
     $username = "homasan5_thomas";
     $password = "JohanaRamirez21$$";
-    $dbname = "homasan5_portfolio_clients_database";
+    $dbname = "homasan5_portfolio_clients_database"; */
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "my_portfolio_v2_test";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -236,7 +241,7 @@
                 <div class="header dialog">
                     <h2>Hey, <span class="color"><?=$_SESSION["name"]?></span>!</h2>
                     <h3>Let's see what your day looks like</h3>
-                    <hr>
+                    <hr />
                 </div>
             </div>
         </div>
@@ -253,10 +258,10 @@
     </section>
     <section id="newClients">
         <div class="container-fluid">
-            <div class="new-clients">
+            <div class="all-card">
                 <div class="header dialog">
                     <h3>New Clients</h3>
-                    <hr>
+                    <hr />
                 </div>
                 <div class="card-container">
                     <?php 
@@ -278,20 +283,26 @@
                                         </div>
                                         <h6 class='client-contact-method'>$clientContactMethod</h6>
                                         <p class='card-text'>$clientMessage</p>
-                                        <div class='button-container'>
-                                            <form action='/php/status.php' method='POST'>
-                                                <select name='status'>
-                                                    <option value='Active'>Active</option>
-                                                    <option value='Former'>Former</option>
-                                                    <option value='New'>New</option>
-                                                </select>
-                                                <div class='card-input'>
+                                        <form action='/php/status.php' method='POST'>
+                                            <div class='card-form-section'>
+                                                <div class='form-controls'>
+                                                    <select name='status'>
+                                                        <option value='Active'>Active</option>
+                                                        <option value='Former'>Former</option>
+                                                        <option value='New'>New</option>
+                                                    </select>
                                                     <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                     <br/>
-                                                    <input class='background-color' type='submit' value='Submit'>
+                                                    <button class='btn btn-default btn-delete'>Delete</button>
+                                                    <input type='submit' value='Submit'>
                                                 </div>
-                                            </form>
-                                        </div>
+                                                <hr />
+                                                <div class='admin-card-controls'>
+                                                    <button class='btn btn-default btn-msg'>Message</button>
+                                                    <button class='btn btn-default btn-notes'>Notes</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             ";
@@ -303,11 +314,11 @@
     </section>
 
     <section id="activeClients">
-        <div class="container-fluid">
-            <div class="new-clients">
+    <div class="container-fluid">
+            <div class="all-card">
                 <div class="header dialog">
                     <h3>Active Clients</h3>
-                    <hr>
+                    <hr />
                 </div>
                 <div class="card-container">
                     <?php 
@@ -329,20 +340,26 @@
                                         </div>
                                         <h6 class='client-contact-method'>$clientContactMethod</h6>
                                         <p class='card-text'>$clientMessage</p>
-                                        <div class='button-container'>
-                                            <form action='/php/status.php' method='POST'>
-                                                <select name='status'>
-                                                    <option value='Active'>Active</option>
-                                                    <option value='Former'>Former</option>
-                                                    <option value='New'>New</option>
-                                                </select>
-                                                <div class='card-input'>
+                                        <form action='/php/status.php' method='POST'>
+                                            <div class='card-form-section'>
+                                                <div class='form-controls'>
+                                                    <select name='status'>
+                                                        <option value='Active'>Active</option>
+                                                        <option value='Former'>Former</option>
+                                                        <option value='New'>New</option>
+                                                    </select>
                                                     <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                     <br/>
-                                                    <input class='background-color' type='submit' value='Submit'>
+                                                    <button class='btn btn-default btn-delete'>Delete</button>
+                                                    <input type='submit' value='Submit'>
                                                 </div>
-                                            </form>
-                                        </div>
+                                                <hr />
+                                                <div class='admin-card-controls'>
+                                                    <button class='btn btn-default btn-msg'>Message</button>
+                                                    <button class='btn btn-default btn-notes'>Notes</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             ";
@@ -354,11 +371,11 @@
     </section>
 
     <section id="formerClients">
-        <div class="container-fluid">
-            <div class="new-clients">
+    <div class="container-fluid">
+            <div class="all-card">
                 <div class="header dialog">
                     <h3>Former Clients</h3>
-                    <hr>
+                    <hr />
                 </div>
                 <div class="card-container">
                     <?php 
@@ -380,20 +397,26 @@
                                         </div>
                                         <h6 class='client-contact-method'>$clientContactMethod</h6>
                                         <p class='card-text'>$clientMessage</p>
-                                        <div class='button-container'>
-                                            <form action='/php/status.php' method='POST'>
-                                                <select name='status'>
-                                                    <option value='Active'>Active</option>
-                                                    <option value='Former'>Former</option>
-                                                    <option value='New'>New</option>
-                                                </select>
-                                                <div class='card-input'>
+                                        <form action='/php/status.php' method='POST'>
+                                            <div class='card-form-section'>
+                                                <div class='form-controls'>
+                                                    <select name='status'>
+                                                        <option value='Active'>Active</option>
+                                                        <option value='Former'>Former</option>
+                                                        <option value='New'>New</option>
+                                                    </select>
                                                     <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                     <br/>
-                                                    <input class='background-color' type='submit' value='Submit'>
+                                                    <button class='btn btn-default btn-delete'>Delete</button>
+                                                    <input type='submit' value='Submit'>
                                                 </div>
-                                            </form>
-                                        </div>
+                                                <hr />
+                                                <div class='admin-card-controls'>
+                                                    <button class='btn btn-default btn-msg'>Message</button>
+                                                    <button class='btn btn-default btn-notes'>Notes</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             ";

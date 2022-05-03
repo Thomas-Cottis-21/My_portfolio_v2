@@ -62,6 +62,9 @@ My next step will be to add PHPMailer.
 5-02-22
 Merged branches and launched new master branch to the internet. Encounters various bugs, but they are all fixed now.
 
+Created new branch, home client management controls, that gives me an environment to create more funcionality to the cards. I have added a delete button that works, but instead of straight up deleting a client (could lead to bad consequences), I am going to open up a modal that leads me to status.php, then deleting the client if yes is selected. I also created a message button and a notes button that will require much more logic and code. Styling is also finished.
+
+Next step will be to add make message and notes modals + backend.
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
