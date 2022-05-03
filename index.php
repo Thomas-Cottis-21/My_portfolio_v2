@@ -95,9 +95,9 @@
 //attempts to connect to the server when the user submits the entire form with no errors
     if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
         $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "my_portfolio_v2_test";
+        $username = "homasan5_thomas";
+        $password = "JohanaRamirez21$$";
+        $dbname = "homasan5_portfolio_clients_database";
 
 //try catch statemnet to either connect to the database and proceed with success modal, or procceed with the error modal
         try {
@@ -308,7 +308,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/Img/hero/climbing-1pp-hero.jpg);">
+                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/climbing-1pp-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
                             <div class="carousel-header animate__animated animate__fadeInDown">I love to find solutions to challenges</div>
@@ -316,7 +316,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/Img/hero/printer-hero.jpg);">
+                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/printer-hero.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-caption">
                             <div class="carousel-header animate__animated animate__fadeInDown">I love to create</div>
@@ -335,7 +335,7 @@
     <div class="container d-flex">
         <div id="intro-container-row" class="row">
             <div class="col-6 intro-container-image">
-                <img src="/assets/Img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
+                <img src="/assets/img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
             </div>
             <div class="col col-right-intro">
                 <h1 class="display-5 intro-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">I am truly passionate about a few things</h1>

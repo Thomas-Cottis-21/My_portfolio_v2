@@ -1,12 +1,13 @@
 <?php
+ob_start();
 //starting session to be able to use session variables
     session_start();
 
 //create conenction to database
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "my_portfolio_v2_test";
+    $username = "homasan5_thomas";
+    $password = "JohanaRamirez21$$";
+    $dbname = "homasan5_portfolio_clients_database";
 
 //filter incoming data
     function data_filter($data) {
@@ -57,7 +58,7 @@
 
         if ($userName === $loginUsername && $userPassword === $loginPassword) {
             //redirects the page to the home page
-            header("Location: home.php");
+            header("Location: ./home.php");
 
             echo "username and password match with the user's input (if statement is running)";
             
@@ -75,7 +76,7 @@
 
         } else {
             //redirects the user back to the index page if the credentials that they input are wrong
-            header("Location: /index.php");
+            header("Location: ./index.php");
 
             //unsetting logged in variable
             $_SESSION["loggedin"] = FALSE;
@@ -86,7 +87,7 @@
         
     } catch(PDOException $error) {
         //user is redirected back to the index page if the database cannot be connected to
-        header("Location: /index.php");
+        header("Location: ./index.php");
 
         //runs the error to the log
         echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
