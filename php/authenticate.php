@@ -57,7 +57,7 @@ ob_start();
             //redirects the page to the home page
             header("Location: ./home.php");
 
-            echo "username and password match with the user's input (if statement is running)";
+            /* echo "username and password match with the user's input (if statement is running)"; */
             
             //starts a new session
             session_regenerate_id();
