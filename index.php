@@ -278,7 +278,7 @@
                         <input type="text" class="border-color" id="username" name="username" placeholder="Username">
                         <div class="error" id="userErrorSpan"></div>
 
-                        <input type="text" class="border-color" id="password" name="password" placeholder="Password">
+                        <input type="password" class="border-color" id="password" name="password" placeholder="Password">
                         <div class="error" id="passErrorSpan"></div>
 
                         <button type="submit" name="submitLogin" class="submit background-color">Submit</button>

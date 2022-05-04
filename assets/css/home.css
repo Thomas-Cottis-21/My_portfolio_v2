@@ -430,7 +430,7 @@ select:hover, .form-controls input[type=submit]:hover {
     cursor: pointer;
 }
 .form-controls input[type="submit"] {
-    background-color: #7CC92A;
+    background-color: #a2c80a;
     padding: 5px 15px 5px 15px;
 }
 .form-controls input[type="submit"]:hover {
