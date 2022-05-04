@@ -329,9 +329,9 @@ p.nav-link.dropdown-toggle {
 .welcome h3 {
     font-size: 45px;
 }
-.welcome hr {
+.welcome .header hr {
     width: 100%;
-    margin: auto;
+    margin: right;
 }   
 
 /* ----- Agenda ----- */
@@ -343,6 +343,22 @@ p.nav-link.dropdown-toggle {
 }
 
 /* ----- Global card styles ----- */
+.all-card {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0 25px 0;
+    font-family: "Oxygen", sans-serif;
+}
+.all-card .header {
+    text-align: center;
+}
+.all-card .header h3 {
+    font-size: 35px;
+}
+.header hr {
+    width: 50%;
+    margin: auto;
+}
 
 .card-container {
     display: flex;
@@ -385,29 +401,43 @@ p.card-text {
     font-size: 16px;
     margin: 0 10px 0 10px;
 }
-.button-container {
+.card-form-section {
+    display: flex;
+    flex-direction: column;
+}
+.card-form-section hr {
+    width: 60%;
+    margin: right;
+}
+.form-controls {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    align-content: center;
+    justify-content: left;
+    margin: 15px 0 0 0;
 }
-select, .card-input input[type=submit] {
+select, 
+.form-controls input[type=submit] {
     font-size: 20px;
+    margin: 0 5px 0 5px;
     border: none;
     border-radius: 5px;
     transition: ease-in-out;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
 }
-select {
-    margin: 10px 0 0 5px;
-    padding: 0px;
-}
-.card-input input[type=submit] {
-    margin: 0 0 0 5px;
-}
-select:hover, .card-input input[type=submit]:hover {
+select:hover, .form-controls input[type=submit]:hover {
     border-radius: 0px;
     cursor: pointer;
 }
+.form-controls input[type="submit"] {
+    background-color: #7CC92A;
+    padding: 5px 15px 5px 15px;
+}
+.form-controls input[type="submit"]:hover {
+    border-radius: 0;
+    background-color: lightgrey;
+}
+
 /* media queries */
 @media (max-width: 500px) {
     .client-info {
@@ -426,61 +456,4 @@ select:hover, .card-input input[type=submit]:hover {
     .client-card {
         width: 80vw;
     }
-}
-
-/* ----- New Clients ----- */
-
-.new-clients {
-    display: flex;
-    flex-direction: column;
-    margin: 25px 0 25px 0;
-    font-family: "Oxygen", sans-serif;
-}
-.new-clients .header {
-    text-align: center;
-}
-.new-clients .header h3 {
-    font-size: 35px;
-}
-.new-clients hr {
-    width: 50%;
-    margin: auto;
-}
-
-/* ----- Active Clients ----- */
-
-.active-clients {
-    display: flex;
-    flex-direction: column;
-    margin: 25px 0 25px 0;
-    font-family: "Oxygen", sans-serif;
-}
-.active-clients .header {
-    text-align: center;
-}
-.active-clients .header h3 {
-    font-size: 35px;
-}
-.active-clients hr {
-    width: 50%;
-    margin: auto;
-}
-
-/* Former Clients */
-
-.former-clients {
-    display: flex;
-    flex-direction: column;
-    margin: 25px 0 25px 0;
-    font-family: "Oxygen", sans-serif;
-}
-.former-clients .header {
-    text-align: center;
-}
-.former-clients .header h3 {
-    font-size: 35px;
-}
-.former-clients hr {
-    width: 50%;
-    margin: auto;
 }

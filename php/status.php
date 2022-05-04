@@ -2,10 +2,7 @@
 ob_start();
 
 
-    $servername = "localhost";
-    $username = "homasan5_thomas";
-    $password = "JohanaRamirez21$$";
-    $dbname = "homasan5_portfolio_clients_database";
+    require "databaseConnection.php";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -37,6 +34,15 @@ ob_start();
         $stmt2 = $conn->prepare("UPDATE `clients` SET `status`= '$currentStatus' WHERE '$clientId' = `clientId`");
 
         $stmt2->execute();
+
+
+        if (isset($_POST["Delete"])) {
+            $stmt3 = $conn->prepare("DELETE FROM `clients` WHERE $clientId = `clientId`");
+
+            $stmt3->execute();
+        } else {
+            echo "<script>console.log('This is the else stmt in the delete if stmt');</script>";
+        }
 
         header("Location: home.php");
         

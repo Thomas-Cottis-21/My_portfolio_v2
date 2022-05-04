@@ -1,8 +1,5 @@
 <?php 
-    $servername = "localhost";
-    $username = "homasan5_thomas";
-    $password = "JohanaRamirez21$$";
-    $dbname = "homasan5_portfolio_clients_database";
+    require "databaseConnection.php";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
