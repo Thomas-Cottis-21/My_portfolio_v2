@@ -409,8 +409,6 @@ p.card-text {
     width: 60%;
     margin: right;
 }
-
-
 .form-controls {
     display: flex;
     flex-direction: row;
@@ -419,8 +417,7 @@ p.card-text {
     margin: 15px 0 0 0;
 }
 select, 
-.form-controls input[type=submit],
-.btn-delete {
+.form-controls input[type=submit] {
     font-size: 20px;
     margin: 0 5px 0 5px;
     border: none;
@@ -432,41 +429,11 @@ select:hover, .form-controls input[type=submit]:hover {
     border-radius: 0px;
     cursor: pointer;
 }
-.form-controls .btn-delete {
-    background-color: #ff4000;
-}
 .form-controls input[type="submit"] {
     background-color: #7CC92A;
-    padding: 0 10px 0 10px;
+    padding: 5px 15px 5px 15px;
 }
-select:hover,
-.form-controls input[type="submit"]:hover,
-.form-controls .btn-delete:hover {
-    border-radius: 0;
-    background-color: lightgrey;
-}
-
-
-.admin-card-controls {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: left;
-}
-.admin-card-controls .btn-msg, .btn-notes {
-    font-size: 20px;
-    margin: 0 5px 0 5px;
-    border: none;
-    border-radius: 5px;
-    transition: ease-in-out;
-    transition-duration: 0.2s;
-}
-.admin-card-controls .btn-msg,
-.admin-card-controls .btn-notes {
-    background-color: whitesmoke;
-}
-.admin-card-controls .btn-msg:hover,
-.admin-card-controls .btn-notes:hover {
+.form-controls input[type="submit"]:hover {
     border-radius: 0;
     background-color: lightgrey;
 }

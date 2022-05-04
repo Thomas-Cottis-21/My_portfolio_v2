@@ -282,16 +282,11 @@
                                                         <option value='Active'>Active</option>
                                                         <option value='Former'>Former</option>
                                                         <option value='New'>New</option>
+                                                        <option value='Delete'>Delete</option>
                                                     </select>
                                                     <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                     <br/>
-                                                    <button class='btn btn-default btn-delete'>Delete</button>
                                                     <input type='submit' value='Submit'>
-                                                </div>
-                                                <hr />
-                                                <div class='admin-card-controls'>
-                                                    <button type='button' class='btn btn-default btn-msg'>Message</button>
-                                                    <button type='button' class='btn btn-default btn-notes'>Notes</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -325,9 +320,9 @@
                                                 <h4>$clientLastName</h4>
                                             </div>
                                             <div class='client-contact-info'>
-                                                <h5>$clientEmail</h5>
-                                                <h6>$clientNumber</h6>
-                                                <h6>$clientDate</h6>
+                                        <h5>$clientEmail</h5>
+                                        <h6>$clientNumber</h6>
+                                        <h6>$clientDate</h6>
                                             </div>
                                         </div>
                                         <h6 class='client-contact-method'>$clientContactMethod</h6>
@@ -339,16 +334,11 @@
                                                         <option value='Active'>Active</option>
                                                         <option value='Former'>Former</option>
                                                         <option value='New'>New</option>
+                                                        <option value='Delete'>Delete</option>
                                                     </select>
                                                     <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                     <br/>
-                                                    <button class='btn btn-default btn-delete'>Delete</button>
                                                     <input type='submit' value='Submit'>
-                                                </div>
-                                                <hr />
-                                                <div class='admin-card-controls'>
-                                                    <button type='button' class='btn btn-default btn-msg'>Message</button>
-                                                    <button type='button' class='btn btn-default btn-notes'>Notes</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -396,16 +386,11 @@
                                                         <option value='Active'>Active</option>
                                                         <option value='Former'>Former</option>
                                                         <option value='New'>New</option>
+                                                        <option value='Delete'>Delete</option>
                                                     </select>
                                                     <input type='hidden' id='clientId' name='clientId' value='$clientId'>
                                                     <br/>
-                                                    <button class='btn btn-default btn-delete'>Delete</button>
                                                     <input type='submit' value='Submit'>
-                                                </div>
-                                                <hr />
-                                                <div class='admin-card-controls'>
-                                                    <button type='button' class='btn btn-default btn-msg'>Message</button>
-                                                    <button type='button' class='btn btn-default btn-notes'>Notes</button>
                                                 </div>
                                             </div>
                                         </form>
