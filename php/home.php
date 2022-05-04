@@ -6,15 +6,7 @@
         exit;
     }
 
-    /* $servername = "localhost";
-    $username = "homasan5_thomas";
-    $password = "JohanaRamirez21$$";
-    $dbname = "homasan5_portfolio_clients_database"; */
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "my_portfolio_v2_test";
+    require "databaseConnection.php";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -298,8 +290,8 @@
                                                 </div>
                                                 <hr />
                                                 <div class='admin-card-controls'>
-                                                    <button class='btn btn-default btn-msg'>Message</button>
-                                                    <button class='btn btn-default btn-notes'>Notes</button>
+                                                    <button type='button' class='btn btn-default btn-msg'>Message</button>
+                                                    <button type='button' class='btn btn-default btn-notes'>Notes</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -355,8 +347,8 @@
                                                 </div>
                                                 <hr />
                                                 <div class='admin-card-controls'>
-                                                    <button class='btn btn-default btn-msg'>Message</button>
-                                                    <button class='btn btn-default btn-notes'>Notes</button>
+                                                    <button type='button' class='btn btn-default btn-msg'>Message</button>
+                                                    <button type='button' class='btn btn-default btn-notes'>Notes</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -412,8 +404,8 @@
                                                 </div>
                                                 <hr />
                                                 <div class='admin-card-controls'>
-                                                    <button class='btn btn-default btn-msg'>Message</button>
-                                                    <button class='btn btn-default btn-notes'>Notes</button>
+                                                    <button type='button' class='btn btn-default btn-msg'>Message</button>
+                                                    <button type='button' class='btn btn-default btn-notes'>Notes</button>
                                                 </div>
                                             </div>
                                         </form>
