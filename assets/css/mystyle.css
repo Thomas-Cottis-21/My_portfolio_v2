@@ -393,11 +393,12 @@ p.nav-link.dropdown-toggle {
     font-family: "Oxygen", sans-serif;
     padding-top: 20px;
 }
-.education-content-main {
+.education-content-main,
+.education-content-right,
+.education-content-left {
     font-family: "Oxygen", sans-serif;
 }
 .education-header-content {
-    
     font-family: "Oxygen", sans-serif;
 }
 /* ----- End Education Section ----- */

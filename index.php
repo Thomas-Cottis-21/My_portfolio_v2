@@ -406,37 +406,37 @@
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">HTML</div>
                 <div class="progress">
-                    <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">CSS</div>
                 <div class="progress">
-                    <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Bootstrap</div>
                 <div class="progress">
-                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">JavaScript</div>
                 <div class="progress">
-                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">PHP</div>
                 <div class="progress">
-                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                 <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">MySQL</div>
                 <div class="progress">
-                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                 </div>
             </div>
         </div>
@@ -452,12 +452,12 @@
             <div class="col-xl col-xs education-content-right">
                 <div class="display-6 education-header-content color" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Alta High School</div>
                 <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
-                <p class="dialog" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">//Education descriptions</p>
+                <p class="dialog" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">I attended to Alta High School from 2016 to 2018. I learned everything I needed to graduate, but I also took CTEC (Technical Education). That's where I learned how to weld, work on cars and to really use my head to create amazing things! Those experiences have kickstarted me to go on and keep creating amazing things and to even attend college!</p>
             </div>
             <div class="col-xl col-xs education-content-left">
                 <div class="display-6 education-header-content color" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Salt Lake Community College</div>
                 <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
-                <p class="dialog" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">//Education descriptions</p>
+                <p class="dialog" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">Salt Lake Coummunity College has been amazing! I am currently enrolled, taking the web development courses now, but will soon graduate. I have done lots of generals, as well as many fun classes that show me different fields of study and career paths. I am decided on web development and feel that SLCC has opened some serious doors.</p>
             </div>
         </div>
     </div>
