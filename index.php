@@ -291,41 +291,41 @@
         </div>
     </div>
     <!-- -------------------- Hero Section -------------------- -->
-<section id="hero">
-    <div class="container-fluid p-0 hero-container">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/cave-man-hero.jpg);">
-                    <div class="carousel-container">
-                        <div class="carousel-caption">
-                            <div class="hero-content-container">
-                                <div class="carousel-header animate__animated animate__fadeInDown">I am an explorer</div>
-                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">I love to explore and discover new hobbies and skills, like mountain biking and welding.</div>
+    <section id="hero">
+        <div class="container-fluid p-0 hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/cave-man-hero.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="hero-content-container">
+                                    <div class="carousel-header animate__animated animate__fadeInDown">I am an explorer</div>
+                                    <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">I love to explore and discover new hobbies and skills, like mountain biking and welding.</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/climbing-1pp-hero.jpg);">
-                    <div class="carousel-container">
-                        <div class="carousel-caption">
-                            <div class="carousel-header animate__animated animate__fadeInDown">I love to find solutions to challenges</div>
-                            <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Getting into rock climbing has been a great adventure and an even better opportunity to keep improving myself</div>
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/climbing-1pp-hero.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">I love to find solutions to challenges</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Getting into rock climbing has been a great adventure and an even better opportunity to keep improving myself</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/printer-hero.jpg);">
-                    <div class="carousel-container">
-                        <div class="carousel-caption">
-                            <div class="carousel-header animate__animated animate__fadeInDown">I love to create</div>
-                            <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">From software to 3d printing and design, I love to think up and build new things</div>
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/printer-hero.jpg);">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">I love to create</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">From software to 3d printing and design, I love to think up and build new things</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>    
+                </div>    
+            </div>
         </div>
-    </div>
-    <div id="about"></div>
-</section>
+        <div id="about"></div>
+    </section>
     <!-- -------------------- End Hero Section -------------------- -->
 
     <!-- -------------------- Intro Section -------------------- -->
@@ -380,7 +380,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-xs mt-5">
                 <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Creativity</div>
-                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">My creative skills have flourished alongside my growing passions for creating things that no one else has, like websites for unique people or something new in the 3D-printer.</p>
+                <p class="mt-4 soft-skills-content dialog" data-aos="fade-up-left" data-aos-duration="1600" data-aos-once="true" data-aos-delay="400">My creative skills have flourished alongside my growing passions for aesthetics, like websites for unique people or something new in the 3D-printer. I love to use modern design and inspiration from others to improve my quality of life and that of others.</p>
             </div>
             <div class="col-lg-4 col-md-6 col-xs mt-5">
                 <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Attention to detail</div>
@@ -396,52 +396,111 @@
     <!-- -------------------- End Soft Skills Section -------------------- -->
 
     <!-- -------------------- Hard Skills Section -------------------- -->
-    <div class="container">
-        <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Hard Skills | What can I do?</div>
-        <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My main study is Web Development, so that is what I have based my hard skills on. It is excatly what I am passionate about, creating something beautiful as well as funcional. These are my skills and what I peronally rank myself as, with the help of some peers to give a second opinion.</p>
-    </div>
-    <!-- Plan to make progress bars from css and not bootstrap -->
-    <div class="container-fluid">
-        <div class="row text-center">
-            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
-                <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">HTML</div>
-                <div class="progress">
-                    <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
-                <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">CSS</div>
-                <div class="progress">
-                    <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
-                <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Bootstrap</div>
-                <div class="progress">
-                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
-                <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">JavaScript</div>
-                <div class="progress">
-                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
-                <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">PHP</div>
-                <div class="progress">
-                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
-                <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">MySQL</div>
-                <div class="progress">
-                    <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
-                </div>
-            </div>
+    <section id="hard-skills">
+        <div class="container">
+            <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Hard Skills | What can I do?</div>
+            <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My main study is Web Development, so that is what I have based my hard skills on. It is excatly what I am passionate about, creating something beautiful as well as funcional. These are my skills and what I peronally rank myself as, with the help of some peers to give a second opinion.</p>
         </div>
-    </div>
-    <div id="education"></div>
+        <!-- beginning of progress bars -->
+
+        <!-- Web Dev hard skills -->
+
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">HTML</div>
+                    <div class="progress">
+                        <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">CSS</div>
+                    <div class="progress">
+                        <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Bootstrap</div>
+                    <div class="progress">
+                        <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">JavaScript</div>
+                    <div class="progress">
+                        <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">PHP</div>
+                    <div class="progress">
+                        <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">MySQL</div>
+                    <div class="progress">
+                        <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+
+            <!-- General Hard Skills -->
+
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Spanish</div>
+                    <div class="progress">
+                        <div class="progress-bar w-100 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Welding</div>
+                    <div class="progress">
+                        <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Mechanics</div>
+                    <div class="progress">
+                        <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+
+            <!-- Goals -->
+
+            <div class="container" id="goals">
+                <h3 class="goals-header" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My Goals for 2022</h3>
+                <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">Along with the skills that have kept me going, I have ambitious goals to help me build up my quality of life and to support and uplift those around me, especially my family. Without smart, achievable goals, this wouldn't be possible.</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge goals-sub-header" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">React.js</div>
+                    <div class="progress">
+                        <div class="progress-bar w-50 goal-progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge goals-sub-header" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Ajax</div>
+                    <div class="progress">
+                        <div class="progress-bar w-50 goal-progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                    <div class="display-6 hard-skills-header-gauge goals-sub-header" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">App Development</div>
+                    <div class="progress">
+                        <div class="progress-bar w-50 goal-progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="education"></div>
+    </section>
     <!-- -------------------- End Hard Skills Section -------------------- -->
 
     <!-- -------------------- Education Section -------------------- -->
@@ -457,7 +516,7 @@
             <div class="col-xl col-xs education-content-left">
                 <div class="display-6 education-header-content color" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Salt Lake Community College</div>
                 <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
-                <p class="dialog" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">Salt Lake Coummunity College has been amazing! I am currently enrolled, taking the web development courses now, but will soon graduate. I have done lots of generals, as well as many fun classes that show me different fields of study and career paths. I am decided on web development and feel that SLCC has opened some serious doors.</p>
+                <p class="dialog" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">Salt Lake Coummunity College has been amazing! I am currently enrolled, taking the web development courses now, but will soon graduate. I have done lots of generals, as well as many fun classes that show me different fields of study and career paths. I am decided on web development and feel that SLCC has opened some serious doors, but I am definitley open to other career paths that I am yet to discover.</p>
             </div>
         </div>
     </div>
@@ -470,21 +529,21 @@
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Grandpas' Polygraph Business</div>
-                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My grandfather, Joseph Cottis worked for the F.B.I as a lie detector. He was in need of a new, modern website in order to better connect him to the younger generations, as his old website was slowly being outdated. I made him this website without knowing if he would implement it to get more practice in. I used a bootstrap theme because there is no better way to learn than to jump in head first.</p>
+                    <p class="mb-2 dialog project-content" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My grandfather, Joseph Cottis worked for the F.B.I as a lie detector. He was in need of a new, modern website in order to better connect him to the younger generations, as his old website was slowly being outdated. I made him this website without knowing if he would implement it to get more practice in. I used a bootstrap theme because there is no better way to learn than to jump in head first.</p>
                     <iframe class="project-iframe" src="https://projectpolygraph.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="flute" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Shaloras' flute instructor freelance</div>
-                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I started telling my friends about my new career path and all the exciting progress that I was making. Eager to find more projects, my best friend's wife, Shalora presented me an idea for her. She wants to be a freelancing flute instructor, but doesn't know where to start. I am currently working with them in order to put new content out as well as building a new database to keep track of clients, appointment and class times.</p>
+                    <p class="mb-2 dialog project-content" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I started telling my friends about my new career path and all the exciting progress that I was making. Eager to find more projects, my best friend's wife, Shalora presented me an idea for her. She wants to be a freelancing flute instructor, but doesn't know where to start. I am currently working with them in order to put new content out as well as building a new database to keep track of clients, appointment and class times.</p>
                     <iframe class="project-iframe" src="https://shaloraflute.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="cerakote" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Cerakote business startup</div>
-                    <p class="mb-2 dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My brother in-law, Josh is extremley creative and talented with many things, especially creative things like photography and painting. He is currently in the proccess of starting his own cerakote business and needs a powerful website to keep track of all of the data that is associated with an entire start-up as well as a creative and attractive front-end to keep the traffic coming</p>
+                    <p class="mb-2 dialog project-content" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My brother in-law, Josh is extremley creative and talented with many things, especially creative things like photography and painting. He is currently in the proccess of starting his own cerakote business and needs a powerful website to keep track of all of the data that is associated with an entire start-up as well as a creative and attractive front-end to keep the traffic coming</p>
                     <iframe class="project-iframe" src="https://joshcerakote.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>

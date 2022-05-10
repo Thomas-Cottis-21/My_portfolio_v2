@@ -8,6 +8,9 @@ body {
 p {
     font-size: 20px;
 }
+hr {
+    border: 2px solid;
+}
 /* ----- Dark Mode ----- */
 .dark-mode {
     background-color: #313131;
@@ -120,6 +123,21 @@ p.nav-link.dropdown-toggle {
     margin: 0;
     transition: ease-in-out;
     transition-duration: 0.5s;
+}
+.projects-dropdown-button {
+    font-family: "Oxygen", sans-serif;
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+.projects-dropdown-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .login-nav-container {
     display: flex;
@@ -371,10 +389,24 @@ p.nav-link.dropdown-toggle {
 .progress {
     width: 45vw;
     align-self: center;
+    margin: 0 0 35px 0;
 }
 .hard-skills-content {
     font-family: "Oxygen", sans-serif;
     font-weight: 100;
+}
+/* ----- Goals ----- */
+#goals .goals-header {
+    font-family: "Oxygen", sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: #ffe107;
+}
+.goals-sub-header {
+    color: #ffe107;
+}
+.goal-progress {
+    background-color: #ffe107;
 }
 @media (min-width: 768px) {
     .progress {
@@ -404,20 +436,6 @@ p.nav-link.dropdown-toggle {
 /* ----- End Education Section ----- */
 
 /* ----- Projects Section ----- */
-.projects-dropdown-button {
-    width: 100%;
-    background-color: transparent;
-    color: #ffffff;
-    border: none;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-}
-.projects-dropdown-button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
 .project-header-main, .project-header-iframe, .project-content {
     font-family: "Oxygen", sans-serif;
 }
