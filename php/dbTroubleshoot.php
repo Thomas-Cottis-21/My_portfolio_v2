@@ -8,7 +8,7 @@
         echo "Database connected successfully ";
         
     } catch(PDOException $error) {
-        echo $sql . $error->getMessage();
+        echo $error->getMessage();
     }
 
     $conn = null;

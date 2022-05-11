@@ -1,4 +1,5 @@
 <?php 
+/* phpinfo(); */
 //starts a new session if one isn't yet started
     if (!isset($_SESSION)) {
         session_start();
@@ -94,7 +95,7 @@
 
 //attempts to connect to the server when the user submits the entire form with no errors
     if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
-        require "/Sites/My_portfolio_v2/php/databaseConnection.php";
+        require "./php/databaseConnection.php";
 
 //try catch statemnet to either connect to the database and proceed with success modal, or procceed with the error modal
         try {
