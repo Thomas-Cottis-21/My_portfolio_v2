@@ -72,7 +72,11 @@ I tweeked tons of small front end things (font-family, colors, new sections). Ad
 Next step will be to add email capabilites and then advertise. Maybe some more / different pictures.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+5-11-22
+Finished the google captcha using syntax that I will study more. 
+Also added email funcionality, but not through phpmailer, but through the mail function.
 
+Next move is to style the captcha so that it fits and reacts better. Then to add one in the user login form on my own.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 

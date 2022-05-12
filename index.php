@@ -10,7 +10,7 @@
     $firstName = $lastName = $number = $email = $content = "";
 
 //form error variables
-    $fNameErr = $fNameFormatErr = $lNameFormatErr = $emailErr = $emailFormatErr = $contactErr = $contentErr = $numberErr = "";
+    $fNameErr = $fNameFormatErr = $lNameFormatErr = $emailErr = $emailFormatErr = $contactErr = $contentErr = $numberErr = $captchaErr = "";
 
     $formErr = FALSE;
 
@@ -91,7 +91,33 @@
         } else {
             $contentErr = null;
         }
-    }
+
+        $post_data = http_build_query(
+            array(
+                'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy",
+                'response' => $_POST['g-recaptcha-response'],
+                'remoteip' => $_SERVER['REMOTE_ADDR']
+            )
+        );
+        $opts = array('http' =>
+            array(
+                'method'  => 'POST',
+                'header'  => 'Content-type: application/x-www-form-urlencoded',
+                'content' => $post_data
+            )
+        );
+        $context  = stream_context_create($opts);
+        $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify', true, $context);
+        $result = json_decode($response);
+
+        if (empty($result->success)) {
+            /* throw new Exception('Gah! CAPTCHA verification failed. Please email me directly at: jstark at jonathanstark dot com', 1); */
+            $formErr = TRUE;
+            $captchaErr = "*Please verify that you are a human";
+        } else {
+            $formErr = FALSE;
+        }
+    } 
 
 //attempts to connect to the server when the user submits the entire form with no errors
     if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
@@ -135,6 +161,20 @@
 //sets the session variable complete to true. The modal is triggered when this is set, and this is only set when the form is error free and submitted
             $_SESSION["complete"] = TRUE;
 
+            //send mail
+
+            $to = "tomcottis21@gmail.com";
+
+            $msg = "It worked!";
+
+            $msg = wordwrap($msg, 70);
+
+            $subject = "It worked!";
+
+            $headers = "From: thomascottis@thomasandco.xyz";
+
+            mail($to, $subject, $msg, $headers);
+
 //on submit, redirecting to the current page... Could be cause of small bug
             header("Location: " . $_SERVER["REQUEST_URI"]);
             return;
@@ -166,6 +206,8 @@
     <meta name="author" content="Thomas Joseph Cottis">
     <meta name="keywords" content="Local, Web developer, Web designer, cheap, good">
     <title>Thomas Cottis</title>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
     <!-- -------------------- Bootstrap CDN -------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -625,6 +667,8 @@
                         <textarea class="border-color dialog" name="content" id="content" value="" placeholder="Message" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"><?php if (isset($content)) echo $content ?></textarea>
                         <span class="error"><?= $contentErr ?></span>
                     </div>
+                    <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div>
+                    <span class="error"><?= $captchaErr ?></span>
                     <button id="submit" type="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Send</button>
                 </div>
             </form>
