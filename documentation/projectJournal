@@ -79,7 +79,10 @@ Also added email funcionality, but not through phpmailer, but through the mail f
 Next move is to style the captcha so that it fits and reacts better. Then to add one in the user login form on my own.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+5-12-22
+Added cv nav item, new hero image and progress bar css.
 
+Next move will be to update email message to myself, add javascript to limit sign in attempts and create redirect without refresh to the form on submit, regardless of success 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 

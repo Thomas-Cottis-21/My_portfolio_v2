@@ -385,11 +385,16 @@ p.nav-link.dropdown-toggle {
 .hard-skills-card-container {
     display: flex;
     flex-direction: column;
+    margin: 0 0 35px 0;
+}
+.hard-skills-card-container span {
+    font-family: "Oxygen", sans-serif;
+    font-size: 25px;
 }
 .progress {
     width: 45vw;
     align-self: center;
-    margin: 0 0 35px 0;
+    margin: 0 0 15px 0;
 }
 .hard-skills-content {
     font-family: "Oxygen", sans-serif;
@@ -398,15 +403,15 @@ p.nav-link.dropdown-toggle {
 /* ----- Goals ----- */
 #goals .goals-header {
     font-family: "Oxygen", sans-serif;
-    font-size: 35px;
+    font-size: 55px;
     text-align: center;
-    color: #ffe107;
+    color: #ffc600;
 }
 .goals-sub-header {
-    color: #ffe107;
+    color: #ffc600;
 }
 .goal-progress {
-    background-color: #ffe107;
+    background-color: #ffc600;
 }
 @media (min-width: 768px) {
     .progress {

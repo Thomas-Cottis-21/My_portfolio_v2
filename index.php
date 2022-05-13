@@ -96,9 +96,9 @@
         $post_data = http_build_query(
             array(
                 //live server secret key
-                /* 'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy", */
+                'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy",
                 //localhost secret key
-                'secret' => "6LeeBeIfAAAAAI3oCddDOiJweSySgZDBDoRoMZQR",
+                /* 'secret' => "6LeeBeIfAAAAAI3oCddDOiJweSySgZDBDoRoMZQR", */
                 'response' => $_POST['g-recaptcha-response'],
                 'remoteip' => $_SERVER['REMOTE_ADDR']
             )
@@ -176,11 +176,11 @@
 
             $to = "tomcottis21@gmail.com";
 
-            $msg = "It worked!";
+            $msg = "Check your site!";
 
             $msg = wordwrap($msg, 70);
 
-            $subject = "It worked!";
+            $subject = "New Response!";
 
             $headers = "From: thomascottis@thomasandco.xyz";
 
@@ -310,7 +310,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
+                        <a href="/assets/CV_web_dev_v3.pdf" class="nav-link" target="_blank">CV</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
@@ -464,41 +467,47 @@
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">HTML</div>
                     <div class="progress">
-                        <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 90%" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">90%</span>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">CSS</div>
                     <div class="progress">
-                        <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">80%</span>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Bootstrap</div>
                     <div class="progress">
-                        <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">75%</span>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">JavaScript</div>
                     <div class="progress">
-                        <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 70%" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">70%</span>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">PHP</div>
                     <div class="progress">
-                        <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 60%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">60%</span>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">MySQL</div>
                     <div class="progress">
-                        <div class="progress-bar w-50 background-color" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">50%</span>
                 </div>
             </div>
-            <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+            <!-- <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400"> -->
 
             <!-- General Hard Skills -->
 
@@ -506,21 +515,24 @@
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Spanish</div>
                     <div class="progress">
-                        <div class="progress-bar w-100 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 95%" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">95%</span>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
-                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Welding</div>
+                    <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Github</div>
                     <div class="progress">
-                        <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">75%</span>
                 </div>
-                <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
+                <!-- <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge color" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Mechanics</div>
                     <div class="progress">
-                        <div class="progress-bar w-75 background-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar background-color" style="width: 95%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
-                </div>
+                    <span class="dialog">95%</span>
+                </div> -->
             </div>
             <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
 
@@ -529,26 +541,30 @@
             <div class="container" id="goals">
                 <h3 class="goals-header" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My Goals for 2022</h3>
                 <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">Along with the skills that have kept me going, I have ambitious goals to help me build up my quality of life and to support and uplift those around me, especially my family. Without smart, achievable goals, this wouldn't be possible.</p>
+                <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">The following does not display where my current progress is, but where I want my proficiency to be by the end of the year 2022.</p>
             </div>
 
             <div class="row text-center">
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge goals-sub-header" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">React.js</div>
                     <div class="progress">
-                        <div class="progress-bar w-50 goal-progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar goal-progress" style="width: 75%" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">75%</span>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge goals-sub-header" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Ajax</div>
                     <div class="progress">
-                        <div class="progress-bar w-50 goal-progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar goal-progress" style="width: 50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">50%</span>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs hard-skills-card-container">
                     <div class="display-6 hard-skills-header-gauge goals-sub-header" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">App Development</div>
                     <div class="progress">
-                        <div class="progress-bar w-50 goal-progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
+                        <div class="progress-bar goal-progress" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-aos="zoom-in" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"></div>
                     </div>
+                    <span class="dialog" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">75%</span>
                 </div>
             </div>
 
@@ -679,9 +695,9 @@
                         <span class="error"><?= $contentErr ?></span>
                     </div>
                     <!-- live server site key -->
-                    <!-- <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div> -->
+                    <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div>
                     <!-- localhost server site key -->
-                    <div class="g-recaptcha" data-sitekey="6LeeBeIfAAAAAEsRAoPESJZa4IZxG4dBwFCDLNcT"></div>
+                    <!-- <div class="g-recaptcha" data-sitekey="6LeeBeIfAAAAAEsRAoPESJZa4IZxG4dBwFCDLNcT"></div> -->
                     <span class="error"><?= $captchaErr ?></span>
                     <button id="submit" type="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Send</button>
                 </div>
