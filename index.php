@@ -40,8 +40,8 @@
         if (empty($_POST["fname"])) {
             $fNameErr = "* First or business name is required";
             $formErr = TRUE;
-        } else if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
-            $fNameFormatErr = "* Only words and spaces";
+        } else if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!' ]*$/", $firstName)) {
+            $fNameFormatErr = "* No special characters permited";
             $formErr = TRUE;
         } else {
             $fNameErr = null;
@@ -49,8 +49,8 @@
         }
 
 //last name not required, but only allows letters and spaces
-        if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName)) {
-            $lNameFormatErr = "* Only words and spaces";
+        if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!' ]*$/", $lastName)) {
+            $lNameFormatErr = "* No special characters";
             $formErr = TRUE;
         }
 
@@ -86,15 +86,19 @@
         if (empty($_POST["content"])) {
             $contentErr = "* A general message is required (Say Hi!)";
             $formErr = TRUE;
-        } else if ((!preg_match("/^[a-zA-Z-' ]*$/", $content))) {
-            $contentErr = "* Please use only words and spaces";
+        } else if ((!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!' ]*$/", $content))) {
+            $contentErr = "* No special characters permited";
         } else {
             $contentErr = null;
         }
 
+//google captcha verification
         $post_data = http_build_query(
             array(
-                'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy",
+                //live server secret key
+                /* 'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy", */
+                //localhost secret key
+                'secret' => "6LeeBeIfAAAAAI3oCddDOiJweSySgZDBDoRoMZQR",
                 'response' => $_POST['g-recaptcha-response'],
                 'remoteip' => $_SERVER['REMOTE_ADDR']
             )
@@ -111,12 +115,16 @@
         $result = json_decode($response);
 
         if (empty($result->success)) {
-            /* throw new Exception('Gah! CAPTCHA verification failed. Please email me directly at: jstark at jonathanstark dot com', 1); */
             $formErr = TRUE;
             $captchaErr = "*Please verify that you are a human";
         } else {
             $formErr = FALSE;
         }
+        
+        //scroll to the form if there are errors on submit
+        /* if ($formErr = TRUE) {
+            header("Location: index.php#contact");
+        } */
     } 
 
 //attempts to connect to the server when the user submits the entire form with no errors
@@ -142,6 +150,9 @@
 //excecuting the prepared statement
             $stmt->execute();
 
+//on submit, redirecting to the current page... Could be cause of small bug
+            header("Location: " . $_SERVER["REQUEST_URI"]);
+
 //session variables that show the modal messages. Need to be session variables in order to be accessed beyond page refresh
             $_SESSION["modalHeader"] = "Data Was Recieved Successfully";
 
@@ -161,7 +172,7 @@
 //sets the session variable complete to true. The modal is triggered when this is set, and this is only set when the form is error free and submitted
             $_SESSION["complete"] = TRUE;
 
-            //send mail
+            //send mail upon submitting form with no errors
 
             $to = "tomcottis21@gmail.com";
 
@@ -175,11 +186,11 @@
 
             mail($to, $subject, $msg, $headers);
 
-//on submit, redirecting to the current page... Could be cause of small bug
-            header("Location: " . $_SERVER["REQUEST_URI"]);
             return;
 
         } catch(PDOException $error) {
+//on submit, redirecting to the current page regardless of success or not... Could be cause of small bug
+            header("Location: " . $_SERVER["REQUEST_URI"]);
 
 //session variables with error message to be displayed in the modal
             $_SESSION["modalHeader"] = "Data was not recieved";
@@ -202,7 +213,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="I can create you an effective money making machine to help you on your way to success without breaking the bank.">
+    <meta name="description" content="I can create you an effective website to help you on your way to success without breaking the bank.">
     <meta name="author" content="Thomas Joseph Cottis">
     <meta name="keywords" content="Local, Web developer, Web designer, cheap, good">
     <title>Thomas Cottis</title>
@@ -338,7 +349,7 @@
         <div class="container-fluid p-0 hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/cave-man-hero.jpg);">
+                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/mountain-hero.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
                                 <div class="hero-content-container">
@@ -667,7 +678,10 @@
                         <textarea class="border-color dialog" name="content" id="content" value="" placeholder="Message" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"><?php if (isset($content)) echo $content ?></textarea>
                         <span class="error"><?= $contentErr ?></span>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div>
+                    <!-- live server site key -->
+                    <!-- <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div> -->
+                    <!-- localhost server site key -->
+                    <div class="g-recaptcha" data-sitekey="6LeeBeIfAAAAAEsRAoPESJZa4IZxG4dBwFCDLNcT"></div>
                     <span class="error"><?= $captchaErr ?></span>
                     <button id="submit" type="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Send</button>
                 </div>
