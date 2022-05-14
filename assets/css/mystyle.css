@@ -262,12 +262,12 @@ p.nav-link.dropdown-toggle {
     justify-content: center;
 }
 .carousel-item {
-    width: 100%;
+    /* width: 100%; */
     height: 100vh;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
-    position: relative;
+    /* position: relative; */
     transition: 0.5s;
     background-attachment: fixed;
 }

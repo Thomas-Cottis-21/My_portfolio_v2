@@ -96,10 +96,10 @@
         $post_data = http_build_query(
             array(
             //live server secret key
-                /* 'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy", */
+                'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy",
 
             //localhost secret key
-                'secret' => "6LeeBeIfAAAAAI3oCddDOiJweSySgZDBDoRoMZQR",
+                /* 'secret' => "6LeeBeIfAAAAAI3oCddDOiJweSySgZDBDoRoMZQR", */
 
                 'response' => $_POST['g-recaptcha-response'],
                 'remoteip' => $_SERVER['REMOTE_ADDR']
@@ -269,9 +269,6 @@
                     <li class="nav-item text-nowwrap">
                         <a href="#softSkills" class="nav-link">Soft Skills</a>
                     </li>
-                    <li class="nav-item text-nowwrap">
-                        <a href="#hardSkills" class="nav-link">Hard Skills</a>
-                    </li>
                     <li class="nav-item">
                         <a href="#education" class="nav-link">Education</a>
                     </li>
@@ -303,6 +300,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="/assets/CV_web_dev_v3.pdf" class="nav-link" target="_blank">CV</a>
+                    </li>
+                    <li class="nav-item text-nowwrap">
+                        <a href="https://github.com/Thomas-Cottis-21" target="_blank" class="nav-link">Github</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact</a>
@@ -342,22 +342,29 @@
     <section id="hero">
         <div class="container-fluid hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/green-mountain.jpg);">
+                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/mountain.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
                                 <div class="hero-content-container">
                                     <div class="carousel-header animate__animated animate__fadeInDown">I am an explorer</div>
-                                    <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">I love to explore and discover new hobbies and skills, like mountain biking and welding.</div>
+                                    <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">I love to explore and discover new skills, like a new programming language, or a new real language!</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/clouds.jpg);">
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/city-lights.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
-                                <div class="carousel-header animate__animated animate__fadeInDown">I love to find solutions to challenges</div>
-                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Getting into rock climbing has been a great adventure and an even better opportunity to keep improving myself</div>
+                                <div class="carousel-header animate__animated animate__fadeInDown">I am a problem solver</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">From software and hardware to welding up a new design, I love solving problems that come along with creating</div>
                             </div>
                         </div>
                     </div>
@@ -365,11 +372,19 @@
                         <div class="carousel-container">
                             <div class="carousel-caption">
                                 <div class="carousel-header animate__animated animate__fadeInDown">I love to create</div>
-                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">From software to 3d printing and design, I love to think up and build new things</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Designing and creating new and clever things has been a passion for me all my life</div>
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div> 
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>   
             </div>
         </div>
         <div id="about"></div>
@@ -687,9 +702,9 @@
                     </div>
                     <div class="form-submit">
                         <!-- live server site key -->
-                            <!-- <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div> -->
+                            <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div>
                         <!-- localhost server site key -->
-                            <div class="g-recaptcha" data-sitekey="6LeeBeIfAAAAAEsRAoPESJZa4IZxG4dBwFCDLNcT"></div>
+                            <!-- <div class="g-recaptcha" data-sitekey="6LeeBeIfAAAAAEsRAoPESJZa4IZxG4dBwFCDLNcT"></div> -->
                         <span class="error"><?= $captchaErr ?></span>
                         <button id="submit" type="submit" class="contact-button-submit btn btn-default mt-3 col-lg-2 background-color mb-5" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Send</button>
                     </div>

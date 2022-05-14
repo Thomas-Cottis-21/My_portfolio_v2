@@ -93,7 +93,12 @@ Next move will be to add new descriptions and content to the hero sliders.
 Also to add a github link on the navbar while removing some things in order to not have too many navs.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+5-14-22
+Added new hero images and descriptons. Changed css to the background images to hopefully work with safari.
 
+Also added a github link to the navbar
+
+Next move will be to insert weather api + data and time in home.php
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
