@@ -95,10 +95,12 @@
 //google captcha verification
         $post_data = http_build_query(
             array(
-                //live server secret key
-                'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy",
-                //localhost secret key
-                /* 'secret' => "6LeeBeIfAAAAAI3oCddDOiJweSySgZDBDoRoMZQR", */
+            //live server secret key
+                /* 'secret' => "6LdE_OEfAAAAALPLYkoqrOHVNOthK253LIq5o9Hy", */
+
+            //localhost secret key
+                'secret' => "6LeeBeIfAAAAAI3oCddDOiJweSySgZDBDoRoMZQR",
+
                 'response' => $_POST['g-recaptcha-response'],
                 'remoteip' => $_SERVER['REMOTE_ADDR']
             )
@@ -120,11 +122,6 @@
         } else {
             $formErr = FALSE;
         }
-        
-        //scroll to the form if there are errors on submit
-        /* if ($formErr = TRUE) {
-            header("Location: index.php#contact");
-        } */
     } 
 
 //attempts to connect to the server when the user submits the entire form with no errors
@@ -150,9 +147,6 @@
 //excecuting the prepared statement
             $stmt->execute();
 
-//on submit, redirecting to the current page... Could be cause of small bug
-            header("Location: " . $_SERVER["REQUEST_URI"]);
-
 //session variables that show the modal messages. Need to be session variables in order to be accessed beyond page refresh
             $_SESSION["modalHeader"] = "Data Was Recieved Successfully";
 
@@ -176,22 +170,19 @@
 
             $to = "tomcottis21@gmail.com";
 
-            $msg = "Check your site!";
+            $subject = "New Response | $firstName $lastName!";
 
             $msg = wordwrap($msg, 70);
 
-            $subject = "New Response!";
+            $msg = nl2br($msg);
+
+            $msg = $email . "\n" . $number . "\n" . $contactStr . "\n" . $content;
 
             $headers = "From: thomascottis@thomasandco.xyz";
 
             mail($to, $subject, $msg, $headers);
 
-            return;
-
         } catch(PDOException $error) {
-//on submit, redirecting to the current page regardless of success or not... Could be cause of small bug
-            header("Location: " . $_SERVER["REQUEST_URI"]);
-
 //session variables with error message to be displayed in the modal
             $_SESSION["modalHeader"] = "Data was not recieved";
 
@@ -349,10 +340,10 @@
     </div>
     <!-- -------------------- Hero Section -------------------- -->
     <section id="hero">
-        <div class="container-fluid p-0 hero-container">
+        <div class="container-fluid hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/mountain-hero.jpg);">
+                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/green-mountain.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
                                 <div class="hero-content-container">
@@ -362,7 +353,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/climbing-1pp-hero.jpg);">
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/clouds.jpg);">
                         <div class="carousel-container">
                             <div class="carousel-caption">
                                 <div class="carousel-header animate__animated animate__fadeInDown">I love to find solutions to challenges</div>
@@ -642,7 +633,7 @@
     <section>
         <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Contact</div>
         <div id="contactForm" class="container">
-            <form id="myForm" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+            <form id="myForm" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>#contact" method="POST">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <label for="first-name"></label>
@@ -678,7 +669,7 @@
                                 <input type="checkbox" name="contact[]" value="Text" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="400">
                             </div>
 
-                            <div class="col-lg-2 col-md-5 col-xs-7">
+                            <div class="col-lg-2 col-md-12 col-xs-12">
                                 <label for="contact" class="dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Phone call</label>
                                 <input type="checkbox" name="contact[]" value="Call" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="400">
                             </div>
@@ -694,12 +685,14 @@
                         <textarea class="border-color dialog" name="content" id="content" value="" placeholder="Message" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300"><?php if (isset($content)) echo $content ?></textarea>
                         <span class="error"><?= $contentErr ?></span>
                     </div>
-                    <!-- live server site key -->
-                    <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div>
-                    <!-- localhost server site key -->
-                    <!-- <div class="g-recaptcha" data-sitekey="6LeeBeIfAAAAAEsRAoPESJZa4IZxG4dBwFCDLNcT"></div> -->
-                    <span class="error"><?= $captchaErr ?></span>
-                    <button id="submit" type="submit" class="contact-button-submit mt-3 col-lg-2 background-color mb-5" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Send</button>
+                    <div class="form-submit">
+                        <!-- live server site key -->
+                            <!-- <div class="g-recaptcha" data-sitekey="6LdE_OEfAAAAAPaFd2BdyxjgequdsQSm8YoBxVdy"></div> -->
+                        <!-- localhost server site key -->
+                            <div class="g-recaptcha" data-sitekey="6LeeBeIfAAAAAEsRAoPESJZa4IZxG4dBwFCDLNcT"></div>
+                        <span class="error"><?= $captchaErr ?></span>
+                        <button id="submit" type="submit" class="contact-button-submit btn btn-default mt-3 col-lg-2 background-color mb-5" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Send</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -708,7 +701,9 @@
 //whether or not the form data was sent, displays modal with error or success message
         if ($_SESSION["complete"]) {
             echo "<script>$(document).ready(function() {
-                $('#thanksModal').modal('show');
+                setTimeout(function(){
+                    $('#thanksModal').modal('show');
+                }, 2500);
             });</script>";
             
 //unsets the current session since the form was submitted
