@@ -350,9 +350,9 @@
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/mountain.jpg);">
+                    <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/clouds.jpg); background-position: center bottom">
                         <div class="carousel-container">
-                            <div class="carousel-caption">
+                            <div class="carousel-caption dark">
                                 <div class="hero-content-container">
                                     <div class="carousel-header animate__animated animate__fadeInDown">I am an explorer</div>
                                     <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">I love to explore and discover new skills, like a new programming language, or a new real language!</div>
@@ -360,15 +360,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/city-lights.jpg);">
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/buildings-bottom.jpg); background-position: center bottom">
                         <div class="carousel-container">
-                            <div class="carousel-caption">
+                            <div class="carousel-caption dark">
                                 <div class="carousel-header animate__animated animate__fadeInDown">I am a problem solver</div>
                                 <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">From software and hardware to welding up a new design, I love solving problems that come along with creating</div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/printer-hero.jpg);">
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/printer-hero.jpg); background-position: center top">
                         <div class="carousel-container">
                             <div class="carousel-caption">
                                 <div class="carousel-header animate__animated animate__fadeInDown">I love to create</div>
