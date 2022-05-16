@@ -40,7 +40,7 @@
         if (empty($_POST["fname"])) {
             $fNameErr = "* First or business name is required";
             $formErr = TRUE;
-        } else if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!' ]*$/", $firstName)) {
+        } else if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $firstName)) {
             $fNameFormatErr = "* No special characters permited";
             $formErr = TRUE;
         } else {
@@ -49,7 +49,7 @@
         }
 
 //last name not required, but only allows letters and spaces
-        if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!' ]*$/", $lastName)) {
+        if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $lastName)) {
             $lNameFormatErr = "* No special characters";
             $formErr = TRUE;
         }
@@ -86,7 +86,7 @@
         if (empty($_POST["content"])) {
             $contentErr = "* A general message is required (Say Hi!)";
             $formErr = TRUE;
-        } else if ((!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!' ]*$/", $content))) {
+        } else if ((!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $content))) {
             $contentErr = "* No special characters permited";
         } else {
             $contentErr = null;
@@ -119,13 +119,11 @@
         if (empty($result->success)) {
             $formErr = TRUE;
             $captchaErr = "*Please verify that you are a human";
-        } else {
-            $formErr = FALSE;
         }
     } 
 
 //attempts to connect to the server when the user submits the entire form with no errors
-    if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE)) {
+    if (($_SERVER["REQUEST_METHOD"] == "POST") && ($formErr !== TRUE) || ($formErr = FALSE)) {
         require "./php/databaseConnection.php";
 
 //try catch statemnet to either connect to the database and proceed with success modal, or procceed with the error modal
@@ -364,6 +362,8 @@
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
 
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="5000" style="background-image: url(/assets/img/hero/clouds.jpg); background-position: center bottom">
@@ -389,6 +389,14 @@
                             <div class="carousel-caption">
                                 <div class="carousel-header animate__animated animate__fadeInDown">I love to create</div>
                                 <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">Designing and creating new and clever things has been a passion for me all my life</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000" style="background-image: url(/assets/img/hero/fish.jpg); background-position: center top">
+                        <div class="carousel-container">
+                            <div class="carousel-caption">
+                                <div class="carousel-header animate__animated animate__fadeInDown">I am inspired</div>
+                                <div class="carousel-content animate__animated animate__fadeInUp animate__delay-1s">I love to see others designs and take inspiration so that I can learn and improve</div>
                             </div>
                         </div>
                     </div>
@@ -622,21 +630,21 @@
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Grandpas' Polygraph Business</div>
                     <p class="mb-2 dialog project-content" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My grandfather, Joseph Cottis worked for the F.B.I as a lie detector. He was in need of a new, modern website in order to better connect him to the younger generations, as his old website was slowly being outdated. I made him this website without knowing if he would implement it to get more practice in. I used a bootstrap theme because there is no better way to learn than to jump in head first.</p>
-                    <iframe class="project-iframe" src="https://projectpolygraph.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
+                    <iframe class="project-iframe embed-responsive-item" src="https://projectpolygraph.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="flute" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Shaloras' flute instructor freelance</div>
                     <p class="mb-2 dialog project-content" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I started telling my friends about my new career path and all the exciting progress that I was making. Eager to find more projects, my best friend's wife, Shalora presented me an idea for her. She wants to be a freelancing flute instructor, but doesn't know where to start. I am currently working with them in order to put new content out as well as building a new database to keep track of clients, appointment and class times.</p>
-                    <iframe class="project-iframe" src="https://shaloraflute.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
+                    <iframe class="project-iframe embed-responsive-item" src="https://shaloraflute.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
             <div class="col">
                 <div class="embed-responsive">
                     <div class="display-6 mt-5 project-header-iframe color" id="cerakote" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Cerakote business startup</div>
                     <p class="mb-2 dialog project-content" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">My brother in-law, Josh is extremley creative and talented with many things, especially creative things like photography and painting. He is currently in the proccess of starting his own cerakote business and needs a powerful website to keep track of all of the data that is associated with an entire start-up as well as a creative and attractive front-end to keep the traffic coming</p>
-                    <iframe class="project-iframe" src="https://joshcerakote.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
+                    <iframe class="project-iframe embed-responsive-item" src="https://joshcerakote.netlify.app/" frameborder="0" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="200"></iframe>
                 </div>
             </div>
         </div>
@@ -694,7 +702,7 @@
                     <div class="contact-checkbox-section mt-4">
                         <div class="dialog" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">What is your prefered method of contact?</div>
                         <span class="error"><?= $contactErr ?></span>
-                        <div class="contact-checkboxes d-flex mt-4 row">
+                        <div class="contact-checkboxes mt-4 row">
                             <div class="col-lg-2 col-md-5 col-xs-7">
                                 <label for="contact" class="dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Text message</label>
                                 <input type="checkbox" name="contact[]" value="Text" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="400">
@@ -734,7 +742,7 @@
             echo "<script>$(document).ready(function() {
                 setTimeout(function(){
                     $('#thanksModal').modal('show');
-                }, 2500);
+                }, 3000);
             });</script>";
             
 //unsets the current session since the form was submitted

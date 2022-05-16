@@ -101,7 +101,10 @@ Also added a github link to the navbar
 Next move will be to insert weather api + data and time in home.php
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+5-15-22
+Added new slider. Changed css for the background images to not be fixed + small security bug fixed
 
+Next move is to maintain.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
