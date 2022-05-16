@@ -182,6 +182,22 @@
 
             mail($to, $subject, $msg, $headers);
 
+            //second email to the client
+
+            $toClient = $email;
+
+            $subjectClient = "Thank you from | Thomasandco";
+
+            $msgClient = wordwrap($msg, 70);
+
+            $msgClient = nl2br($msg);
+
+            $msgClient = "Thank you, $firstName $lastName, for having a special interest in me and my endeavors to create aesthetic, functional websites and web applications for those who want to get thereselves out there with their ideas! Please allow me 24 hours in order to get back to you! \n Best regards - Thomas Joseph Cottis";
+
+            $headersClient = "From: thomascottis@thomasandco.xyz";
+
+            mail($toClient, $subjectClient, $msgClient, $headersClient);
+
         } catch(PDOException $error) {
 //session variables with error message to be displayed in the modal
             $_SESSION["modalHeader"] = "Data was not recieved";
