@@ -15,7 +15,7 @@
 
         echo "<script>console.log('Database connection successfull -> Access Granted')</script>";
 
-        $stmt = $conn->prepare('SELECT * FROM `clients` WHERE `status`="New"');
+        $stmt = $conn->prepare('SELECT * FROM `clients` WHERE `status`="New" ORDER BY `date` DESC');
         $stmt->execute();
 
         /* new clients table */
