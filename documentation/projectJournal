@@ -107,7 +107,10 @@ Added new slider. Changed css for the background images to not be fixed + small 
 Next move is to maintain.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+5-18-22
+Got rid of the session variable being unnamed error. Now displays error message upon unsuccessful login in the user-access-modal
 
+Maintain
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 

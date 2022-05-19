@@ -15,13 +15,16 @@ ob_start();
         return $data;
     }
 
+//this variable is the error message in the login screen if the database connection fails or if the credentials are incorrect
+    $_SESSION["loginFail"] = "";
+
 //this variable is what the user types in as a username and will be tested further on
     $loginUsername = data_filter($_POST["username"]);
 
 //this variable is what the user types in as a password and will be tested further on
     $loginPassword = data_filter($_POST["password"]);
 
-//can't remember why I wrote this... Look it up!
+//can't remember why I wrote this... Pretty sure it's for the google captcha
     $_SESSION["post-data"] = $_POST;
 
 //try and catch to connect to database or return and show error
@@ -73,21 +76,24 @@ ob_start();
 
         } else {
             //redirects the user back to the index page if the credentials that they input are wrong
-            header("Location: ./index.php");
+            header("Location: ../index.php");
 
             //unsetting logged in variable
             $_SESSION["loggedin"] = FALSE;
 
 
-            echo "Credentials have failed";
+            $_SESSION["loginFail"] = "Username or password is incorrect, please try again.";
+
         }
         
     } catch(PDOException $error) {
         //user is redirected back to the index page if the database cannot be connected to
-        header("Location: ./index.php");
+        header("Location: ../index.php");
 
         //runs the error to the log
         echo "<script>console.log('ERROR: " . addslashes($error->getMessage()) . "')</script>";
+
+        $_SESSION["loginFail"] = "Connection lost, try again later";
 
 
         echo "Database failed to connect";

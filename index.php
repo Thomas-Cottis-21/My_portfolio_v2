@@ -6,6 +6,15 @@
     }
 //naming variabeles to ""
 
+//naming session variables to avoid errors
+if (!isset($_SESSION["loginFail"])) {
+    $_SESSION["loginFail"] = null;
+}
+
+if (!isset($_SESSION["complete"])) {
+    $_SESSION["complete"] = null;
+}
+
 //form variables
     $firstName = $lastName = $number = $email = $content = "";
 
@@ -40,7 +49,7 @@
         if (empty($_POST["fname"])) {
             $fNameErr = "* First or business name is required";
             $formErr = TRUE;
-        } else if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $firstName)) {
+        } else if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?@#!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $firstName)) {
             $fNameFormatErr = "* No special characters permited";
             $formErr = TRUE;
         } else {
@@ -49,7 +58,7 @@
         }
 
 //last name not required, but only allows letters and spaces
-        if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $lastName)) {
+        if (!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?@#!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $lastName)) {
             $lNameFormatErr = "* No special characters";
             $formErr = TRUE;
         }
@@ -86,8 +95,9 @@
         if (empty($_POST["content"])) {
             $contentErr = "* A general message is required (Say Hi!)";
             $formErr = TRUE;
-        } else if ((!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $content))) {
+        } else if ((!preg_match("/^[a-zA-Z-.()\'\"$%&*;:,=+-?@#!áéíóúÁÉÍÓÚÜüöÖ' ]*$/", $content))) {
             $contentErr = "* No special characters permited";
+            $formErr = TRUE;
         } else {
             $contentErr = null;
         }
@@ -337,6 +347,7 @@
                 </div>
                 <div class="modal-body">
                     <form name="loginForm" action="php/authenticate.php" method="POST" onsubmit="return authenticateForm()">
+                    <span class="error"><?= $_SESSION["loginFail"]?></span>
                         <input type="text" class="border-color" id="username" name="username" placeholder="Username">
                         <div class="error" id="userErrorSpan"></div>
 
@@ -352,6 +363,23 @@
             </div>
         </div>
     </div>
+    <?php 
+    //unsets the variable so that it doesn't keep triggering the modal on refresh
+    function wipeLoginFail() {
+        unset($_SESSION["loginFail"]);
+    }
+
+    //calls modal if the session variable loginFail is set to a message, then unsets for the next time the page is refreshed
+    if (isset($_SESSION["loginFail"])) {
+        echo "<script type='text/javascript'>$(document).ready(function() {
+            setTimeout(function(){
+                $('#user-access-modal').modal('show');
+            }, 1000);
+            });</script>";
+
+        call_user_func("wipeLoginFail");
+    }
+    ?>
     <!-- -------------------- Hero Section -------------------- -->
     <section id="hero">
         <div class="container-fluid hero-container">
@@ -738,7 +766,7 @@
     </section>
     <?php 
 //whether or not the form data was sent, displays modal with error or success message
-        if ($_SESSION["complete"]) {
+        if (isset($_SESSION["complete"])) {
             echo "<script>$(document).ready(function() {
                 setTimeout(function(){
                     $('#thanksModal').modal('show');
