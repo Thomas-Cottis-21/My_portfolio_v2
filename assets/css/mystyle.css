@@ -290,7 +290,7 @@ p.nav-link.dropdown-toggle {
     margin-bottom: 0px;
 }
 .carousel-content {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 25px;
     margin-top: 0px;
 }
@@ -341,7 +341,7 @@ p.nav-link.dropdown-toggle {
     font-weight: 100;
 }
 .intro-content {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 100;
 }
 @media (max-width: 1200px) {
@@ -374,7 +374,7 @@ p.nav-link.dropdown-toggle {
     justify-content: center;
 }
 .soft-skills-content {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
 }
 /* ----- End Soft Skills Section ----- */
@@ -393,7 +393,7 @@ p.nav-link.dropdown-toggle {
     margin: 0 0 35px 0;
 }
 .hard-skills-card-container span {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 25px;
 }
 .progress {
@@ -402,10 +402,16 @@ p.nav-link.dropdown-toggle {
     margin: 0 0 15px 0;
 }
 .hard-skills-content {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 100;
 }
 /* ----- Goals ----- */
+/* .goals {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+} */
 #goals .goals-header {
     font-family: "Oxygen", sans-serif;
     font-size: 55px;
@@ -438,7 +444,7 @@ p.nav-link.dropdown-toggle {
 .education-content-main,
 .education-content-right,
 .education-content-left {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 .education-header-content {
     font-family: "Oxygen", sans-serif;
