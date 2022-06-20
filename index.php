@@ -597,7 +597,7 @@ if (!isset($_SESSION["complete"])) {
             <!-- Goals -->
             <div class="container" id="goals">
                 <h3 class="goals-header" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My Goals for 2022</h3>
-                <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">My goals are to learn React.js and to start to implement it in sites that I already manage + create new user interfaces for clients that I am working with currently.</p>
+                <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">My goals are to learn React.js as well as Python and to start to implement them into sites and projects that I already manage + create new user interfaces for clients that I am working with currently.</p>
                 <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">The following displays how far I am along in learning and implementing React.js and Python into my workflow and so far, I love it!</p>
             </div>
 
