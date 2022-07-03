@@ -630,7 +630,7 @@ if (!isset($_SESSION["complete"])) {
     <!-- -------------------- End Hard Skills Section -------------------- -->
 
     <!-- -------------------- Education Section -------------------- -->
-    <div class="container">
+    <div class="container" id="education">
         <div class="display-3 d-flex mt-5 justify-content-center education-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Education</div>
         <p class="mt-4 text-center education-content-main dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I graduated from Alta High School in 2018. From there I left on a mission for The Church of Jesus Christ of Latter-Day Saints to Lima, Peru for 2 years where I learned Spanish. Upon returning, I entered the Web Design and Develpment program in SLCC to get me started. I am currently enrolled in the program.</p>
         <div class="row row-col-2 text-center">
@@ -644,6 +644,9 @@ if (!isset($_SESSION["complete"])) {
                 <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
                 <p class="dialog" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true" data-aos-delay="500">I have graduated the web development course from Salt Lake Community College, earning an A+! I am currently freelancing, working with lots of clients for cheap in order to gain as much experience as possible and I really love what I do. I am currently working on finishing my associates degree and planning to go on to get a Bachelors Degree in Computer / Data science.</p>
             </div>
+        </div>
+        <div class="cert">
+            <img src="assets/img/education/cert_edited_2.jpg" alt="SLCC Certification Web Dev 2022" data-aos="fade-up" data-aos-duration="1600" data-aos-delay="400" data-aos-once="true">
         </div>
     </div>
     <!-- -------------------- End Education Section -------------------- -->

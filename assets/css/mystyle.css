@@ -449,6 +449,21 @@ p.nav-link.dropdown-toggle {
 .education-header-content {
     font-family: "Oxygen", sans-serif;
 }
+#education .cert {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#education .cert img {
+    width: 50vw;
+    border: none;
+    border-radius: 10px;
+}
+@media (max-width: 786px) {
+    #education .cert img {
+        width: 75vw;
+    }
+}
 /* ----- End Education Section ----- */
 
 /* ----- Projects Section ----- */
