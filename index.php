@@ -323,7 +323,7 @@ if (!isset($_SESSION["complete"])) {
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="/assets/CV_web_dev_v3.pdf" class="nav-link" target="_blank">CV</a>
+                        <a href="/assets/CV_web_dev_v4.pdf" class="nav-link" target="_blank">CV</a>
                     </li>
                     <li class="nav-item text-nowwrap">
                         <a href="https://github.com/Thomas-Cottis-21" target="_blank" class="nav-link">Github</a>
