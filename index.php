@@ -444,7 +444,7 @@ if (!isset($_SESSION["complete"])) {
     <!-- -------------------- End Hero Section -------------------- -->
 
     <!-- -------------------- Intro Section -------------------- -->
-    <div class="container d-flex">
+    <div class="container-fluid d-flex">
         <div id="intro-container-row" class="row">
             <div class="col-6 intro-container-image">
                 <img src="/assets/img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
