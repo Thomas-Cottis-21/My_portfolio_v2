@@ -451,7 +451,7 @@ if (!isset($_SESSION["complete"])) {
             </div>
             <div class="col col-right-intro">
                 <div class="intro-title-container">
-                    <h1 class="intro-header-main color">I am truly passionate about a few things</h1>
+                    <h1 class="display-3 intro-header-main color">I am truly passionate about a few things</h1>
                 </div>
                 <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">I believe that once someone finds something that they are passionate about, they no longer worry about what they want to be when they grow up</p>
                 <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400"> 
@@ -481,7 +481,9 @@ if (!isset($_SESSION["complete"])) {
 
     <!-- -------------------- Skills Section -------------------- -->
     <div class="container">
-        <div class="display-3 d-flex mt-5 justify-content-center soft-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">My values | What do I stand for?</div>
+        <div class="d-flex mt-5 justify-content-center soft-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">
+            <h1 class="display-3">My values | What do I stand for?</h1>
+        </div>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-xs mt-5">
                 <div class="display-6 d-flex soft-skills-header-content color" data-aos="fade-up-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">Solving problems</div>

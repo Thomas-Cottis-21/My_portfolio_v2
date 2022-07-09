@@ -11,6 +11,7 @@ p {
 }
 hr {
     border: 2px solid;
+    border-color: #5f9da5;
 }
 /* ----- Dark Mode ----- */
 .dark-mode {
@@ -346,7 +347,6 @@ p.nav-link.dropdown-toggle {
     margin-top: 0;
     font-weight: 200;
     padding: 30px;
-    font-size: 64px;
 }
 .intro-header-content {
     font-weight: 100;
@@ -374,7 +374,11 @@ p.nav-link.dropdown-toggle {
 
 /* ----- Soft Skills Section ----- */
 .soft-skills-header-main {
-    padding-top: 25px;
+    padding: 25px;
+    background-image: url(/assets/img/png/blob_6.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .soft-skills-header-main, .soft-skills-header-content, .hard-skills-header-main, .hard-skills-header-gauge {
     font-family: "Oxygen", sans-serif;
