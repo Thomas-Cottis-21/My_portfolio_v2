@@ -120,3 +120,7 @@ Removed personal phone number from the site (form error modal message)
 7-02-22
 Added my Salt Lake Community College Web Development Certificate to the education section. 
 --------------------------------------------------------------------------------------------------------------------------------------------
+7-09-22
+Currently adding "blobs" to the page, behind every header as a marker for the headers, but to also add something more interesting and eye catching to the site. 
+
+Also adding more bootstrap instead of straight up css to elements for more consistency across the site.
