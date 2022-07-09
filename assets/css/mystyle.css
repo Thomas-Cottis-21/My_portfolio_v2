@@ -330,12 +330,22 @@ p.nav-link.dropdown-toggle {
     margin-top: 15px;
     border-radius: 10px;
 }
+.intro-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/img/png/blob_3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 .intro-header-main, .intro-header-content {
     font-family: "Oxygen", sans-serif;
 }
 .intro-header-main {
     margin-top: 0;
     font-weight: 200;
+    padding: 30px;
 }
 .intro-header-content {
     font-weight: 100;

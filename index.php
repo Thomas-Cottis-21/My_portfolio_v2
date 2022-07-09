@@ -450,7 +450,9 @@ if (!isset($_SESSION["complete"])) {
                 <img src="/assets/img/intro/Tom_img.jpeg" alt="Thomas and Johana Oxapampa" class="intro-image">
             </div>
             <div class="col col-right-intro">
-                <h1 class="display-5 intro-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">I am truly passionate about a few things</h1>
+                <div class="intro-title-container">
+                    <h1 class="intro-header-main color">I am truly passionate about a few things</h1>
+                </div>
                 <p class="intro-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">I believe that once someone finds something that they are passionate about, they no longer worry about what they want to be when they grow up</p>
                 <hr class="dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400"> 
                 <div class="row">
