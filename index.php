@@ -517,7 +517,9 @@ if (!isset($_SESSION["complete"])) {
     <!-- -------------------- Hard Skills Section -------------------- -->
     <section id="hard-skills">
         <div class="container">
-            <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Hard Skills | What can I do?</div>
+            <div class="display-3 d-flex mt-5 justify-content-center hard-skills-header-main" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">
+                <h1 class="display-3 color">Hard Skills | What can I do?</h1>
+            </div>
             <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My main study is Web Development, so that is what I have based my hard skills on. It is excatly what I am passionate about, creating something beautiful as well as funcional. These are my skills and what I peronally rank myself as, with the help of some peers to give a second opinion.</p>
         </div>
         <!-- beginning of progress bars -->
@@ -600,7 +602,9 @@ if (!isset($_SESSION["complete"])) {
 
             <!-- Goals -->
             <div class="container" id="goals">
-                <h3 class="goals-header" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">My Goals for 2022</h3>
+                <div class="goals-header" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300">
+                    <div class="display-5">My goals for 2022</div>
+                </div>
                 <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">My goals are to learn React.js as well as Python and to start to implement them into sites and projects that I already manage + create new user interfaces for clients that I am working with currently.</p>
                 <p class="mt-4 text-center hard-skills-content dialog" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">The following displays how far I am along in learning and implementing React.js and Python into my workflow and so far, I love it!</p>
             </div>
@@ -635,7 +639,9 @@ if (!isset($_SESSION["complete"])) {
 
     <!-- -------------------- Education Section -------------------- -->
     <div class="container" id="education">
-        <div class="display-3 d-flex mt-5 justify-content-center education-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">Education</div>
+        <div class="display-3 d-flex mt-5 justify-content-center education-header-main" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">
+            <h1 class="display-3 color">Education</h1>
+        </div>
         <p class="mt-4 text-center education-content-main dialog" data-aos="fade-up" data-aos-duration="1400" data-aos-once="true" data-aos-delay="300">I graduated from Alta High School in 2018. From there I left on a mission for The Church of Jesus Christ of Latter-Day Saints to Lima, Peru for 2 years where I learned Spanish. Upon returning, I entered the Web Design and Develpment program in SLCC to get me started. I am currently enrolled in the program.</p>
         <div class="row row-col-2 text-center">
             <div class="col-xl col-xs education-content-right">
@@ -657,7 +663,9 @@ if (!isset($_SESSION["complete"])) {
 
     <!-- -------------------- Projects Section -------------------- -->
     <div class="container-fluid" id="projects">
-        <div class="display-3 d-flex mt-5 justify-content-center project-header-main color" id="polygraph" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Projects</div>
+        <div class="display-3 d-flex mt-5 justify-content-center project-header-main" id="polygraph" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">
+            <h1 class="display-3 color">Projects</h1>
+        </div>
         <div class="row row-cols-1 d-flex justify-content-center text-center">
             <div class="col">
                 <div class="embed-responsive">
@@ -703,7 +711,9 @@ if (!isset($_SESSION["complete"])) {
         </div>
     </div>
     <section>
-        <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">Contact</div>
+        <div class="display-3 d-flex mt-5 justify-content-center contact-header-main color" data-aos="fade-down" data-aos-duration="1400" data-aos-once="true">
+            <h1 class="display-3 color">Contact</h1>
+        </div>
         <div id="contactForm" class="container">
             <form id="myForm" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>#contact" method="POST">
                 <div class="row justify-content-center">

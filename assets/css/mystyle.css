@@ -346,7 +346,7 @@ p.nav-link.dropdown-toggle {
 .intro-header-main {
     margin-top: 0;
     font-weight: 200;
-    padding: 30px;
+    padding: 35px;
 }
 .intro-header-content {
     font-weight: 100;
@@ -374,7 +374,7 @@ p.nav-link.dropdown-toggle {
 
 /* ----- Soft Skills Section ----- */
 .soft-skills-header-main {
-    padding: 25px;
+    padding: 35px;
     background-image: url(/assets/img/png/blob_6.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -396,7 +396,11 @@ p.nav-link.dropdown-toggle {
 
 /* ----- Hard Skills Section ----- */
 .hard-skills-header-main {
-    padding-top: 20px;
+    padding: 35px;
+    background-image: url(/assets/img/png/blob_7.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .hard-skills-header-gauge {
     margin: 10px 0 20px 0px;
@@ -428,9 +432,13 @@ p.nav-link.dropdown-toggle {
     justify-content: space-around;
 } */
 #goals .goals-header {
+    padding: 25px;
     font-family: "Oxygen", sans-serif;
-    font-size: 55px;
     text-align: center;
+    background-image: url(/assets/img/png/blob_8.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     color: #ffc600;
 }
 .goals-sub-header {
@@ -454,7 +462,11 @@ p.nav-link.dropdown-toggle {
 /* ----- Education Section ----- */
 .education-header-main {
     font-family: "Oxygen", sans-serif;
-    padding-top: 20px;
+    padding-top: 35px;
+    background-image: url(/assets/img/png/blob_4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .education-content-main,
 .education-content-right,
@@ -482,6 +494,13 @@ p.nav-link.dropdown-toggle {
 /* ----- End Education Section ----- */
 
 /* ----- Projects Section ----- */
+.project-header-main {
+    padding: 25px;
+    background-image: url(/assets/img/png/blob_3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 .project-header-main, .project-header-iframe, .project-content {
     font-family: "Oxygen", sans-serif;
 }
@@ -503,7 +522,11 @@ p.nav-link.dropdown-toggle {
 /* ----- Contact Section ----- */
 .contact-header-main {
     font-family: "Oxygen", sans-serif;
-    padding-top: 30px;
+    padding: 35px;
+    background-image: url(/assets/img/png/blob_9.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 input{
     border: none;
